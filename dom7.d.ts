@@ -28,6 +28,8 @@ declare namespace Dom7 {
 	}
 	
 	interface Dom7 {
+		length: number;
+		
 		// Classes
 		addClass(className : string) : Dom7;
 		removeClass(className : string) : Dom7;
