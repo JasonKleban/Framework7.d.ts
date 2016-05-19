@@ -1,0 +1,6 @@
+{
+    "name": "framework7",
+    "main": "framework7.d.ts",
+    "homepage": "https://github.com/nolimits4web/framework7/",
+    "version": "1.4.0"
+}
