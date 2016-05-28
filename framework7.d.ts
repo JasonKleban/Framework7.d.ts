@@ -949,6 +949,17 @@ declare class Swiper {
 declare class Framework7 {
 	constructor(options?: Framework7.Framework7Options);
 	
+	//device info
+	android: boolean;
+	androidChrome: boolean;
+	ios: boolean;
+	ipad: boolean;
+	iphone: boolean;
+	pixelRatio: number;
+	statusBar: boolean;
+	os: string;
+	osVersion: string;
+		
 	// Views
 	views: Framework7.View[]
 	addView(selector: string | HTMLElement | Dom7.Dom7, parameters: Framework7.ViewParameters) : Framework7.View;
