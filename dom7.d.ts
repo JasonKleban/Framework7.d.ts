@@ -177,6 +177,7 @@ declare namespace Dom7 {
 		(): Dom7;
 		(selector: string, context?: Element|Dom7): Dom7;
 		(element: Element): Dom7;
+		(element: Document): Dom7;
 		(elementArray: Element[]): Dom7;
 		
 		// Utility
