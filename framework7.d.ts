@@ -949,6 +949,7 @@ declare class Swiper {
 
 declare class Framework7 {
 	constructor(options?: Framework7.Framework7Options);
+    init();
 	
 	//device info
 	android: boolean;
