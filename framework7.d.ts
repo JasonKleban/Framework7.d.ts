@@ -330,6 +330,7 @@ declare namespace Framework7 {
 
 	interface Router {
 		load(options: RouterOptions): void;
+		back(): void;
 		back(options: RouterOptions): void;
 		loadPage(url: string): void;
 		loadContent(content: string | HTMLElement | Dom7.Dom7 | HTMLElement[]): void;
