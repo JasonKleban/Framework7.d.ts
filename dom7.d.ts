@@ -1,5 +1,11 @@
 declare namespace Dom7 {
 	interface Dom7AjaxSettings {
+		url?: string;
+		method?: string;
+		success?: Function;
+		beforeSend?: Function;
+		error?: Function;
+		complete?: Function;
 		async?: boolean;
 		cache?: boolean;
 		contentType?: any;
