@@ -198,7 +198,7 @@ declare namespace Dom7 {
 	}
 }
 
-declare var Dom7 : Dom7.Dom7Static;
+declare let Dom7 : Dom7.Dom7Static;
 
 declare module "Dom7" {
 	export = Dom7;
