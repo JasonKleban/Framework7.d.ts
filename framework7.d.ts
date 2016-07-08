@@ -172,12 +172,12 @@ declare namespace Framework7 {
 	}
 
 	interface ActionSheetButton {
-		text?: string;
+		text: string;
 		bold?: boolean;
-		colo: string;
-		bg: string;
-		label: boolean;
-		disabled: boolean;
+		colo?: string;
+		bg?: string;
+		label?: boolean;
+		disabled?: boolean;
 		onClick?: () => void;
 	}
 
