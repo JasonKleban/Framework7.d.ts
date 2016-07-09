@@ -1,5 +1,11 @@
 declare namespace Dom7 {
 	interface Dom7AjaxSettings {
+		url?: string;
+		method?: string;
+		success?: Function;
+		beforeSend?: Function;
+		error?: Function;
+		complete?: Function;
 		async?: boolean;
 		cache?: boolean;
 		contentType?: any;
@@ -171,6 +177,7 @@ declare namespace Dom7 {
 		(): Dom7;
 		(selector: string, context?: Element|Dom7): Dom7;
 		(element: Element): Dom7;
+		(element: Document): Dom7;
 		(elementArray: Element[]): Dom7;
 		
 		// Utility
@@ -192,7 +199,7 @@ declare namespace Dom7 {
 	}
 }
 
-declare var Dom7 : Dom7.Dom7Static;
+declare let Dom7 : Dom7.Dom7Static;
 
 declare module "Dom7" {
 	export = Dom7;

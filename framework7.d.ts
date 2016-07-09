@@ -172,12 +172,12 @@ declare namespace Framework7 {
 	}
 
 	interface ActionSheetButton {
-		text?: string;
+		text: string;
 		bold?: boolean;
-		colo: string;
-		bg: string;
-		label: boolean;
-		disabled: boolean;
+		colo?: string;
+		bg?: string;
+		label?: boolean;
+		disabled?: boolean;
 		onClick?: () => void;
 	}
 
@@ -330,6 +330,7 @@ declare namespace Framework7 {
 
 	interface Router {
 		load(options: RouterOptions): void;
+		back(): void;
 		back(options: RouterOptions): void;
 		loadPage(url: string): void;
 		loadContent(content: string | HTMLElement | Dom7.Dom7 | HTMLElement[]): void;
@@ -948,6 +949,7 @@ declare class Swiper {
 
 declare class Framework7 {
 	constructor(options?: Framework7.Framework7Options);
+    init();
 	
 	//device info
 	android: boolean;
