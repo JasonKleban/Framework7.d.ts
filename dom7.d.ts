@@ -179,7 +179,8 @@ declare namespace Dom7 {
 		(element: Element): Dom7;
 		(element: Document): Dom7;
 		(elementArray: Element[]): Dom7;
-		
+		(event: EventTarget): Dom7;
+
 		// Utility
 		each(callback : (index : number, element : any) => void) : void;
 		parseUrlQuery(url : string) : any;
