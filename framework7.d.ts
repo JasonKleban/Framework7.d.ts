@@ -1077,6 +1077,7 @@ declare class Framework7 {
 	// not documented
 	onPageBeforeInit(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
 	onPageInit(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
+	onPageReinit(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
 	onPageBeforeAnimation(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
 	onPageAfterAnimation(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
 	onPageBeforeRemove(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
