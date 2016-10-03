@@ -352,7 +352,7 @@ declare namespace Framework7 {
 		navbarInnerContainer?: HTMLElement;
 		swipeBack?: boolean;
 		context?: any;
-		fromPage?: any;
+		fromPage?: PageData;
 	}
 
 	interface View {
