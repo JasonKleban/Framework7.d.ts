@@ -508,14 +508,15 @@ declare namespace Framework7 {
 	}
 
 	interface PickerColumn {
-		container: Dom7.Dom7;
-		items: Dom7.Dom7;
-		value: any;
-		displayValue: any;
-		activeIndex: number;
+		container?: Dom7.Dom7;
+		items?: Dom7.Dom7;
+		values: Array<any>;
+		displayValues?: Array<any>;
+		activeIndex?: number;
+		textAlign?: string;
 
-		setValue(value: any, duration: number): void;
-		replaceValues(values: any[], displayValues: any[]): void;
+		setValue?(value: any, duration: number): void;
+		replaceValues?(values: any[], displayValues: any[]): void;
 	}
 
 	interface PickerOptions {
