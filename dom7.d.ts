@@ -108,7 +108,7 @@ declare namespace Dom7 {
 		text(newTextContent : string) : Dom7;
 		is(CSSSelector : string | Element | Dom7) : boolean;
 		index() : boolean;
-		eq(index : number) : boolean;
+		eq(index : number) : Dom7;
 		append(element : string | Element | Dom7) : Dom7;
 		append(element : string | Element | Dom7) : Dom7;
 		appendTo(element : string | Element | Dom7) : Dom7;
@@ -179,7 +179,8 @@ declare namespace Dom7 {
 		(element: Element): Dom7;
 		(element: Document): Dom7;
 		(elementArray: Element[]): Dom7;
-		
+		(event: EventTarget): Dom7;
+
 		// Utility
 		each(callback : (index : number, element : any) => void) : void;
 		parseUrlQuery(url : string) : any;

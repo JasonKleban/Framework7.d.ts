@@ -352,7 +352,7 @@ declare namespace Framework7 {
 		navbarInnerContainer?: HTMLElement;
 		swipeBack?: boolean;
 		context?: any;
-		fromPage?: any;
+		fromPage?: PageData;
 	}
 
 	interface View {
@@ -508,14 +508,15 @@ declare namespace Framework7 {
 	}
 
 	interface PickerColumn {
-		container: Dom7.Dom7;
-		items: Dom7.Dom7;
-		value: any;
-		displayValue: any;
-		activeIndex: number;
+		container?: Dom7.Dom7;
+		items?: Dom7.Dom7;
+		values: Array<any>;
+		displayValues?: Array<any>;
+		activeIndex?: number;
+		textAlign?: string;
 
-		setValue(value: any, duration: number): void;
-		replaceValues(values: any[], displayValues: any[]): void;
+		setValue?(value: any, duration: number): void;
+		replaceValues?(values: any[], displayValues: any[]): void;
 	}
 
 	interface PickerOptions {
@@ -1077,6 +1078,7 @@ declare class Framework7 {
 	// not documented
 	onPageBeforeInit(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
 	onPageInit(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
+	onPageReinit(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
 	onPageBeforeAnimation(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
 	onPageAfterAnimation(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
 	onPageBeforeRemove(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
