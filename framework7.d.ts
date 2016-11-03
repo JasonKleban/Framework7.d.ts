@@ -181,11 +181,11 @@ declare namespace Framework7 {
 		onClick?: () => void;
 	}
 
-	interface ModelOptions {
+	interface ModalOptions {
 		title?: string;
 		text?: string;
 		afterText?: string;
-		buttons: string[];
+		buttons: ModalButton[];
 		verticalButtons: boolean;
 		onClick: (modal: HTMLElement, index: number) => void;
 	}
@@ -990,7 +990,7 @@ declare class Framework7 {
 	hidePreloader(): void;
 	showIndicator(): void;
 	hideIndicator(): void;
-	model(options: Framework7.ModelOptions): Framework7.Modal;
+	modal(options: Framework7.ModalOptions): Framework7.Modal;
 	popup(content: HTMLElement | string | Dom7.Dom7, removeOnClose?: boolean): Framework7.Modal;
 	popover(content: HTMLElement | string | Dom7.Dom7, target: HTMLElement | string | Dom7.Dom7, removeOnClose?: boolean): Framework7.Modal;
 	closeModal(modal: Framework7.Modal | HTMLElement | string): void;
