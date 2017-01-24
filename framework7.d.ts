@@ -41,7 +41,7 @@ declare namespace Framework7 {
 		animateNavBackIcon?: boolean;
 		animatePages?: boolean;
 		preloadPreviousPage?: boolean;
-		preroute?: (view, options) => void;
+		preroute?: (view: any, options: any) => void;
 		preprocess?: (content?: any, url?: string, next?: (resultContent: any) => void) => void;
 		
 		// Push State
@@ -240,8 +240,8 @@ declare namespace Framework7 {
 		animatePages?: boolean;
 		preloadPreviousPage?: boolean;
 		reloadPages?: boolean;
-		preroute?: (view, options) => void;
-		preprocess?: (content, url, next) => void;
+		preroute?: (view: any, options: any) => void;
+		preprocess?: (content: any, url: any, next: any) => void;
 		
 		// Swipe back (iOS theme only)
 		swipeBackPage?: boolean;
@@ -408,20 +408,20 @@ declare namespace Framework7 {
 		captionTemplate?: string;
 		
 		// Callbacks
-		onOpen?: (photobrowser) => void;
-		onClose?: (photobrowser) => void;
-		onSwipeToClose?: (photobrowser) => void;
+		onOpen?: (photobrowser: any) => void;
+		onClose?: (photobrowser: any) => void;
+		onSwipeToClose?: (photobrowser: any) => void;
 		
 		// Swiper Callbacks
-		onSlideChangeStart?: (swiper) => void;
-		onSlideChangeEnd?: (swiper) => void;
-		onTransitionStart?: (swiper) => void;
-		onTransitionEnd?: (swiper) => void;
-		onClick?: (swiper, event) => void;
-		onTap?: (swiper, event) => void;
-		onDoubleTap?: (swiper, event) => void;
-		onLazyImageLoad?: (swiper, slide, image) => void;
-		onLazyImageReady?: (swiper, slide, image) => void;
+		onSlideChangeStart?: (swiper: any) => void;
+		onSlideChangeEnd?: (swiper: any) => void;
+		onTransitionStart?: (swiper: any) => void;
+		onTransitionEnd?: (swiper: any) => void;
+		onClick?: (swiper: any, event: any) => void;
+		onTap?: (swiper: any, event: any) => void;
+		onDoubleTap?: (swiper: any, event: any) => void;
+		onLazyImageLoad?: (swiper: any, slide: any, image: any) => void;
+		onLazyImageReady?: (swiper: any, slide: any, image: any) => void;
 	}
 
 	interface PhotoBrowser {
@@ -441,7 +441,7 @@ declare namespace Framework7 {
 
 	interface AutocompleteOptions {
 		openIn?: string;
-		source?: (autocomplete, query, render) => void;
+		source?: (autocomplete: any, query: any, render: any) => void;
 		limit?: number;
 		preloader?: boolean;
 		preloaderColor?: string;
@@ -543,7 +543,7 @@ declare namespace Framework7 {
 		cols?: PickerColumn[];
 		
 		// Callbacks
-		onChange?: (p: Picker, values, displayValues) => void;
+		onChange?: (p: Picker, values: any, displayValues: any) => void;
 		onOpen?: (p: Picker) => void;
 		onClose?: (p: Picker) => void;
 
@@ -874,7 +874,7 @@ declare namespace Swiper {
 		onReachEnd?: (swiper: Swiper) => void;
 		onDestroy?: (swiper: Swiper) => void;
 		onSetTranslate?: (swiper: Swiper, translate: boolean) => void;
-		onSetTransition?: (swiper: Swiper, transition) => void;
+		onSetTransition?: (swiper: Swiper, transition: any) => void;
 		onAutoplayStart?: (swiper: Swiper) => void;
 		onAutoplayStop?: (swiper: Swiper) => void;
 		onLazyImageLoad?: (swiper: Swiper, slide: number, image: HTMLElement) => void;
@@ -919,7 +919,7 @@ declare class Swiper {
 
 	slideNext(runCallbacks?: boolean,  speed?: number): Swiper;
 	slidePrev(runCallbacks?: boolean,  speed?: number): Swiper;
-	slideTo(index,  speed?: number,  runCallbacks?: boolean): Swiper;
+	slideTo(index: any,  speed?: number,  runCallbacks?: boolean): Swiper;
 	update(updateTranslate?: boolean): Swiper;
 	onResize(): Swiper;
 	detachEvents(): Swiper;
@@ -950,7 +950,7 @@ declare class Swiper {
 
 declare class Framework7 {
 	constructor(options?: Framework7.Framework7Options);
-    init();
+    init(): any;
 	
 	//device info
 	android: boolean;
@@ -969,11 +969,11 @@ declare class Framework7 {
 	getCurrentView(index?: number): Framework7.View | Framework7.View[];
 	
 	// Search Bar
-	searchbar(searchbarContainer: string | HTMLElement | Dom7.Dom7, parameters): Framework7.SearchBar;
+	searchbar(searchbarContainer: string | HTMLElement | Dom7.Dom7, parameters: any): Framework7.SearchBar;
 	
 	// Side panels
-	openPanel(position: string);
-	closePanel();
+	openPanel(position: string): any;
+	closePanel(): any;
 	
 	// Overlays
 	alert(text: string, callbackOk?: () => void): Framework7.Modal;
@@ -1024,9 +1024,9 @@ declare class Framework7 {
 	virtualList(listBlockContainer: HTMLElement | string | Dom7.Dom7, parameters: Framework7.VirtualListOptions): Framework7.VirtualList;
 	
 	// Accordian
-	accordionOpen(item: HTMLElement | string | Dom7.Dom7);
-	accordionClose(item: HTMLElement | string | Dom7.Dom7);
-	accordionToggle(item: HTMLElement | string | Dom7.Dom7);
+	accordionOpen(item: HTMLElement | string | Dom7.Dom7): any;
+	accordionClose(item: HTMLElement | string | Dom7.Dom7): any;
+	accordionToggle(item: HTMLElement | string | Dom7.Dom7): any;
 	
 	// SmartSelect
 	smartSelectOpen(smartSelect: HTMLElement | string | Dom7.Dom7): void;
@@ -1058,22 +1058,22 @@ declare class Framework7 {
 	calendar(parameters: Framework7.CalendarOptions): Framework7.Calendar;
 	
 	// Pull to Refresh
-	pullToRefreshDone(ptrContent: string | HTMLElement | Dom7.Dom7);
-	pullToRefreshTrigger(ptrContent: string | HTMLElement | Dom7.Dom7);
-	destroyPullToRefresh(ptrContent: string | HTMLElement | Dom7.Dom7);
-	initPullToRefresh(ptrContent: string | HTMLElement | Dom7.Dom7);
+	pullToRefreshDone(ptrContent: string | HTMLElement | Dom7.Dom7): any;
+	pullToRefreshTrigger(ptrContent: string | HTMLElement | Dom7.Dom7): any;
+	destroyPullToRefresh(ptrContent: string | HTMLElement | Dom7.Dom7): any;
+	initPullToRefresh(ptrContent: string | HTMLElement | Dom7.Dom7): any;
 	
 	// Infinite Scroll
-	attachInfiniteScroll(container: string | HTMLElement | Dom7.Dom7);
-	detachInfiniteScroll(container: string | HTMLElement | Dom7.Dom7);
+	attachInfiniteScroll(container: string | HTMLElement | Dom7.Dom7): any;
+	detachInfiniteScroll(container: string | HTMLElement | Dom7.Dom7): any;
 	
 	// Messages
 	messages(messagesContainer: string | HTMLElement | Dom7.Dom7, parameters: Framework7.MessagesOptions): Framework7.Messages;
 	messagebar(messagebarContainer: string | HTMLElement | Dom7.Dom7, parameters: Framework7.MessageBarOptions): Framework7.MessageBar;
 	
 	// Notifications
-	addNotification(parameters: Framework7.NotificationOptions);
-	closeNotification(notificationElement: string | HTMLElement | Dom7.Dom7);
+	addNotification(parameters: Framework7.NotificationOptions): any;
+	closeNotification(notificationElement: string | HTMLElement | Dom7.Dom7): any;
 	
 	// not documented
 	onPageBeforeInit(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;

@@ -56,7 +56,7 @@ declare namespace Dom7 {
 		// Data
 		data(key : string, value : any) : Dom7;
 		data(key : string) : any;
-		removeData(key : string);
+		removeData(key : string): any;
 		dataset() : any;
 		
 		// CSS trasforms, transitions
@@ -190,7 +190,7 @@ declare namespace Dom7 {
 		toCamelCase(string: string) : string;
 		dataset(target: string | HTMLElement | Dom7) : any;
 		requestAnimationFrame(callback: () => void) : number;
-		cancelAnimationFrame(requestID: number);
+		cancelAnimationFrame(requestID: number): any;
 		
 		ajax(parameters : Dom7AjaxSettings) : Dom7XHR;
 		
