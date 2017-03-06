@@ -174,7 +174,7 @@ declare namespace Framework7 {
 	interface ActionSheetButton {
 		text: string;
 		bold?: boolean;
-		colo?: string;
+		color?: string;
 		bg?: string;
 		label?: boolean;
 		disabled?: boolean;
