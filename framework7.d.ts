@@ -947,6 +947,7 @@ declare class Swiper {
 	enableMousewheelControl(): Swiper;
 	disableKeyboardControl(): Swiper;
 	enableKeyboardControl(): Swiper;
+	updateSlidesSize(): any;
 }
 
 declare class Framework7 {
