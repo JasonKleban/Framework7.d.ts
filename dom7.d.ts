@@ -60,6 +60,9 @@ declare namespace Dom7 {
 	
 	interface Dom7 {
 		length: number;
+
+		/**  Retrieve one of the elements matched by the Dom7 object (jQuery syntax). **/
+		[index:number]: Element;
 		
 		// CLASSES
 		/** Add class to elements */
@@ -97,7 +100,7 @@ declare namespace Dom7 {
 		/** Return the value at the named data store for the first element in the collection, as set by data(key, value) or by an HTML5 data-* attribute */
 		data(key : string) : any;
 		/** Remove specified data */
-		removeData(key : string);
+		removeData(key : string): void;
 		/** Returns element's data set (set of data- attributes) as plain Object */
 		dataset() : any;
 		
@@ -360,9 +363,9 @@ declare namespace Dom7 {
 		/** Cross-browser implementation on requestAnimationFrame. Returns animation request id, that uniquely identifies the entry in the callback list */
 		requestAnimationFrame(callback: () => void) : number;
 		/** Cancels an animation frame request. */
-		cancelAnimationFrame(requestID: number);
+		cancelAnimationFrame(requestID: number): void;
 		/** Replace diacritics in specified text string with standard latin characters */
-		removeDiacritics(text: string);
+		removeDiacritics(text: string): string;
 		
 		/** Load data from the server. Returns plain XHR object */
 		ajax(parameters : Dom7AjaxSettings) : Dom7XHR;

@@ -907,12 +907,15 @@ declare class Swiper {
 	height: number;
 	translate: string;
 	progress: number;
+	/** Index number of currently active slide. In loop mode active index value will be always shifted on a number of looped/duplicated slides. **/
 	activeIndex: number;
 	previousIndex: number;
-	isBeginning: boolean
-	isEnd: boolean
-	autoplaying: boolean
-	animating: boolean
+	/** Index number of currently active slide considering duplicated slides in loop mode **/
+	realIndex: number;
+	isBeginning: boolean;
+	isEnd: boolean;
+	autoplaying: boolean;
+	animating: boolean;
 	touches: { startX: number; startY: number; currentX: number; currentY: number; diff: any };
 	clickedIndex: number;
 	clickedSlide: HTMLElement;
@@ -948,23 +951,47 @@ declare class Swiper {
 	enableKeyboardControl(): Swiper;
 }
 
+declare class Device
+{
+	/** Contains "android" (for Android), "ios" (for iOS), undefined (for any other OS/platform) **/
+	os: string;
+
+	/** Contains version of operating system. Available only for Android and iOS devices. For example, if it is iOS device with iOS version 7.1 then it will contain "7.1". **/
+	osVersion: string;
+
+	/** Contains true for Android device, otherwise contains false **/
+	android: boolean;
+
+	/** Contains true for iOS device, otherwise contains false **/
+	ios: boolean;
+
+	/** Contains true for iPad, otherwise contains false **/
+	ipad: boolean;
+
+	/** Contains true for iPhone/iPod Touch, otherwise contains false **/
+	iphone: boolean;
+
+	/** Returns device screen pixel ratio. Actually it is a shortcut of window.devicePixelRatio **/
+	pixelRatio: number;
+
+	/** Contains true if app runs in UIWebView - webapp installed to home screen or phone gap. **/
+	webView: boolean;
+
+	/** Contains true if minimal-ui mode is enabled: web app running in browser on iPhone/iPod with iOS 7.1+ and minimal-ui viewport meta tag value. **/
+	minimalUi: boolean;
+
+	/** Contains true if app running in full-screen mode and requires for Status bar overlay. iOS only **/
+	statusBar: boolean;
+}
+
 declare class Framework7 {
 	constructor(options?: Framework7.Framework7Options);
-    init();
-	
-	//device info
-	android: boolean;
-	androidChrome: boolean;
-	ios: boolean;
-	ipad: boolean;
-	iphone: boolean;
-	pixelRatio: number;
-	statusBar: boolean;
-	os: string;
-	osVersion: string;
-		
+	init();
+
+	device: Device; // https://framework7.io/docs/device-api.html
+
 	// Views
-	views: Framework7.View[]
+	views: Framework7.View[];
 	addView(selector: string | HTMLElement | Dom7.Dom7, parameters: Framework7.ViewParameters) : Framework7.View;
 	getCurrentView(index?: number): Framework7.View | Framework7.View[];
 	
@@ -974,6 +1001,19 @@ declare class Framework7 {
 	// Side panels
 	openPanel(position: string);
 	closePanel();
+
+	// Navbar https://framework7.io/docs/navbar.html
+
+	/** Hide specified toolbar. **/
+	hideNavbar(navbar: HTMLElement, isAnimated?: boolean): void;
+
+	/** Show specified toolbar. **/
+	showNavbar(navbar: HTMLElement, isAnimated?: boolean): void;
+
+	/** Recalculate positional styles for Navbar in selected View. Useful after you change some of Navbar elements dynamically.
+	 * @param viewContainer - CSS Selector string or HTMLElement. **/
+	sizeNavbars(viewContainer: any): void;
+
 	
 	// Overlays
 	alert(text: string, callbackOk?: () => void): Framework7.Modal;
@@ -1084,6 +1124,7 @@ declare class Framework7 {
 	onPageBeforeRemove(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
 	onPageBack(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
 	onPageAfterBack(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
+
 }
 
 declare module "Framework7" {
