@@ -364,6 +364,7 @@ declare namespace Framework7 {
 		activePage: PageData;
 		main: boolean;
 		router: Router;
+		selector: string;
 
 		hideNavbar(): void;
 		showNavbar(): void;
