@@ -1127,6 +1127,6 @@ declare class Framework7 {
 
 }
 
-declare module "Framework7" {
+declare module "framework7" {
 	export = Framework7;
 }
