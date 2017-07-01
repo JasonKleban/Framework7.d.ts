@@ -1,5 +1,5 @@
 {
-  "name": "framework7.d.ts",
+  "name": "@types/framework7",
   "version": "1.0.0",
   "description": "Typescript definitions for Framework7, Swiper, Dom7 by iDangero.us",
   "main": "framework7.d.ts",
