@@ -692,7 +692,8 @@ declare namespace Framework7 {
 
 	interface NotificationOptions {
 		title?: string;
-		subtitle?: string;
+		message?: string;
+    subtitle?: string;
 		media?: string;
 		hold?: number;
 		closeIcon?: boolean;
