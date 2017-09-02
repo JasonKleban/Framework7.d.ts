@@ -148,7 +148,7 @@ declare namespace Dom7 {
 		/** Set height for the first element in the set of matched elements, including padding and border, and margin (if includeMargin is true) */
 		outerHeight(value: string | number) : Dom7;
 		/** Get the current coordinates of the first element relative to the document */
-		offset() : number;
+		offset() : {top: number, left: number};
 		/** Set the coordinates of the first element relative to the document */
 		offset(value: string | number) : Dom7;
 		/** Set "display:none" to the matched elements */
