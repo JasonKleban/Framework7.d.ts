@@ -1039,7 +1039,7 @@ declare class Framework7 {
 	actions(buttons: Framework7.ActionSheetButton[]): HTMLElement;
 	actions(target: HTMLElement | string | Dom7.Dom7, groups: Framework7.ActionSheetButton[][]): void;
 	actions(target: HTMLElement | string | Dom7.Dom7, buttons: Framework7.ActionSheetButton[]): HTMLElement;
-	loginScreen(): HTMLElement;
+	loginScreen(loginScreen: HTMLElement | string | Dom7.Dom7, animated?: boolean);
 	pickerModal(picker: HTMLElement | string | Dom7.Dom7, removeOnClose?: boolean): HTMLElement;
 	
 	// Progress Bars
