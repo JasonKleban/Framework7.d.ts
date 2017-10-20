@@ -197,7 +197,7 @@ declare namespace Dom7 {
 		 * */	
 		is(CSSSelector : string | Element | Dom7) : boolean;
 		/** Return the position of the first element within the Dom7 collection relative to its sibling elements */
-		index() : boolean;
+		index() : number;
 		/** Reduce the set of matched elements to the one at the specified index */
 		eq(index : number) : Dom7;
 		/** `.append(HTMLString)` : 
