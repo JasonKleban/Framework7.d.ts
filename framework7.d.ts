@@ -1034,7 +1034,7 @@ declare class Framework7 {
 	modal(options: Framework7.ModalOptions): Framework7.Modal;
 	popup(content: HTMLElement | string | Dom7.Dom7, removeOnClose?: boolean): Framework7.Modal;
 	popover(content: HTMLElement | string | Dom7.Dom7, target: HTMLElement | string | Dom7.Dom7, removeOnClose?: boolean): Framework7.Modal;
-	closeModal(modal: Framework7.Modal | HTMLElement | string): void;
+	closeModal(modal?: Framework7.Modal | HTMLElement | string): void;
 	actions(groups: Framework7.ActionSheetButton[][]): void;
 	actions(buttons: Framework7.ActionSheetButton[]): HTMLElement;
 	actions(target: HTMLElement | string | Dom7.Dom7, groups: Framework7.ActionSheetButton[][]): void;
