@@ -655,10 +655,12 @@ declare namespace Framework7 {
 	}
 
 	interface MessagesOptions {
-		autoLayout: boolean;
-		newMessagesFirst: boolean;
-		messages: Message[];
-		messageTemplate: string;
+		autoLayout?: boolean;
+		newMessagesFirst?: boolean;
+		scrollMessages?: boolean;
+		scrollMessagesOnlyOnEdge?: boolean;
+		messages?: Message[];
+		messageTemplate?: string;
 	}
 
 	interface Messages {
