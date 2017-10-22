@@ -206,10 +206,10 @@ declare namespace Framework7 {
 		hideDividers?: boolean;
 		hideGroups?: boolean;
 		// Callbacks
-		onSearch?: (query: string) => void;
-		onEnable?: (query: string) => void;
-		onDisable?: (query: string) => void;
-		onClear?: (query: string) => void;
+		onSearch?: (s: SearchBar) => void;
+		onEnable?: (s: SearchBar) => void;
+		onDisable?: (s: SearchBar) => void;
+		onClear?: (s: SearchBar) => void;
 	}
 
 	interface SearchBar {
