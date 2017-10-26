@@ -1,4 +1,5 @@
 /// <reference path="dom7.d.ts" />
+/// <reference path="template7.d.ts" />
 
 declare namespace Framework7 {
 	interface PageCallbackObject {
