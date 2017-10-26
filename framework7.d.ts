@@ -1129,6 +1129,11 @@ declare class Framework7 {
 	onPageBack(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
 	onPageAfterBack(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
 
+	// Resizable textarea
+	resizeTextarea(textarea: string | HTMLElement | Dom7.Dom7): void;
+	resizableTextarea(textarea: string | HTMLElement | Dom7.Dom7): void;
+	destroyResizableTextarea(pageContainer: string | HTMLElement | Dom7.Dom7): void;
+	initPageResizableTextarea(pageContainer: string | HTMLElement | Dom7.Dom7): void;
 }
 
 declare module "framework7" {
