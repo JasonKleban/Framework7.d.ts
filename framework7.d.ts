@@ -669,9 +669,9 @@ declare namespace Framework7 {
 		container: Dom7.Dom7;
 
 		addMessage(messageParameters: MessageOptions, method?: string, animate?: boolean): HTMLElement;
-		appendMessage(messageParameters: MessageOptions, animate: boolean): HTMLElement;
-		prependMessage(messageParameters: MessageOptions, animate: boolean): HTMLElement;
-		addMessages(messages: Message[], method: string, animate: boolean): HTMLElement[];
+		appendMessage(messageParameters: MessageOptions, animate?: boolean): HTMLElement;
+		prependMessage(messageParameters: MessageOptions, animate?: boolean): HTMLElement;
+		addMessages(messages: Message[], method?: string, animate?: boolean): HTMLElement[];
 		removeMessage(message: Message): boolean;
 		removeMessages(messages: Message[]): boolean;
 		scrollMessages(): void;
