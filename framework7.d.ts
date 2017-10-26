@@ -1102,10 +1102,10 @@ declare class Framework7 {
 	calendar(parameters: Framework7.CalendarOptions): Framework7.Calendar;
 	
 	// Pull to Refresh
-	pullToRefreshDone(ptrContent: string | HTMLElement | Dom7.Dom7) : void;
-	pullToRefreshTrigger(ptrContent: string | HTMLElement | Dom7.Dom7) : void;
-	destroyPullToRefresh(ptrContent: string | HTMLElement | Dom7.Dom7) : void;
-	initPullToRefresh(ptrContent: string | HTMLElement | Dom7.Dom7) : void;
+	initPullToRefresh(pageContainer: string | HTMLElement | Dom7.Dom7) : void;
+	pullToRefreshDone(ptrContent?: string | HTMLElement | Dom7.Dom7) : void;
+	pullToRefreshTrigger(ptrContent?: string | HTMLElement | Dom7.Dom7) : void;
+	destroyPullToRefresh(ptrContent?: string | HTMLElement | Dom7.Dom7) : void;
 	
 	// Infinite Scroll
 	attachInfiniteScroll(container: string | HTMLElement | Dom7.Dom7) : void;
