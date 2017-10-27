@@ -1,4 +1,5 @@
 /// <reference path="dom7.d.ts" />
+/// <reference path="template7.d.ts" />
 
 declare namespace Framework7 {
 	interface PageCallbackObject {
@@ -206,10 +207,10 @@ declare namespace Framework7 {
 		hideDividers?: boolean;
 		hideGroups?: boolean;
 		// Callbacks
-		onSearch?: (query: string) => void;
-		onEnable?: (query: string) => void;
-		onDisable?: (query: string) => void;
-		onClear?: (query: string) => void;
+		onSearch?: (s: SearchBar) => void;
+		onEnable?: (s: SearchBar) => void;
+		onDisable?: (s: SearchBar) => void;
+		onClear?: (s: SearchBar) => void;
 	}
 
 	interface SearchBar {
@@ -655,20 +656,22 @@ declare namespace Framework7 {
 	}
 
 	interface MessagesOptions {
-		autoLayout: boolean;
-		newMessagesFirst: boolean;
-		messages: Message[];
-		messageTemplate: string;
+		autoLayout?: boolean;
+		newMessagesFirst?: boolean;
+		scrollMessages?: boolean;
+		scrollMessagesOnlyOnEdge?: boolean;
+		messages?: Message[];
+		messageTemplate?: string;
 	}
 
 	interface Messages {
 		params: MessagesOptions;
 		container: Dom7.Dom7;
 
-		addMessage(messageParameters: MessageOptions, method: string, animate: boolean): HTMLElement;
-		appendMessage(messageParameters: MessageOptions, animate: boolean): HTMLElement;
-		prependMessage(messageParameters: MessageOptions, animate: boolean): HTMLElement;
-		addMessages(messages: Message[], method: string, animate: boolean): HTMLElement[];
+		addMessage(messageParameters: MessageOptions, method?: string, animate?: boolean): HTMLElement;
+		appendMessage(messageParameters: MessageOptions, animate?: boolean): HTMLElement;
+		prependMessage(messageParameters: MessageOptions, animate?: boolean): HTMLElement;
+		addMessages(messages: Message[], method?: string, animate?: boolean): HTMLElement[];
 		removeMessage(message: Message): boolean;
 		removeMessages(messages: Message[]): boolean;
 		scrollMessages(): void;
@@ -1099,10 +1102,10 @@ declare class Framework7 {
 	calendar(parameters: Framework7.CalendarOptions): Framework7.Calendar;
 	
 	// Pull to Refresh
-	pullToRefreshDone(ptrContent: string | HTMLElement | Dom7.Dom7) : void;
-	pullToRefreshTrigger(ptrContent: string | HTMLElement | Dom7.Dom7) : void;
-	destroyPullToRefresh(ptrContent: string | HTMLElement | Dom7.Dom7) : void;
-	initPullToRefresh(ptrContent: string | HTMLElement | Dom7.Dom7) : void;
+	initPullToRefresh(pageContainer: string | HTMLElement | Dom7.Dom7) : void;
+	pullToRefreshDone(ptrContent?: string | HTMLElement | Dom7.Dom7) : void;
+	pullToRefreshTrigger(ptrContent?: string | HTMLElement | Dom7.Dom7) : void;
+	destroyPullToRefresh(ptrContent?: string | HTMLElement | Dom7.Dom7) : void;
 	
 	// Infinite Scroll
 	attachInfiniteScroll(container: string | HTMLElement | Dom7.Dom7) : void;
@@ -1126,6 +1129,11 @@ declare class Framework7 {
 	onPageBack(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
 	onPageAfterBack(pageName: string, callback: (page: Framework7.PageData) => void): Framework7.PageCallbackObject;
 
+	// Resizable textarea
+	resizeTextarea(textarea: string | HTMLElement | Dom7.Dom7): void;
+	resizableTextarea(textarea: string | HTMLElement | Dom7.Dom7): void;
+	destroyResizableTextarea(pageContainer: string | HTMLElement | Dom7.Dom7): void;
+	initPageResizableTextarea(pageContainer: string | HTMLElement | Dom7.Dom7): void;
 }
 
 declare module "framework7" {
