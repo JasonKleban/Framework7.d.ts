@@ -500,7 +500,7 @@ declare namespace Framework7 {
 		displayValues?: string[];
 		cssClass?: string;
 		textAlign?: string;
-		width?: number;
+		width?: number | string;
 		divider?: boolean;
 		content?: string;
 		
