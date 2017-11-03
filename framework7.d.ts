@@ -135,13 +135,13 @@ declare namespace Framework7 {
 		templates?: any;
 		
 		// Page Callbacks
-		onPageBeforeInit?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-		onPageInit?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-		onPageBeforeAnimation?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-		onPageAfterAnimation?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-		onPageBeforeRemove?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-		onPageBack?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-		onPageAfterBack?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
+		onPageBeforeInit?: (app: Framework7, page: PageData) => void;
+		onPageInit?: (app: Framework7, page: PageData) => void;
+		onPageBeforeAnimation?: (app: Framework7, page: PageData) => void;
+		onPageAfterAnimation?: (app: Framework7, page: PageData) => void;
+		onPageBeforeRemove?: (app: Framework7, page: PageData) => void;
+		onPageBack?: (app: Framework7, page: PageData) => void;
+		onPageAfterBack?: (app: Framework7, page: PageData) => void;
 		
 		// Ajax Callbacks
 		onAjaxStart?: (xhr: Dom7.Dom7XHR) => void;
