@@ -541,7 +541,7 @@ declare namespace Framework7 {
 		updateValuesOnTouchmove?: boolean;
 		value?: any[];
 		formatValue?: (p: Picker, values: any[], displayValues: string[]) => string;
-		cols?: PickerColumn[];
+		cols?: PickerColumnOptions[];
 		
 		// Callbacks
 		onChange?: (p: Picker, values : string[], displayValues : string[]) => void;
