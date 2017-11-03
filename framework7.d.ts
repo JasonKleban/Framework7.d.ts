@@ -432,7 +432,7 @@ declare namespace Framework7 {
 		activeSlideIndex: number;
 		params: PhotoBrowserOptions;
 
-		open(index: number): void;
+		open(index?: number): void;
 		close(): void;
 		toggleZoom(): void;
 		toggleExposition(): void;
