@@ -5,9 +5,9 @@ declare namespace Template7 {
         templates?: any;
         compile? (htmlString: string): any;
         registerHelper? (name: string, helper: Function): any;
-        unregisterHelper? (name: string);
-        registerPartial? (name: string, template: string);
-        unregisterPartial? (name: string);
+        unregisterHelper? (name: string) : any;
+        registerPartial? (name: string, template: string) : any;
+        unregisterPartial? (name: string) : any;
     }
     
 }
