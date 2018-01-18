@@ -13,7 +13,7 @@ npm install https://github.com/JasonKleban/Framework7.d.ts#v2
 
 Assuming that you'll want to include the whole of framework7 library and you're using webpack, you need to alias 'framework7' to be resolved to the full bundle.  That way you can still say `import Framework7 from 'framework7'` in your code and these type definitions will get picked up by typescript, yet at runtime you'll get more than just the core.  I don't want to rename this module declaration, because it seems more flexible to alias thusly for your situation.
 
-```json
+```js
 resolve: {
     alias: {
       'framework7$': 'framework7/dist/framework7.esm.bundle'
