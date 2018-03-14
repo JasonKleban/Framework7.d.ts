@@ -186,9 +186,9 @@ declare namespace Framework7 {
 		title?: string;
 		text?: string;
 		afterText?: string;
-		buttons: ModalButton[];
-		verticalButtons: boolean;
-		onClick: (modal: HTMLElement, index: number) => void;
+		buttons?: ModalButton[];
+		verticalButtons?: boolean;
+		onClick?: (modal: HTMLElement, index: number) => void;
 	}
 
 	interface Modal {
