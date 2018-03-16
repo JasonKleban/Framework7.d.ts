@@ -1020,23 +1020,23 @@ declare class Framework7 {
 
 	
 	// Overlays
-	alert(text: string, callbackOk?: () => void): Framework7.Modal;
-	alert(text: string, title?: string, callbackOk?: () => void): Framework7.Modal;
-	confirm(text: string, callbackOk?: () => void, callbackCancel?: () => void): Framework7.Modal;
-	confirm(text: string, title?: string, callbackOk?: () => void, callbackCancel?: () => void): Framework7.Modal;
-	prompt(text: string, callbackOk?: (input: string) => void, callbackCancel?: (input: string) => void): Framework7.Modal;
-	prompt(text: string, title?: string, callbackOk?: (input: string) => void, callbackCancel?: (input: string) => void): Framework7.Modal;
-	modalLogin(text: string, callbackOk?: (username: string, password: string) => void, callbackCancel?: (username: string, password: string) => void): Framework7.Modal;
-	modalLogin(text: string, title?: string, callbackOk?: (username: string, password: string) => void, callbackCancel?: (username: string, password: string) => void): Framework7.Modal;
-	modalPassword(text: string, callbackOk?: (password: string) => void, callbackCancel?: (password: string) => void): Framework7.Modal;
-	modalPassword(text: string, title?: string, callbackOk?: (password: string) => void, callbackCancel?: (password: string) => void): Framework7.Modal;
+	alert(text: string, callbackOk?: () => void): HTMLElement;
+	alert(text: string, title?: string, callbackOk?: () => void): HTMLElement;
+	confirm(text: string, callbackOk?: () => void, callbackCancel?: () => void): HTMLElement;
+	confirm(text: string, title?: string, callbackOk?: () => void, callbackCancel?: () => void): HTMLElement;
+	prompt(text: string, callbackOk?: (input: string) => void, callbackCancel?: (input: string) => void): HTMLElement;
+	prompt(text: string, title?: string, callbackOk?: (input: string) => void, callbackCancel?: (input: string) => void): HTMLElement;
+	modalLogin(text: string, callbackOk?: (username: string, password: string) => void, callbackCancel?: (username: string, password: string) => void): HTMLElement;
+	modalLogin(text: string, title?: string, callbackOk?: (username: string, password: string) => void, callbackCancel?: (username: string, password: string) => void): HTMLElement;
+	modalPassword(text: string, callbackOk?: (password: string) => void, callbackCancel?: (password: string) => void): HTMLElement;
+	modalPassword(text: string, title?: string, callbackOk?: (password: string) => void, callbackCancel?: (password: string) => void): HTMLElement;
 	showPreloader(title: string): void;
 	hidePreloader(): void;
 	showIndicator(): void;
 	hideIndicator(): void;
-	modal(options: Framework7.ModalOptions): Framework7.Modal;
-	popup(content: HTMLElement | string | Dom7.Dom7, removeOnClose?: boolean): Framework7.Modal;
-	popover(content: HTMLElement | string | Dom7.Dom7, target: HTMLElement | string | Dom7.Dom7, removeOnClose?: boolean): Framework7.Modal;
+	modal(options: Framework7.ModalOptions): HTMLElement;
+	popup(content: HTMLElement | string | Dom7.Dom7, removeOnClose?: boolean): HTMLElement;
+	popover(content: HTMLElement | string | Dom7.Dom7, target: HTMLElement | string | Dom7.Dom7, removeOnClose?: boolean): HTMLElement;
 	closeModal(modal?: Framework7.Modal | HTMLElement | string): void;
 	actions(groups: Framework7.ActionSheetButton[][]): void;
 	actions(buttons: Framework7.ActionSheetButton[]): HTMLElement;
