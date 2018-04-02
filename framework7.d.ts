@@ -135,13 +135,13 @@ declare namespace Framework7 {
 		templates?: any;
 		
 		// Page Callbacks
-		onPageBeforeInit?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-		onPageInit?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-		onPageBeforeAnimation?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-		onPageAfterAnimation?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-		onPageBeforeRemove?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-		onPageBack?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-		onPageAfterBack?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
+		onPageBeforeInit?: (app: Framework7, page: PageData) => void;
+		onPageInit?: (app: Framework7, page: PageData) => void;
+		onPageBeforeAnimation?: (app: Framework7, page: PageData) => void;
+		onPageAfterAnimation?: (app: Framework7, page: PageData) => void;
+		onPageBeforeRemove?: (app: Framework7, page: PageData) => void;
+		onPageBack?: (app: Framework7, page: PageData) => void;
+		onPageAfterBack?: (app: Framework7, page: PageData) => void;
 		
 		// Ajax Callbacks
 		onAjaxStart?: (xhr: Dom7.Dom7XHR) => void;
@@ -432,7 +432,7 @@ declare namespace Framework7 {
 		activeSlideIndex: number;
 		params: PhotoBrowserOptions;
 
-		open(index: number): void;
+		open(index?: number): void;
 		close(): void;
 		toggleZoom(): void;
 		toggleExposition(): void;
@@ -500,7 +500,7 @@ declare namespace Framework7 {
 		displayValues?: string[];
 		cssClass?: string;
 		textAlign?: string;
-		width?: number;
+		width?: number | string;
 		divider?: boolean;
 		content?: string;
 		
@@ -541,7 +541,7 @@ declare namespace Framework7 {
 		updateValuesOnTouchmove?: boolean;
 		value?: any[];
 		formatValue?: (p: Picker, values: any[], displayValues: string[]) => string;
-		cols?: PickerColumn[];
+		cols?: PickerColumnOptions[];
 		
 		// Callbacks
 		onChange?: (p: Picker, values : string[], displayValues : string[]) => void;
