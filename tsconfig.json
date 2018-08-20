@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "es2015",
+        "lib": ["dom", "es2016"],
+        "moduleResolution": "node",
+        "strict": true,
+        "allowSyntheticDefaultImports": false,
+        "sourceMap": true,
+        "noEmit": true
+    }
+}

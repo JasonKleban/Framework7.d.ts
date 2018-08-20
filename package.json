@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JasonKleban/Framework7.d.ts/issues"
   },
-  "homepage": "https://github.com/JasonKleban/Framework7.d.ts#readme"
+  "homepage": "https://github.com/JasonKleban/Framework7.d.ts#readme",
+  "dependencies": {
+    "@types/react": "^16.4.11"
+  }
 }
