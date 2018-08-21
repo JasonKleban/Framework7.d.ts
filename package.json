@@ -2,8 +2,8 @@
   "name": "@types/framework7",
   "version": "1.0.1",
   "description": "Typescript definitions for Framework7, Swiper, Dom7 by iDangero.us",
-  "main": "framework7.d.ts",
-  "types": "framework7.d.ts",
+  "main": "index.d.ts",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
