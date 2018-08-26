@@ -2449,39 +2449,100 @@ declare module "framework7" {
 
     export namespace PullToRefresh {
         export interface PullToRefresh {
-            // TODO: fill in?
-        }
+            /** Link to global app instance */
+            app : Framework7
+            /** PTR HTML element (ptr-content) */
+            el : HTMLElement
+            /** Dom7 instance with PTR HTML element (ptr-content) */
+            $el : Dom7.Dom7
 
-        export interface Parameters {
-            // TODO: fill in?
+            /** Reset PTR state */
+            done() : void
+            /** Trigger PTR */
+            refresh() : void
+            /** Destroy PTR instance and remove PTR event listeners from the specified HTML element */
+            destroy() : void
         }
 
         export interface Events {
-            // TODO: fill in?
+            /** Event will be triggered when you start to move pull to refresh content. As an argument event handler receives ptr element */
+            pullStart(el : PullToRefresh) : void
+            /**  */
+            pullMove(el : PullToRefresh, data : Data): void
+            /**  */
+            pullEnd(el : PullToRefresh, data : Data): void
+            /**  */
+            refresh(el : PullToRefresh, done : () => void): void
+            /**  */
+            done(el : PullToRefresh): void
+            /**  */
+            beforeDestroy(ptr: PullToRefresh): void
         }
     
         export interface DomEvents {
-            // TODO: fill in?
+            /** Event will be triggered when you start to move pull to refresh content */
+            'ptr:pullstart' : () => void
+            /** Event will be triggered during you move pull to refresh content */
+            'ptr:pullmove' : () => void
+            /** Event will be triggered when you release pull to refresh content */
+            'ptr:pullend' : () => void
+            /** Event will be triggered when pull to refresh enters in "refreshing" state. event.detail contain ptr.done method to reset its state after loading completed */
+            'ptr:refresh' : () => void
+            /** Event will be triggered after pull to refresh is done and it is back to initial state (after calling ptr.done method) */
+            'ptr:done' : () => void
+            /** Event will be triggered right before PTR instance will be destroyed */
+            'ptr:beforedestroy' : () => void
         }
 
         export interface AppMethods {
-            // TODO: fill in?
+            /** initialise PTR on specified HTML element container */
+            create(el : HTMLElement | CssSelector) : PullToRefresh
+
+            /** remove PTR event listeners from the specified HTML element */
+            destroy(el : HTMLElement | CssSelector | PullToRefresh) : void
+
+            /** get PTR instance by HTML element */
+            get(el : HTMLElement | CssSelector) : PullToRefresh
+
+            /** reset PTR state on specified PTR content element */
+            done(el : HTMLElement | CssSelector) : PullToRefresh
+
+            /** trigger PTR on specified PTR content element */
+            refresh(el : HTMLElement | CssSelector) : PullToRefresh
+        }
+
+        export interface Data {
+            /** touchmove event */
+            event: Event
+            /** current scroll top position */
+            scrollTop : number
+            /** current translateY offset */
+            translate: number
+            /** touches difference (in px) */
+            touchesDiff: number
         }
     
         export interface AppEvents {
-            // TODO: fill in?
+            /** Event will be triggered when you start to move pull to refresh content. As an argument event handler receives ptr element */
+            ptrPullStart(el : PullToRefresh) : void
+            /**  */
+            ptrPullMove(el : PullToRefresh, data : Data): void
+            /**  */
+            ptrPullEnd(el : PullToRefresh, data : Data): void
+            /**  */
+            ptrRefresh(el : PullToRefresh, done : () => void): void
+            /**  */
+            ptrDone(el : PullToRefresh): void
+            /**  */
+            ptrBeforeDestroy(ptr: PullToRefresh): void
         }
     }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
     export interface Framework7 {
-        // TODO: fill in?
-        // PullToRefresh: PullToRefresh.AppMethods
+        ptr: PullToRefresh.AppMethods
     }
-    //export interface Framework7AppEvents extends PullToRefresh.AppEvents {}
+    export interface Framework7AppEvents extends PullToRefresh.AppEvents {}
 
-    export namespace PullToRefresh {
+    export namespace Radio {
         export interface Radio {
             // TODO: fill in?
         }
@@ -2511,9 +2572,9 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // PullToRefresh: PullToRefresh.AppMethods
+        // Radio: Radio.AppMethods
     }
-    //export interface Framework7AppEvents extends PullToRefresh.AppEvents {}
+    //export interface Framework7AppEvents extends Radio.AppEvents {}
 
     export namespace RangeSlider {
         export interface RangeSlider {
