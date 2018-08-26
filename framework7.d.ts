@@ -400,7 +400,7 @@ declare module "framework7" {
     export interface Framework7AppEvents extends Autocomplete.AppEvents {}
 
     export namespace Badge {
-        export interface Instance { // TODO Rename to component name
+        export interface Badge {
             // TODO: fill in?
         }
 
@@ -428,12 +428,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Badge: Badge.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    export interface Framework7AppEvents extends Badge.AppEvents {}
 
     export namespace Block {
-        export interface Instance { // TODO Rename to component name
+        export interface Block {
             // TODO: fill in?
         }
 
@@ -461,12 +461,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Block: Block.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    export interface Framework7AppEvents extends Block.AppEvents {}
 
     export namespace Button {
-        export interface Instance { // TODO Rename to component name
+        export interface Button {
             // TODO: fill in?
         }
 
@@ -494,12 +494,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Button: Button.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Button.AppEvents {}
 
     export namespace Calendar {
-        export interface Instance { // TODO Rename to component name
+        export interface Calendar {
             // TODO: fill in?
         }
 
@@ -527,12 +527,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Calendar: Calendar.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Calendar.AppEvents {}
 
     export namespace Datepicker {
-        export interface Instance { // TODO Rename to component name
+        export interface Datepicker {
             // TODO: fill in?
         }
 
@@ -560,12 +560,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Datepicker: Datepicker.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Datepicker.AppEvents {}
 
     export namespace Cards {
-        export interface Instance { // TODO Rename to component name
+        export interface Cards {
             // TODO: fill in?
         }
 
@@ -593,12 +593,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Cards: Cards.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Cards.AppEvents {}
 
     export namespace Checkbox {
-        export interface Instance { // TODO Rename to component name
+        export interface Checkbox {
             // TODO: fill in?
         }
 
@@ -626,12 +626,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Checkbox: Checkbox.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Checkbox.AppEvents {}
 
     export namespace Chips {
-        export interface Instance { // TODO Rename to component name
+        export interface Chips {
             // TODO: fill in?
         }
 
@@ -659,12 +659,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Chips: Chips.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Chips.AppEvents {}
 
     export namespace Tags {
-        export interface Instance { // TODO Rename to component name
+        export interface Tags {
             // TODO: fill in?
         }
 
@@ -692,12 +692,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Tags: Tags.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Tags.AppEvents {}
 
     export namespace ContactsList {
-        export interface Instance { // TODO Rename to component name
+        export interface ContactsList {
             // TODO: fill in?
         }
 
@@ -725,12 +725,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // ContactsList: ContactsList.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends ContactsList.AppEvents {}
 
     export namespace DataTable {
-        export interface Instance { // TODO Rename to component name
+        export interface DataTable {
             // TODO: fill in?
         }
 
@@ -758,12 +758,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // DataTable: DataTable.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends DataTable.AppEvents {}
 
     export namespace Dialog {
-        export interface Instance { // TODO Rename to component name
+        export interface Dialog {
             // TODO: fill in?
         }
 
@@ -791,12 +791,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Dialog: Dialog.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Dialog.AppEvents {}
 
     export namespace Elevation {
-        export interface Instance { // TODO Rename to component name
+        export interface Elevation {
             // TODO: fill in?
         }
 
@@ -824,12 +824,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Elevation: Elevation.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Elevation.AppEvents {}
 
     export namespace FloatingActionButton {
-        export interface Instance { // TODO Rename to component name
+        export interface FloatingActionButton {
             // TODO: fill in?
         }
 
@@ -857,12 +857,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // FloatingActionButton: FloatingActionButton.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends FloatingActionButton.AppEvents {}
 
     export namespace FormDataStorage {
-        export interface Instance { // TODO Rename to component name
+        export interface FormDataStorage {
             // TODO: fill in?
         }
 
@@ -890,12 +890,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // FormDataStorage: FormDataStorage.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends FormDataStorage.AppEvents {}
 
     export namespace Gauge {
-        export interface Instance { // TODO Rename to component name
+        export interface Gauge {
             // TODO: fill in?
         }
 
@@ -923,12 +923,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Gauge: Gauge.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Gauge.AppEvents {}
 
     export namespace Grid {
-        export interface Instance { // TODO Rename to component name
+        export interface Grid {
             // TODO: fill in?
         }
 
@@ -956,12 +956,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Grid: Grid.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Grid.AppEvents {}
 
     export namespace LayoutGrid {
-        export interface Instance { // TODO Rename to component name
+        export interface LayoutGrid {
             // TODO: fill in?
         }
 
@@ -989,12 +989,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // LayoutGrid: LayoutGrid.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends LayoutGrid.AppEvents {}
 
     export namespace Icons {
-        export interface Instance { // TODO Rename to component name
+        export interface Icons {
             // TODO: fill in?
         }
 
@@ -1022,12 +1022,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Icons: Icons.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Icons.AppEvents {}
 
     export namespace InfiniteScroll {
-        export interface Instance { // TODO Rename to component name
+        export interface InfiniteScroll {
             // TODO: fill in?
         }
 
@@ -1055,12 +1055,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // InfiniteScroll: InfiniteScroll.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends InfiniteScroll.AppEvents {}
 
     export namespace FormInputs {
-        export interface Instance { // TODO Rename to component name
+        export interface FormInputs {
             // TODO: fill in?
         }
 
@@ -1088,12 +1088,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // FormInputs: FormInputs.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends FormInputs.AppEvents {}
 
     export namespace LazyLoad {
-        export interface Instance { // TODO Rename to component name
+        export interface LazyLoad {
             // TODO: fill in?
         }
 
@@ -1121,12 +1121,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // LazyLoad: LazyLoad.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends LazyLoad.AppEvents {}
 
     export namespace Link {
-        export interface Instance { // TODO Rename to component name
+        export interface Link {
             // TODO: fill in?
         }
 
@@ -1154,12 +1154,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Link: Link.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Link.AppEvents {}
 
     export namespace ListView {
-        export interface Instance { // TODO Rename to component name
+        export interface ListView {
             // TODO: fill in?
         }
 
@@ -1187,12 +1187,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // ListView: ListView.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends ListView.AppEvents {}
 
     export namespace ListIndex {
-        export interface Instance { // TODO Rename to component name
+        export interface ListIndex {
             // TODO: fill in?
         }
 
@@ -1220,12 +1220,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // ListIndex: ListIndex.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends ListIndex.AppEvents {}
 
     export namespace LoginScreen {
-        export interface Instance { // TODO Rename to component name
+        export interface LoginScreen {
             // TODO: fill in?
         }
 
@@ -1253,12 +1253,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // LoginScreen: LoginScreen.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends LoginScreen.AppEvents {}
 
     export namespace Messagebar {
-        export interface Instance { // TODO Rename to component name
+        export interface Messagebar {
             // TODO: fill in?
         }
 
@@ -1286,12 +1286,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Messagebar: Messagebar.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Messagebar.AppEvents {}
 
     export namespace Messages {
-        export interface Instance { // TODO Rename to component name
+        export interface Messages {
             // TODO: fill in?
         }
 
@@ -1319,12 +1319,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Messages: Messages.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Messages.AppEvents {}
 
     export namespace Navbar {
-        export interface Instance { // TODO Rename to component name
+        export interface Navbar {
             // TODO: fill in?
         }
 
@@ -1352,12 +1352,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Navbar: Navbar.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Navbar.AppEvents {}
 
     export namespace Notification {
-        export interface Instance { // TODO Rename to component name
+        export interface Notification {
             // TODO: fill in?
         }
 
@@ -1385,12 +1385,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Notification: Notification.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Notification.AppEvents {}
 
     export namespace Page {
-        export interface Instance { // TODO Rename to component name
+        export interface Page {
             // TODO: fill in?
         }
 
@@ -1418,9 +1418,9 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Page: Page.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Page.AppEvents {}
 
 
     export namespace Panels {
@@ -1450,7 +1450,7 @@ declare module "framework7" {
     }
 
     export namespace PhotoBrowser {
-        export interface Instance { // TODO Rename to component name
+        export interface PhotoBrowser {
             // TODO: fill in?
         }
 
@@ -1478,12 +1478,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // PhotoBrowser: PhotoBrowser.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends PhotoBrowser.AppEvents {}
 
     export namespace Picker {
-        export interface Instance { // TODO Rename to component name
+        export interface Picker {
             // TODO: fill in?
         }
 
@@ -1511,12 +1511,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Picker: Picker.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Picker.AppEvents {}
 
     export namespace Popover {
-        export interface Instance { // TODO Rename to component name
+        export interface Popover {
             // TODO: fill in?
         }
 
@@ -1544,12 +1544,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Popover: Popover.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Popover.AppEvents {}
 
     export namespace Popup {
-        export interface Instance { // TODO Rename to component name
+        export interface Popup {
             // TODO: fill in?
         }
 
@@ -1577,12 +1577,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // popup: Popup.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Popup.AppEvents {}
 
     export namespace Preloader {
-        export interface Instance { // TODO Rename to component name
+        export interface Preloader {
             // TODO: fill in?
         }
 
@@ -1610,12 +1610,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Preloader: Preloader.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Preloader.AppEvents {}
 
     export namespace Progressbar {
-        export interface Instance { // TODO Rename to component name
+        export interface Progressbar {
             // TODO: fill in?
         }
 
@@ -1643,12 +1643,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Progressbar: Progressbar.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Progressbar.AppEvents {}
 
     export namespace PullToRefresh {
-        export interface Instance { // TODO Rename to component name
+        export interface PullToRefresh {
             // TODO: fill in?
         }
 
@@ -1676,12 +1676,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // PullToRefresh: PullToRefresh.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends PullToRefresh.AppEvents {}
 
-    export namespace Radio {
-        export interface Instance { // TODO Rename to component name
+    export namespace PullToRefresh {
+        export interface Radio {
             // TODO: fill in?
         }
 
@@ -1709,12 +1709,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // PullToRefresh: PullToRefresh.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends PullToRefresh.AppEvents {}
 
     export namespace RangeSlider {
-        export interface Instance { // TODO Rename to component name
+        export interface RangeSlider {
             // TODO: fill in?
         }
 
@@ -1742,9 +1742,9 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // RangeSlider: RangeSlider.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends RangeSlider.AppEvents {}
 
     export namespace Searchbar {
         export interface Searchbar {
@@ -1775,12 +1775,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Searchbar: Searchbar.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Searchbar.AppEvents {}
 
     export namespace SheetModal {
-        export interface Instance { // TODO Rename to component name
+        export interface SheetModal {
             // TODO: fill in?
         }
 
@@ -1808,12 +1808,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // SheetModal: SheetModal.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends SheetModal.AppEvents {}
 
     export namespace SmartSelect {
-        export interface Instance { // TODO Rename to component name
+        export interface SmartSelect {
             // TODO: fill in?
         }
 
@@ -1841,12 +1841,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // SmartSelect: SmartSelect.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends SmartSelect.AppEvents {}
 
     export namespace SortableList {
-        export interface Instance { // TODO Rename to component name
+        export interface SortableList {
             // TODO: fill in?
         }
 
@@ -1874,9 +1874,9 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // SortableList: SortableList.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends SortableList.AppEvents {}
 
 
     export namespace Statusbar {
@@ -1944,7 +1944,7 @@ declare module "framework7" {
     }
 
     export namespace Stepper {
-        export interface Instance { // TODO Rename to component name
+        export interface Stepper {
             // TODO: fill in?
         }
 
@@ -1972,12 +1972,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Stepper: Stepper.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Stepper.AppEvents {}
 
     export namespace Subnavbar {
-        export interface Instance { // TODO Rename to component name
+        export interface Subnavbar {
             // TODO: fill in?
         }
 
@@ -2005,12 +2005,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Subnavbar: Subnavbar.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Subnavbar.AppEvents {}
 
     export namespace Swiper {
-        export interface Instance { // TODO Rename to component name
+        export interface Swiper {
             // TODO: fill in?
         }
 
@@ -2038,12 +2038,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Swiper: Swiper.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Swiper.AppEvents {}
 
     export namespace Swipeout {
-        export interface Instance { // TODO Rename to component name
+        export interface Swipeout {
             // TODO: fill in?
         }
 
@@ -2071,12 +2071,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Swipeout: Swipeout.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Swipeout.AppEvents {}
 
     export namespace Tabs {
-        export interface Instance { // TODO Rename to component name
+        export interface Tabs {
             // TODO: fill in?
         }
 
@@ -2104,12 +2104,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Tabs: Tabs.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Tabs.AppEvents {}
 
     export namespace Timeline {
-        export interface Instance { // TODO Rename to component name
+        export interface Timeline {
             // TODO: fill in?
         }
 
@@ -2137,12 +2137,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Timeline: Timeline.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Timeline.AppEvents {}
 
     export namespace Toast {
-        export interface Instance { // TODO Rename to component name
+        export interface Toast {
             // TODO: fill in?
         }
 
@@ -2170,12 +2170,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Toast: Toast.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Toast.AppEvents {}
 
     export namespace Toggle {
-        export interface Instance { // TODO Rename to component name
+        export interface Toggle {
             // TODO: fill in?
         }
 
@@ -2203,12 +2203,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Toggle: Toggle.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Toggle.AppEvents {}
 
     export namespace Toolbar {
-        export interface Instance { // TODO Rename to component name
+        export interface Toolbar {
             // TODO: fill in?
         }
 
@@ -2236,12 +2236,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Toolbar: Toolbar.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Toolbar.AppEvents {}
 
     export namespace Tabbar {
-        export interface Instance { // TODO Rename to component name
+        export interface Tabbar {
             // TODO: fill in?
         }
 
@@ -2269,12 +2269,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Tabbar: Tabbar.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Tabbar.AppEvents {}
 
     export namespace Tooltip {
-        export interface Instance { // TODO Rename to component name
+        export interface Tooltip {
             // TODO: fill in?
         }
 
@@ -2302,12 +2302,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // Tooltip: Tooltip.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends Tooltip.AppEvents {}
 
     export namespace VideoIntelligence {
-        export interface Instance { // TODO Rename to component name
+        export interface VideoIntelligence {
             // TODO: fill in?
         }
 
@@ -2335,9 +2335,9 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // VideoIntelligence: VideoIntelligence.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends VideoIntelligence.AppEvents {}
 
     export namespace View {
         export interface View {
@@ -2369,12 +2369,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // View: View.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends View.AppEvents {}
 
     export namespace VirtualList {
-        export interface Instance { // TODO Rename to component name
+        export interface VirtualList {
             // TODO: fill in?
         }
 
@@ -2402,12 +2402,12 @@ declare module "framework7" {
     }
     export interface Framework7 {
         // TODO: fill in?
-        // ____: ____.AppMethods
+        // VirtualList: VirtualList.AppMethods
     }
-    //export interface Framework7AppEvents extends ____.AppEvents {}
+    //export interface Framework7AppEvents extends VirtualList.AppEvents {}
 
     export namespace Router {
-        export interface Router { // TODO Rename to component name
+        export interface Router {
             /** Template7 template string. Will be compiled as Template7 template */
             template : string
             /** Render function to render component. Must return full html string or HTMLElement */
