@@ -2839,6 +2839,8 @@ declare module "framework7" {
         }
     }
 
+    class Framework7 implements Framework7 {}
+
     // TODO
     
     export type Request = any
