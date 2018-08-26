@@ -1136,107 +1136,11 @@ declare module "framework7" {
     }
     export interface Framework7AppEvents extends Gauge.AppEvents {}
 
-    export namespace Grid {
-        export interface Grid {
-            // TODO: fill in?
-        }
+    export namespace Grid {}
 
-        export interface Parameters {
-            // TODO: fill in?
-        }
+    export namespace LayoutGrid {}
 
-        export interface Events {
-            // TODO: fill in?
-        }
-    
-        export interface DomEvents {
-            // TODO: fill in?
-        }
-
-        export interface AppMethods {
-            // TODO: fill in?
-        }
-    
-        export interface AppEvents {
-            // TODO: fill in?
-        }
-    }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
-    export interface Framework7 {
-        // TODO: fill in?
-        // Grid: Grid.AppMethods
-    }
-    //export interface Framework7AppEvents extends Grid.AppEvents {}
-
-    export namespace LayoutGrid {
-        export interface LayoutGrid {
-            // TODO: fill in?
-        }
-
-        export interface Parameters {
-            // TODO: fill in?
-        }
-
-        export interface Events {
-            // TODO: fill in?
-        }
-    
-        export interface DomEvents {
-            // TODO: fill in?
-        }
-
-        export interface AppMethods {
-            // TODO: fill in?
-        }
-    
-        export interface AppEvents {
-            // TODO: fill in?
-        }
-    }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
-    export interface Framework7 {
-        // TODO: fill in?
-        // LayoutGrid: LayoutGrid.AppMethods
-    }
-    //export interface Framework7AppEvents extends LayoutGrid.AppEvents {}
-
-    export namespace Icons {
-        export interface Icons {
-            // TODO: fill in?
-        }
-
-        export interface Parameters {
-            // TODO: fill in?
-        }
-
-        export interface Events {
-            // TODO: fill in?
-        }
-    
-        export interface DomEvents {
-            // TODO: fill in?
-        }
-
-        export interface AppMethods {
-            // TODO: fill in?
-        }
-    
-        export interface AppEvents {
-            // TODO: fill in?
-        }
-    }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
-    export interface Framework7 {
-        // TODO: fill in?
-        // Icons: Icons.AppMethods
-    }
-    //export interface Framework7AppEvents extends Icons.AppEvents {}
+    export namespace Icons {}
 
     export namespace InfiniteScroll {
         export interface InfiniteScroll {
