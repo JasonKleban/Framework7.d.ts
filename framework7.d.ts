@@ -943,71 +943,36 @@ declare module "framework7" {
     }
     export interface Framework7AppEvents extends Dialog.AppEvents {}
 
-    export namespace Elevation {
-        export interface Elevation {
-            // TODO: fill in?
-        }
-
-        export interface Parameters {
-            // TODO: fill in?
-        }
-
-        export interface Events {
-            // TODO: fill in?
-        }
-    
-        export interface DomEvents {
-            // TODO: fill in?
-        }
-
-        export interface AppMethods {
-            // TODO: fill in?
-        }
-    
-        export interface AppEvents {
-            // TODO: fill in?
-        }
-    }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
-    export interface Framework7 {
-        // TODO: fill in?
-        // Elevation: Elevation.AppMethods
-    }
-    //export interface Framework7AppEvents extends Elevation.AppEvents {}
+    export namespace Elevation { }
 
     export namespace FloatingActionButton {
-        export interface FloatingActionButton {
-            // TODO: fill in?
-        }
+        export interface FloatingActionButton { }
 
-        export interface Parameters {
-            // TODO: fill in?
-        }
+        export interface Parameters { }
 
-        export interface Events {
-            // TODO: fill in?
-        }
+        export interface Events { }
     
         export interface DomEvents {
-            // TODO: fill in?
+            /** Event will be triggered on FAB open or when it morphs to target element */
+            'fab:open' : () => void
+            /** Event will be triggered on FAB close or when it morphs back from target element */
+            'fab:close' : () => void
         }
 
         export interface AppMethods {
-            // TODO: fill in?
+            /** opens FloatingActionButton */
+            open(fabEl : HTMLElement | CssSelector, targetEl : HTMLElement | CssSelector) : FloatingActionButton;
+            /** closes FloatingActionButton */
+            close(fabEl : HTMLElement | CssSelector) : FloatingActionButton;
+            /** toggles FloatingActionButton */
+            toggle(fabEl : HTMLElement | CssSelector) : FloatingActionButton;
         }
     
-        export interface AppEvents {
-            // TODO: fill in?
-        }
+        export interface AppEvents { }
     }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
+    export interface Framework7Params { }
     export interface Framework7 {
-        // TODO: fill in?
-        // FloatingActionButton: FloatingActionButton.AppMethods
+        fab: FloatingActionButton.AppMethods
     }
     //export interface Framework7AppEvents extends FloatingActionButton.AppEvents {}
 
