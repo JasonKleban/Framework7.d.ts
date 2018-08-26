@@ -1319,72 +1319,237 @@ declare module "framework7" {
     export interface Framework7AppEvents extends ListIndex.AppEvents {}
 
     export namespace LoginScreen {
-        export interface LoginScreen {
-            // TODO: fill in?
+        export interface LoginScreen extends EventManagement<Events> {
+            /** Link to global app instance */
+            app : Framework7
+            /** Login Screen HTML element */
+            el : HTMLElement
+            /** Dom7 instance with login screen HTML element */
+            $el : Dom7.Dom7
+            /** Login Screen parameters */
+            params : Parameters
+            /** Boolean prop indicating whether login screen is opened or not */
+            opened : boolean
+
+            /** Open login screen. Where */
+            open(animate : boolean) : void
+            /** Close login screen. Where */
+            close(animate : boolean) : void
+            /** Destroy login screen */
+            destroy() : void
         }
 
         export interface Parameters {
-            // TODO: fill in?
+            /**  */
+            el : HTMLElement
+            /**  */
+            content : string
+            /** true */
+            animate : boolean
+            /** Object with events handlers.. */
+            on: {
+                [event in keyof Events] : Function
+            }
         }
 
         export interface Events {
-            // TODO: fill in?
+            /** Event will be triggered when LoginScreen starts its opening animation. As an argument event handler receives loginScreen instance */
+            open: (loginScreen : LoginScreen) => void
+            /** Event will be triggered after LoginScreen completes its opening animation. As an argument event handler receives loginScreen instance */
+            opened: (loginScreen : LoginScreen) => void
+            /** Event will be triggered when LoginScreen starts its closing animation. As an argument event handler receives loginScreen instance */
+            close: (loginScreen : LoginScreen) => void
+            /** Event will be triggered after LoginScreen completes its closing animation. As an argument event handler receives loginScreen instance */
+            closed: (loginScreen : LoginScreen) => void
+            /** Event will be triggered right before LoginScreen instance will be destroyed. As an argument event handler receives loginScreen instance */
+            beforeDestroy: (loginScreen : LoginScreen) => void
         }
     
         export interface DomEvents {
-            // TODO: fill in?
+            /** Event will be triggered when LoginScreen starts its opening animation */
+            'loginscreen:open' : () => void
+            /** Event will be triggered after LoginScreen completes its opening animation */
+            'loginscreen:opened' : () => void
+            /** Event will be triggered when LoginScreen starts its closing animation */
+            'loginscreen:close' : () => void
+            /** Event will be triggered after LoginScreen completes its closing animation */
+            'loginscreen:closed' : () => void
         }
 
         export interface AppMethods {
-            // TODO: fill in?
+            /** create LoginScreen instance */
+            create(parameters : Parameters) : LoginScreen
+
+            /** destroy LoginScreen instance */
+            destroy(el : HTMLElement | CssSelector | LoginScreen) : void
+
+            /** get Autocomplete instance by HTML element */
+            get(el : HTMLElement | CssSelector) : LoginScreen
+
+            /** open Autocomplete */
+            open(el : HTMLElement | CssSelector) : LoginScreen
+
+            /** closes Autocomplete */
+            close(el : HTMLElement | CssSelector) : LoginScreen
         }
     
         export interface AppEvents {
-            // TODO: fill in?
+            /** Event will be triggered when LoginScreen starts its opening animation. As an argument event handler receives loginScreen instance */
+            loginScreenOpen: (loginScreen : LoginScreen) => void
+            /** Event will be triggered after LoginScreen completes its opening animation. As an argument event handler receives loginScreen instance */
+            loginScreenOpened: (loginScreen : LoginScreen) => void
+            /** Event will be triggered when LoginScreen starts its closing animation. As an argument event handler receives loginScreen instance */
+            loginScreenClose: (loginScreen : LoginScreen) => void
+            /** Event will be triggered after LoginScreen completes its closing animation. As an argument event handler receives loginScreen instance */
+            loginScreenClosed: (loginScreen : LoginScreen) => void
+            /** Event will be triggered right before LoginScreen instance will be destroyed. As an argument event handler receives loginScreen instance */
+            loginScreenBeforeDestroy: (loginScreen : LoginScreen) => void
         }
     }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
     export interface Framework7 {
-        // TODO: fill in?
-        // LoginScreen: LoginScreen.AppMethods
+        loginScreen: LoginScreen.AppMethods
     }
-    //export interface Framework7AppEvents extends LoginScreen.AppEvents {}
+    export interface Framework7AppEvents extends LoginScreen.AppEvents {}
 
     export namespace Messagebar {
         export interface Messagebar {
-            // TODO: fill in?
+            /** Messagebar HTML element. */
+            el : HTMLElement
+            /** Dom7 element with messagebar HTML element. */
+            $el : Dom7.Dom7
+            /** Messagebar textarea HTML element */
+            textareaEl : HTMLTextAreaElement
+            /** Dom7 element with messagebar textarea HTML element */
+            $textareaEl : Dom7.Dom7
+            /** Object with passed initialization parameters */
+            params : Parameters
+            /** Array with messagebar attachments */
+            attachments : string[]
+
+            /** Get messagebar textarea value */
+            getValue() : string
+            /** Set messagebar textarea value/text */
+            setValue(value : string) : void
+            /** Clear textarea and update/reset its size */
+            clear() : void
+            /** Focus messagebar textarea */
+            focus() : void
+            /** Remove focus from messagebar textarea */
+            blur() : void
+            /** Set/change messagebar placeholder text */
+            setPlaceholder(placeholder : string) : void
+            /** Force Messagebar to resize messages page depending on messagebar height/size */
+            resizePage() : void
+            /** Dynamically create attachments block HTML element */
+            attachmentsCreate() : void
+            /** Show attachments block */
+            attachmentsShow() : void
+            /** Hide attachments block */
+            attachmentsHide() : void
+            /** Toggle attachments block */
+            attachmentsToggle() : void
+            /** Render attachments block based on attachments data */
+            renderAttachments() : void
+            /** Dynamically create messagebar sheet block HTML element */
+            sheetCreate() : void
+            /** Show messagebar sheet */
+            sheetShow() : void
+            /** Hide messagebar sheet */
+            sheetHide() : void
+            /** Toggle messagebar sheet */
+            sheetToggle() : void
+            /** Destroy messagebar instance */
+            destroy() : void
         }
 
         export interface Parameters {
-            // TODO: fill in?
+            /** CSS selector or HTML element of messagebar element (div class="messagebar"). */
+            el: HTMLElement | CssSelector
+            /** CSS selector or HTML element of messagebar textarea element. By default (if not passed) will try to look for textarea inside of messagebar. */
+            textareaEl: HTMLElement | CssSelector
+            /** Max height of textarea when it resized depending on amount of its text. (default null) */
+            maxHeight?: number
+            /** Array with attachments. For example ['path/to/image1.png', 'path/to/image2.png']. (default []) */
+            attachments?: string[]
+            /** Disable if you don't want to resize messages page when messagebar textarea size changed. (default true) */
+            resizePage?: boolean
+            /** Object with events handlers.. */
+            on: {
+                [event in keyof Events] : Function
+            }
+
+            /** Function to render attachments block. Must return full attachments HTML string. */
+            renderAttachments: (attachments : string[]) => string
+            /** Function to render single attachment. Must return full attachment HTML string. */
+            renderAttachment: (attachment : string) => string
         }
 
         export interface Events {
-            // TODO: fill in?
+            /** Event will be triggered after messagebar textarea value changed. As an argument event handler receives messagebar instance */
+            change(messagebar : Messagebar) : void
+            /** Event will be triggered when messagebar textarea gets focus. As an argument event handler receives messagebar instance */
+            focus(messagebar : Messagebar) : void
+            /** Event will be triggered when messagebar textarea loses focus. As an argument event handler receives messagebar instance */
+            blur(messagebar : Messagebar) : void
+            /** Event will be triggered when messagebar resizes messages page. As an argument event handler receives messagebar instance */
+            resizePage(messagebar : Messagebar) : void
+            /** Event will be triggered after click on messagebar attachment delete button. As an argument event handler receives messagebar instance, clicked attachment HTML element and attachment index number */
+            attachmentDelete(messagebar : Messagebar, attachmentEl : HTMLElement, attachmentIndex: number) : void
+            /** Event will be triggered on messagebar attachment click. As an argument event handler receives messagebar instance, clicked attachment HTML element and attachment index number */
+            attachmentClick(messagebar : Messagebar, attachmentEl : HTMLElement, attachmentIndex: number) : void
+            /** Event will be triggered right before Messagebar instance will be destroyed */
+            beforeDestroy(messagebar : Messagebar) : void
         }
     
         export interface DomEvents {
-            // TODO: fill in?
+            /** Event will be triggered after messagebar textarea value changed */
+            'messagebar:change': void
+            /** Event will be triggered when messagebar textarea gets focus */
+            'messagebar:focus': void
+            /** Event will be triggered when messagebar textarea loses focus */
+            'messagebar:blur': void
+            /** Event will be triggered when messagebar resizes messages page */
+            'messagebar:resizepage': void
+            /** Event will be triggered after click on messagebar attachment delete button */
+            'messagebar:attachmentdelete': void
+            /** Event will be triggered on messagebar attachment click */
+            'messagebar:attachmentclick': void
+            /** Event will be triggered right before Messagebar instance will be destroyed */
+            'messagebar:beforedestroy': void
         }
 
         export interface AppMethods {
-            // TODO: fill in?
+            /** create Messagebar instance */
+            create(parameters : Parameters) : Messagebar
+
+            /** destroy Messagebar instance */
+            destroy(el : HTMLElement | CssSelector | Messagebar) : void
+
+            /** get Messagebar instance by HTML element */
+            get(el : HTMLElement | CssSelector) : Messagebar
         }
     
         export interface AppEvents {
-            // TODO: fill in?
+            /** Event will be triggered after messagebar textarea value changed. As an argument event handler receives messagebar instance */
+            messagebarChange(messagebar : Messagebar) : void
+            /** Event will be triggered when messagebar textarea gets focus. As an argument event handler receives messagebar instance */
+            messagebarFocus(messagebar : Messagebar) : void
+            /** Event will be triggered when messagebar textarea loses focus. As an argument event handler receives messagebar instance */
+            messagebarBlur(messagebar : Messagebar) : void
+            /** Event will be triggered when messagebar resizes messages page. As an argument event handler receives messagebar instance */
+            messagebarResizePage(messagebar : Messagebar) : void
+            /** Event will be triggered after click on messagebar attachment delete button. As an argument event handler receives messagebar instance, clicked attachment HTML element and attachment index number */
+            messagebarAttachmentDelete(messagebar : Messagebar, attachmentEl : HTMLElement, attachmentIndex: number) : void
+            /** Event will be triggered on messagebar attachment click. As an argument event handler receives messagebar instance, clicked attachment HTML element and attachment index number */
+            messagebarAttachmentClick(messagebar : Messagebar, attachmentEl : HTMLElement, attachmentIndex: number) : void
+            /** Event will be triggered right before Messagebar instance will be destroyed */
+            messagebarBeforeDestroy(messagebar : Messagebar) : void
         }
     }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
     export interface Framework7 {
-        // TODO: fill in?
-        // Messagebar: Messagebar.AppMethods
+        messagebar: Messagebar.AppMethods
     }
-    //export interface Framework7AppEvents extends Messagebar.AppEvents {}
+    export interface Framework7AppEvents extends Messagebar.AppEvents {}
 
     export namespace Messages {
         export interface Messages {
