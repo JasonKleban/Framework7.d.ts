@@ -1085,11 +1085,11 @@ declare module "framework7" {
         }
 
         export interface AppMethods {
-            /** create Gauge  instance */
+            /** create Gauge instance */
             create(parameters : Parameters) : Gauge;
-            /** destroy Gauge  instance */
+            /** destroy Gauge instance */
             destroy(el : HTMLElement | CssSelector | Gauge) : void;
-            /** get Gauge  instance by HTML element */
+            /** get Gauge instance by HTML element */
             get(el : HTMLElement | CssSelector) : Gauge;
             /** update/rerender Gauge SVG according to passed parameters */
             update(parameters : Parameters) : Gauge;
@@ -1383,13 +1383,13 @@ declare module "framework7" {
             /** destroy LoginScreen instance */
             destroy(el : HTMLElement | CssSelector | LoginScreen) : void
 
-            /** get Autocomplete instance by HTML element */
+            /** get LoginScreen instance by HTML element */
             get(el : HTMLElement | CssSelector) : LoginScreen
 
-            /** open Autocomplete */
+            /** open LoginScreen */
             open(el : HTMLElement | CssSelector) : LoginScreen
 
-            /** closes Autocomplete */
+            /** closes LoginScreen */
             close(el : HTMLElement | CssSelector) : LoginScreen
         }
     
@@ -1553,105 +1553,274 @@ declare module "framework7" {
 
     export namespace Messages {
         export interface Messages {
-            // TODO: fill in?
+            /** Object with passed initialization parameters */
+            params : Parameters
+            /** Messages container HTML element (<div class="messages">) */
+            el : HTMLElement
+            /** Dom7 element with messages HTML element */
+            $el : Dom7.Dom7
+            /** Array with messages */
+            messages : Message[]
+
+            /** Show typing message indicator */
+            showTyping(message : Message) : void
+            /** Hide typing message indicator */
+            hideTyping() : void
+            /** Add new message to the end or to the beginning depending on method parameter */
+            addMessage(message : Message, method : 'append' | 'prepend', animate?: boolean) : void
+            /** Add multiple messages per once. */
+            addMessages(messages : Message[], method : 'append' | 'prepend', animate?: boolean) : void
+            /** Remove message */
+            removeMessage(message : Message) : void
+            /** Remove multiple messages */
+            removeMessages(messages : Message[]) : void
+            /** Scroll messages to top/bottom depending on newMessagesFirst parameter */
+            scroll(durationMS : number, position : number) : void
+            /** Render messages HTML depending on messages array */
+            renderMessages() : void
+            /** Force messages auto layout */
+            layout() : void
+            /** Clear/remove all the messages */
+            clear() : void
+            /** Destroy messages instance */
+            destroy() : void
+        }
+
+        export interface Message {
+            /** Message text. */
+            text: string
+            /** Single message header. */
+            header: string
+            /** Single message footer. */
+            footer: string
+            /** Sender name. */
+            name: string
+            /** Sender avatar URL string. */
+            avatar: string
+            /** Message type - sent or received. (default sent) */
+            type?: string
+            /** Message text header. */
+            textHeader: string
+            /** Message text footer. */
+            textFooter: string
+            /** Message image HTML string, e.g. <img src="path/to/image">. Can be used instead of imageSrc parameter. */
+            image: string
+            /** Message image URL string. Can be used instead of image parameter. */
+            imageSrc: string
+            /** Defines whether it should be rendered as a message or as a messages title. */
+            isTitle: boolean
         }
 
         export interface Parameters {
-            // TODO: fill in?
+            /** Enable Auto Layout to add all required additional classes automatically based on passed conditions. (default true) */
+            autoLayout?: boolean
+            /** Enable if you want to use new messages on top, instead of having them on bottom. (default false) */
+            newMessagesFirst?: boolean
+            /** Enable/disable messages autoscrolling when adding new message. (default true) */
+            scrollMessages?: boolean
+            /** If enabled then messages autoscrolling will happen only when user is on top/bottom of the messages view. (default true) */
+            scrollMessagesOnEdge?: boolean
+            /** Array with initial messages. Each message in array should be presented as an object with single message parameters. */
+            messages: Message[]
+            /** Object with events handlers.. */
+            on: {
+                [event in keyof Events] : Function
+            }
+
+            /** Function to render single message. Must return full message HTML string. */
+            renderMessage: (message : Message) => string
+
+            /** Function that must return boolean true or false based on required condition depending on previous and next messages. In case of match then message-first class will be added to message. */
+            firstMessageRule: (message : Message, previousMessage : Message, nextMessage : Message) => boolean
+            /** Function that must return boolean true or false based on required condition depending on previous and next messages. In case of match then message-last class will be added to message. */
+            lastMessageRule: (message : Message, previousMessage : Message, nextMessage : Message) => boolean
+            /** Function that must return boolean true or false based on required condition depending on previous and next messages. In case of match then message-tail class will be added to message. */
+            tailMessageRule: (message : Message, previousMessage : Message, nextMessage : Message) => boolean
+            /** Function that must return boolean true or false based on required condition depending on previous and next messages. In case of match then message-same-name class will be added to message. */
+            sameNameMessageRule: (message : Message, previousMessage : Message, nextMessage : Message) => boolean
+            /** Function that must return boolean true or false based on required condition depending on previous and next messages. In case of match then message-same-header class will be added to message. */
+            sameHeaderMessageRule: (message : Message, previousMessage : Message, nextMessage : Message) => boolean
+            /** Function that must return boolean true or false based on required condition depending on previous and next messages. In case of match then message-same-footer class will be added to message. */
+            sameFooterMessageRule: (message : Message, previousMessage : Message, nextMessage : Message) => boolean
+            /** Function that must return boolean true or false based on required condition depending on previous and next messages. In case of match then message-same-avatar class will be added to message. */
+            sameAvatarMessageRule: (message : Message, previousMessage : Message, nextMessage : Message) => boolean
+            /** Function that must return additional message classes as string, based on required condition depending on previous and next messages.. */
+            customClassMessageRule: (message : Message, previousMessage : Message, nextMessage : Message) => string
         }
 
         export interface Events {
-            // TODO: fill in?
+            /** Event will be triggered right before Messages instance will be destroyed */
+            beforeDestroy(messages : Messages) : void
         }
     
         export interface DomEvents {
-            // TODO: fill in?
+            /** Event will be triggered right before Messages instance will be destroyed */
+            'messages:beforedestroy': void
         }
 
         export interface AppMethods {
-            // TODO: fill in?
+            /** create Messagebar instance */
+            create(parameters : Parameters) : Messages
+
+            /** destroy Messagebar instance */
+            destroy(el : HTMLElement | CssSelector | Messages) : void
+
+            /** get Messagebar instance by HTML element */
+            get(el : HTMLElement | CssSelector) : Messages
         }
     
         export interface AppEvents {
-            // TODO: fill in?
+            /** Event will be triggered right before Messages instance will be destroyed */
+            messagesBeforeDestroy(messages : Messages) : void
         }
     }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
     export interface Framework7 {
-        // TODO: fill in?
-        // Messages: Messages.AppMethods
+        messages: Messages.AppMethods
     }
-    //export interface Framework7AppEvents extends Messages.AppEvents {}
+    export interface Framework7AppEvents extends Messages.AppEvents {}
 
     export namespace Navbar {
-        export interface Navbar {
-            // TODO: fill in?
-        }
-
-        export interface Parameters {
-            // TODO: fill in?
-        }
-
-        export interface Events {
-            // TODO: fill in?
-        }
-    
-        export interface DomEvents {
-            // TODO: fill in?
+        export interface AppParameters {
+            /** Will hide Navbars on page scroll. (default false) */
+            hideOnPageScroll?: boolean
+            /** Set to true to show hidden Navbar when scrolling reaches end of the page. (default true) */
+            showOnPageScrollEnd?: boolean
+            /** Set to false and hidden Navbar will not become visible when you scroll page to top everytime. They will become visible only at the most top scroll position, in the beginning of the page. (default true) */
+            showOnPageScrollTop?: boolean
+            /** When enabled then every click on navbar's title element will scroll related page to the top. (default true) */
+            scrollTopOnTitleClick?: boolean
+            /** When enabled then it will try to position title at the center in iOS theme. Sometime (with some custom design) it may not needed. This will have effect only in iOS theme. (default true) */
+            iosCenterTitle?: boolean
         }
 
         export interface AppMethods {
-            // TODO: fill in?
-        }
-    
-        export interface AppEvents {
-            // TODO: fill in?
+            /** Hide navbar */
+            hide(navbarEl : HTMLElement | CssSelector, animate?: boolean) : void
+            /** Show navbar */
+            show(navbarEl : HTMLElement | CssSelector, isAnimated?: boolean) : void
+            /** Recalculate positional styles for Navbar elements. It could be useful after you change some of Navbar elements dynamically. This will have effect only in iOS theme */
+            size(navbarEl : HTMLElement | CssSelector) : void
+            /** Get navbar HTML element by specified page element. Useful only when dynamic navbar is enabled. In this case it is out of the page container. This will have effect only in iOS theme */
+            getElByPage(pageEl : HTMLElement | CssSelector) : void
         }
     }
     export interface Framework7Params {
-        // TODO: fill in?
+        navbar: Navbar.AppParameters
     }
     export interface Framework7 {
-        // TODO: fill in?
-        // Navbar: Navbar.AppMethods
+        navbar: Navbar.AppMethods
     }
-    //export interface Framework7AppEvents extends Navbar.AppEvents {}
 
     export namespace Notification {
-        export interface Notification {
-            // TODO: fill in?
+        export interface Notification extends EventManagement<Events> {
+            /** Link to global app instance */
+            app : Framework7
+            /** Notification HTML element */
+            el : HTMLElement
+            /** Dom7 instance with notification HTML element */
+            $el : Dom7.Dom7
+            /** Notification parameters */
+            params : Parameters
+
+            /** Open notification */
+            open() : void
+            /** Close notification */
+            close() : void
         }
 
         export interface Parameters {
-            // TODO: fill in?
+            /** Notification element. Can be useful if you already have Notification element in your HTML and want to create new instance using this element. */
+            el: HTMLElement
+            /** Notification icon HTML layout, e.g. <i class="f7-icons">home</i> or image <img src="path/to/icon.png">. */
+            icon: string
+            /** Notification title. */
+            title: string
+            /** Additional text on the right side of title. */
+            titleRightText: string
+            /** Notification subtitle. */
+            subtitle: string
+            /** Notification inner text. */
+            text: string
+            /** Adds notification close button. (default false) */
+            closeButton?: boolean
+            /** Timeout delay (in ms) to close notification automatically. */
+            closeTimeout: number
+            /** If enabled, notification will be closed on notification click. (default false) */
+            closeOnClick?: boolean
+            /** If enabled, notification can be closed by swipe gesture. (default true) */
+            swipeToClose?: boolean
+            /** Additional css class to add. */
+            cssClass: string
+            /** Custom function to render Notification. Must return notification html. */
+            render: () => string
+            /** Object with events handlers.. */
+            on: {
+                [event in keyof Events] : Function
+            }
         }
 
         export interface Events {
-            // TODO: fill in?
+            /** Event will be triggered when user clicks on Notification element. As an argument event handler receives notification instance */
+            click: (notification : Notification) => void
+            /** Event will be triggered when Notification starts its opening animation. As an argument event handler receives notification instance */
+            open: (notification : Notification) => void
+            /** Event will be triggered after Notification completes its opening animation. As an argument event handler receives notification instance */
+            opened: (notification : Notification) => void
+            /** Event will be triggered when Notification starts its closing animation. As an argument event handler receives notification instance */
+            close: (notification : Notification) => void
+            /** Event will be triggered after Notification completes its closing animation. As an argument event handler receives notification instance */
+            closed: (notification : Notification) => void
+            /** Event will be triggered right before Notification instance will be destroyed. As an argument event handler receives notification instance */
+            beforeDestroy: (notification : Notification) => void
         }
     
         export interface DomEvents {
-            // TODO: fill in?
+            /** Event will be triggered when Notification starts its opening animation */
+            'notification:open' : () => void
+            /** Event will be triggered after Notification completes its opening animation */
+            'notification:opened' : () => void
+            /** Event will be triggered when Notification starts its closing animation */
+            'notification:close' : () => void
+            /** Event will be triggered after Notification completes its closing animation */
+            'notification:closed' : () => void
         }
 
         export interface AppMethods {
-            // TODO: fill in?
+            /** create Notification instance */
+            create(parameters : Parameters) : Notification
+
+            /** destroy Notification instance */
+            destroy(el : HTMLElement | CssSelector | Notification) : void
+
+            /** get Notification instance by HTML element */
+            get(el : HTMLElement | CssSelector) : Notification
+
+            /** open Notification */
+            open(el : HTMLElement | CssSelector) : Notification
+
+            /** closes Notification */
+            close(el : HTMLElement | CssSelector) : Notification
         }
     
         export interface AppEvents {
-            // TODO: fill in?
+            /** Event will be triggered when user clicks on Notification element. As an argument event handler receives notification instance */
+            notificationClick: (notification : Notification) => void
+            /** Event will be triggered when Notification starts its opening animation. As an argument event handler receives notification instance */
+            notificationOpen: (notification : Notification) => void
+            /** Event will be triggered after Notification completes its opening animation. As an argument event handler receives notification instance */
+            notificationOpened: (notification : Notification) => void
+            /** Event will be triggered when Notification starts its closing animation. As an argument event handler receives notification instance */
+            notificationClose: (notification : Notification) => void
+            /** Event will be triggered after Notification completes its closing animation. As an argument event handler receives notification instance */
+            notificationClosed: (notification : Notification) => void
+            /** Event will be triggered right before Notification instance will be destroyed. As an argument event handler receives notification instance */
+            notificationBeforeDestroy: (notification : Notification) => void
         }
     }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
     export interface Framework7 {
-        // TODO: fill in?
-        // Notification: Notification.AppMethods
+        notification: Notification.AppMethods
     }
-    //export interface Framework7AppEvents extends Notification.AppEvents {}
+    export interface Framework7AppEvents extends Notification.AppEvents {}
 
     export namespace Page {
         export interface Page {
