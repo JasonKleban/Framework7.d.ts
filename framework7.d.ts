@@ -800,6 +800,27 @@ declare module "framework7" {
             onClick: (dialog : Dialog, e : Event) => void
         }
 
+        export interface AppParameters {
+            /** Default dialogs shortcuts title. If not specified, will be equal to app.name. */
+            title? : string
+            /** Default "OK" button text. (default OK) */
+            buttonOk?: string
+            /** Default "Cancel" button text. (default Cancel) */
+            buttonCancel?: string
+            /** Default username field placeholder in Login dialog. (default Username) */
+            usernamePlaceholder?: string
+            /** Default password field placeholder in Login & Password dialogs. (default Password) */
+            passwordPlaceholder?: string
+            /** Default title for Preloader dialog. (default Loading...) */
+            preloaderTitle?: string
+            /** Default title for Progress dialog. (default Loading...) */
+            progressTitle?: string
+            /** Will automatically destroy all predefined dialogs (Alert, Confirm, Prompt, etc.) on close. (default true) */
+            destroyPredefinedDialogs?: boolean
+            /** Enables keyboard shortcuts (Enter and Esc) keys for predefined dialogs (Alert, Confirm, Prompt, Login, Password) "Ok" and "Cancel" buttons. (default true) */
+            keyboardActions?: boolean
+        }
+
         export interface Parameters {
             /** Dialog element. Can be useful if you already have Dialog element in your HTML and want to create new instance using this element. */
             el: HTMLElement
@@ -864,6 +885,41 @@ declare module "framework7" {
             open(el : HTMLElement | CssSelector, animate : boolean) : Dialog;
             /** closes Dialog */
             close(el : HTMLElement | CssSelector, animate : boolean) : Dialog;
+
+            /** create Alert Dialog and open it */
+            alert(text : string, title : string, callback?: () => void) : Dialog
+            /** create Alert Dialog with default title and open it */
+            alert(text : string, callback?: () => void) : Dialog
+
+            /** create Confirm Dialog and open it */
+            confirm(text : string, title : string, callbackOk?: () => void, callbackCancel?: () => void) : Dialog
+            /** create Confirm Dialog with default title and open it */
+            confirm(text : string, callbackOk?: () => void, callbackCancel?: () => void) : Dialog
+
+            /** create Prompt Dialog and open it */
+            prompt(text : string, title : string, callbackOk?: (value : string) => void, callbackCancel?: (value : string) => void) : Dialog
+            /** create Prompt Dialog with default title and open it */
+            prompt(text : string, callbackOk?: (value : string) => void, callbackCancel?: (value : string) => void) : Dialog
+
+            /** create Login Dialog and open it */
+            login(text : string, title : string, callbackOk?: (username : string, password : string) => void, callbackCancel?: (username : string, password : string) => void) : Dialog
+            /** create Login Dialog with default title and open it */
+            login(text : string, callbackOk?: (username : string, password : string) => void, callbackCancel?: (username : string, password : string) => void) : Dialog
+
+            /** create Password Dialog and open it */
+            password(text : string, title : string, callbackOk?: (password : string) => void, callbackCancel?: (password : string) => void) : Dialog
+            /** create Password Dialog with default title and open it */
+            password(text : string, callbackOk?: (password : string) => void, callbackCancel?: (password : string) => void) : Dialog
+            
+            /** create Preloader Dialog and open it */
+            preloader(title?: string, color?: string) : Dialog
+            
+            /** create Progress Dialog and open it */
+            progress(
+                title?: string, 
+                /** Optional. Progressbar progress (from 0 to 100). If no number passed then it will have infinite progressbar. */
+                progress?: number, 
+                color?: string) : Dialog
         }
     
         export interface AppEvents {
@@ -879,7 +935,9 @@ declare module "framework7" {
             dialogBeforeDestroy: (dialog : Dialog) => void
         }
     }
-    export interface Framework7Params {}
+    export interface Framework7Params {
+        dialog: Dialog.AppParameters
+    }
     export interface Framework7 {
         dialog: Dialog.AppMethods
     }
