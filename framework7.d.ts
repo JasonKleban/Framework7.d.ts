@@ -1824,37 +1824,57 @@ declare module "framework7" {
 
     export namespace Page {
         export interface Page {
-            // TODO: fill in?
-        }
-
-        export interface Parameters {
-            // TODO: fill in?
-        }
-
-        export interface Events {
-            // TODO: fill in?
+            /** Initialized app instance */
+            app : Framework7
+            /** View instance that contains this page (if this View was initialized) */
+            view : View.View
+            /** Router instance that contains this page (if this View was initialized). Same as page.view.router */
+            router : Router.Router
+            /** Value of page's data-name attribute */
+            name : string
+            /** Page element */
+            el : HTMLElement
+            /** Dom7 instance with Page element */
+            $el : Dom7.Dom7
+            /** Related navbar element for this page. Available only in iOS theme with dynamic navbar enabled. */
+            navbarEl : HTMLElement
+            /** Dom7 instance with related navbar element for this page. Available only in iOS theme with dynamic navbar enabled. */
+            $navbarEl : Dom7.Dom7
+            /** Page position before transition or direction of where this Page comes from. It will be next if you load new page, previous - if you go back to this page, or current if this page replaces the currently active one. */
+            from : string
+            /** New page position or where this page goes to. Can be same next, previous or current */
+            to : string
+            /** Alias for page.from */
+            position : string
+            /** Direction of page transition (if applicable). Can be forward or backward */
+            direction : string
+            /** Route associated with this page, object with current route data that was used to load this page. It has the following properties */
+            route : Route
+            /** Page data of the page that was currently active before this new page. */
+            pageFrom : Page
+            /** Template7 context that was passed for this page when using Template7 pages */
+            context : Template7.Template7
         }
     
         export interface DomEvents {
-            // TODO: fill in?
-        }
-
-        export interface AppMethods {
-            // TODO: fill in?
-        }
-    
-        export interface AppEvents {
-            // TODO: fill in?
+            /** Event will be triggered when new page just inserted to DOM */
+            'page:mounted': () => void
+            /** Event will be triggered after Framework7 initialize required page's components and navbar */
+            'page:init': () => void
+            /** This event will be triggered in case of navigating to the page that was already initialized. */
+            'page:reinit': () => void
+            /** Event will be triggered when everything initialized and page is ready to be transitioned into view (into active/current position) */
+            'page:beforein': () => void
+            /** Event will be triggered after page transitioned into view */
+            'page:afterin': () => void
+            /** Event will be triggered right before page is going to be transitioned out of view */
+            'page:beforeout': () => void
+            /** Event will be triggered after page transitioned out of view */
+            'page:afterout': () => void
+            /** Event will be triggered right before Page will be removed from DOM. This event could be very useful if you need to detach some events / destroy some plugins to free memory */
+            'page:beforeremove': () => void
         }
     }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
-    export interface Framework7 {
-        // TODO: fill in?
-        // Page: Page.AppMethods
-    }
-    //export interface Framework7AppEvents extends Page.AppEvents {}
 
 
     export namespace Panels {
