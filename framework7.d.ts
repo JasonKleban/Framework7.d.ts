@@ -104,7 +104,7 @@ declare module "framework7" {
             destroy() : void
         }
 
-        export interface ActionSheetButton {
+        export interface Button {
             /** String with Button's text (could be HTML string) */
             text:string
             /** HTML string of icon */
@@ -139,7 +139,7 @@ declare module "framework7" {
             /** Whether the Action Sheet should be opened/closed with animation or not. Can be overwritten in .open() and .close() methods*/
             animate:boolean
             /** Action sheet groups/buttons. In this case Actions layout will be generated dynamically based on passed groups and buttons. In case of groups it should array where each item represent array with buttons for group.*/
-            buttons: ActionSheetButton[]
+            buttons: Button[]
             /** Enables grid buttons layout*/
             grid:boolean
             /** When enabled, action sheet will be converted to Popoveron large screens.*/
@@ -183,7 +183,7 @@ declare module "framework7" {
             ) : ActionSheet;
             
             /** destroy Action Sheet instance */
-            destroy(el : HTMLElement | CssSelector) : void;
+            destroy(el : HTMLElement | CssSelector | ActionSheet) : void;
             /** get Action Sheet instance by HTML element */
             get(el : HTMLElement | CssSelector) : ActionSheet;
             /** opens Action Sheet */
@@ -635,16 +635,16 @@ declare module "framework7" {
         }
 
         export interface AppMethods {
-            /** create Autocomplete instance */
+            /** create Calendar instance */
             create(parameters : Parameters) : Calendar
 
-            /** destroy Autocomplete instance */
-            destroy(el : HTMLElement | CssSelector) : void
+            /** destroy Calendar instance */
+            destroy(el : HTMLElement | CssSelector | Calendar) : void
 
-            /** get Autocomplete instance by HTML element */
+            /** get Calendar instance by HTML element */
             get(el : HTMLElement | CssSelector) : Calendar
 
-            /** closes Autocomplete */
+            /** closes Calendar */
             close(el : HTMLElement | CssSelector) : Calendar
         }
     
@@ -721,107 +721,169 @@ declare module "framework7" {
 
     export namespace Tags { }
 
-    export namespace ContactsList {
-        export interface ContactsList {
-            // TODO: fill in?
-        }
-
-        export interface Parameters {
-            // TODO: fill in?
-        }
-
-        export interface Events {
-            // TODO: fill in?
-        }
-    
-        export interface DomEvents {
-            // TODO: fill in?
-        }
-
-        export interface AppMethods {
-            // TODO: fill in?
-        }
-    
-        export interface AppEvents {
-            // TODO: fill in?
-        }
-    }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
-    export interface Framework7 {
-        // TODO: fill in?
-        // ContactsList: ContactsList.AppMethods
-    }
-    //export interface Framework7AppEvents extends ContactsList.AppEvents {}
+    export namespace ContactsList { }
 
     export namespace DataTable {
-        export interface DataTable {
-            // TODO: fill in?
-        }
+        export interface DataTable { }
 
         export interface Parameters {
-            // TODO: fill in?
-        }
-
-        export interface Events {
-            // TODO: fill in?
-        }
-    
-        export interface DomEvents {
-            // TODO: fill in?
+            /** Data Table element. Can be useful if you already have Data Table element in your HTML and want to create new instance using this element */
+            el: HTMLElement
         }
 
         export interface AppMethods {
-            // TODO: fill in?
+            /** create DataTable instance */
+            create(parameters : Parameters ) : DataTable;            
+            /** destroy DataTable instance */
+            destroy(el : HTMLElement | CssSelector | DataTable) : void;
+            /** get DataTable instance by HTML element */
+            get(el : HTMLElement | CssSelector) : DataTable;
+            /** opens DataTable */
+            open(el : HTMLElement | CssSelector, animate : boolean) : DataTable;
+            /** closes DataTable */
+            close(el : HTMLElement | CssSelector, animate : boolean) : DataTable;
         }
-    
-        export interface AppEvents {
-            // TODO: fill in?
-        }
-    }
-    export interface Framework7Params {
-        // TODO: fill in?
     }
     export interface Framework7 {
-        // TODO: fill in?
-        // DataTable: DataTable.AppMethods
+        dataTable: DataTable.AppMethods
     }
-    //export interface Framework7AppEvents extends DataTable.AppEvents {}
 
     export namespace Dialog {
-        export interface Dialog {
-            // TODO: fill in?
+        export interface Dialog extends EventManagement<Events> {
+            /** Link to global app instance */
+            app : Framework7
+            /** Dialog HTML element */
+            el : HTMLElement
+            /** Dom7 instance with dialog HTML element */
+            $el : Dom7.Dom7
+            /** Backdrop HTML element */
+            backdropEl : HTMLElement
+            /** Dom7 instance with backdrop HTML element */
+            $backdropEl : Dom7.Dom7
+            /** Dialog parameters */
+            params : Parameters
+            /** Boolean prop indicating whether dialog is opened or not */
+            opened : boolean
+
+            /** Open dialog */
+            open(animate : boolean) : void
+            /** Close dialog. */
+            close(animate : boolean) : void
+            /** Sets dialog progress when Dialog Progress shortcut in use */
+            setProgress(
+                /** progressbar progress (from 0 to 100) */
+                progress : number, 
+                /** (in ms) - progressbar progress change duration */
+                duration : number) : void
+            /** Sets dialog's title */
+            setTitle(title : string) : void
+            /** Sets dialog's text */
+            setText(text : string) : void
+            /** Destroy dialog */
+            destroy() : void
+        }
+
+        export interface Button {
+            /** String with Button's text (could be HTML string). */
+            text: string
+            /** Enables bold button text. (default false) */
+            bold?: boolean
+            /** Button color, one of default colors. */
+            color: string
+            /** If enabled then button click will close Dialog. (default true) */
+            close?: boolean
+            /** Additional button CSS class. */
+            cssClass: string
+            /** Array with keyboard keycodes that will be used to trigger button click. For example, key code 13 means that button click will be triggered on Enter key press. (default []) */
+            keyCodes?: number[]
+            /** Callback function that will be executed after click on this button. */
+            onClick: (dialog : Dialog, e : Event) => void
         }
 
         export interface Parameters {
-            // TODO: fill in?
+            /** Dialog element. Can be useful if you already have Dialog element in your HTML and want to create new instance using this element. */
+            el: HTMLElement
+            /** Enables Dialog backdrop (dark semi transparent layer behind). (default true) */
+            backdrop?: boolean
+            /** When enabled, dialog will be closed on backdrop click. (default true) */
+            closeByBackdropClick?: boolean
+            /** Whether the Dialog should be opened/closed with animation or not. Can be overwritten in .open() and .close() methods. (default true) */
+            animate?: boolean
+            /** Dialog title. */
+            title: string
+            /** Dialog inner text. */
+            text: string
+            /** Custom Dialog content that follows dialog text. */
+            content: string
+            /** Array with dialog buttons. (default []) */
+            buttons?: Button[]
+            /** Enables vertical buttons layout. (default false) */
+            verticalButtons?: boolean
+            /** When enabled will automatically destroy Dialog on close. (default false) */
+            destroyOnClose?: boolean
+            /** Callback function that will be executed after click on the Dialog button. As an arguments it received dialog instance and clicked button index number. */
+            onClick: (dialog : Dialog, index : number) => void
+            /** Additional css class to add. */
+            cssClass: string
+            /** Object with events handlers.. */
+            on: object
         }
 
         export interface Events {
-            // TODO: fill in?
+            /** Event will be triggered when Dialog starts its opening animation. As an argument event handler receives dialog instance */
+            open: (dialog : Dialog) => void
+            /** Event will be triggered after Dialog completes its opening animation. As an argument event handler receives dialog instance */
+            opened: (dialog : Dialog) => void
+            /** Event will be triggered when Dialog starts its closing animation. As an argument event handler receives dialog instance */
+            close: (dialog : Dialog) => void
+            /** Event will be triggered after Dialog completes its closing animation. As an argument event handler receives dialog instance */
+            closed: (dialog : Dialog) => void
+            /** Event will be triggered right before Dialog instance will be destroyed. As an argument event handler receives dialog instance */
+            beforeDestroy: (dialog : Dialog) => void
         }
     
         export interface DomEvents {
-            // TODO: fill in?
+            /** Event will be triggered when Dialog starts its opening animation */
+            'dialog:open' : () => void
+            /** Event will be triggered after Dialog completes its opening animation */
+            'dialog:opened' : () => void
+            /** Event will be triggered when Dialog starts its closing animation */
+            'dialog:close' : () => void
+            /** Event will be triggered after Dialog completes its closing animation */
+            'dialog:closed' : () => void
         }
 
         export interface AppMethods {
-            // TODO: fill in?
+            /** create Dialog instance */
+            create(parameters : Parameters ) : Dialog;
+            /** destroy Dialog instance */
+            destroy(el : HTMLElement | CssSelector | Dialog) : void;
+            /** get Dialog instance by HTML element */
+            get(el : HTMLElement | CssSelector) : Dialog;
+            /** opens Dialog */
+            open(el : HTMLElement | CssSelector, animate : boolean) : Dialog;
+            /** closes Dialog */
+            close(el : HTMLElement | CssSelector, animate : boolean) : Dialog;
         }
     
         export interface AppEvents {
-            // TODO: fill in?
+            /** Event will be triggered when Dialog starts its opening animation. As an argument event handler receives dialog instance */
+            dialogOpen: (dialog : Dialog) => void
+            /** Event will be triggered after Dialog completes its opening animation. As an argument event handler receives dialog instance */
+            dialogOpened: (dialog : Dialog) => void
+            /** Event will be triggered when Dialog starts its closing animation. As an argument event handler receives dialog instance */
+            dialogClose: (dialog : Dialog) => void
+            /** Event will be triggered after Dialog completes its closing animation. As an argument event handler receives dialog instance */
+            dialogClosed: (dialog : Dialog) => void
+            /** Event will be triggered right before Dialog instance will be destroyed. As an argument event handler receives dialog instance */
+            dialogBeforeDestroy: (dialog : Dialog) => void
         }
     }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
+    export interface Framework7Params {}
     export interface Framework7 {
-        // TODO: fill in?
-        // Dialog: Dialog.AppMethods
+        dialog: Dialog.AppMethods
     }
-    //export interface Framework7AppEvents extends Dialog.AppEvents {}
+    export interface Framework7AppEvents extends Dialog.AppEvents {}
 
     export namespace Elevation {
         export interface Elevation {
