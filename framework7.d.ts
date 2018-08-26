@@ -2542,40 +2542,6 @@ declare module "framework7" {
     }
     export interface Framework7AppEvents extends PullToRefresh.AppEvents {}
 
-    export namespace Radio {
-        export interface Radio {
-            // TODO: fill in?
-        }
-
-        export interface Parameters {
-            // TODO: fill in?
-        }
-
-        export interface Events {
-            // TODO: fill in?
-        }
-    
-        export interface DomEvents {
-            // TODO: fill in?
-        }
-
-        export interface AppMethods {
-            // TODO: fill in?
-        }
-    
-        export interface AppEvents {
-            // TODO: fill in?
-        }
-    }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
-    export interface Framework7 {
-        // TODO: fill in?
-        // Radio: Radio.AppMethods
-    }
-    //export interface Framework7AppEvents extends Radio.AppEvents {}
-
     export namespace RangeSlider {
         export interface RangeSlider {
             // TODO: fill in?
