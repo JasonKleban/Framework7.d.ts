@@ -67,19 +67,6 @@ declare module "framework7" {
     export interface Framework7AppEvents extends Accordian.AppEvents {}
 
     export namespace ActionSheet {
-        export interface Events {
-            /** Event will be triggered when Action Sheet starts its opening animation. As an argument event handler receives action sheet instance */
-            open : (actions : ActionSheet) => void
-            /** Event will be triggered after Action Sheet completes its opening animation. As an argument event handler receives action sheet instance */
-            opened : (actions : ActionSheet) => void
-            /** Event will be triggered when Action Sheet starts its closing animation. As an argument event handler receives action sheet instance */
-            close : (actions : ActionSheet) => void
-            /** Event will be triggered after Action Sheet completes its closing animation. As an argument event handler receives action sheet instance */
-            closed : (actions : ActionSheet) => void
-            /** Event will be triggered right before Action Sheet instance will be destroyed. As an argument event handler receives action sheet instance */
-            beforeDestroy : (actions : ActionSheet) => void
-        }
-
         export interface ActionSheet extends EventManagement<Events> {
             /** Link to global app instance */
             app : Framework7
@@ -163,6 +150,19 @@ declare module "framework7" {
             /** Custom function to render Popover when conversition to popover is in use. Must return Popover html*/
             renderPopover: () => string
         }
+
+        export interface Events {
+            /** Event will be triggered when Action Sheet starts its opening animation. As an argument event handler receives action sheet instance */
+            open : (actions : ActionSheet) => void
+            /** Event will be triggered after Action Sheet completes its opening animation. As an argument event handler receives action sheet instance */
+            opened : (actions : ActionSheet) => void
+            /** Event will be triggered when Action Sheet starts its closing animation. As an argument event handler receives action sheet instance */
+            close : (actions : ActionSheet) => void
+            /** Event will be triggered after Action Sheet completes its closing animation. As an argument event handler receives action sheet instance */
+            closed : (actions : ActionSheet) => void
+            /** Event will be triggered right before Action Sheet instance will be destroyed. As an argument event handler receives action sheet instance */
+            beforeDestroy : (actions : ActionSheet) => void
+        }
     
         export interface DomEvents {
             /** Event will be triggered when Action Sheet starts its opening animation */
@@ -177,10 +177,7 @@ declare module "framework7" {
 
         export interface AppMethods {
             /** create Action Sheet instance */
-            create(
-                /** Object with action sheet parameters */ 
-                parameters : Parameters
-            ) : ActionSheet;
+            create(parameters : Parameters) : ActionSheet;
             
             /** destroy Action Sheet instance */
             destroy(el : HTMLElement | CssSelector | ActionSheet) : void;
@@ -393,15 +390,10 @@ declare module "framework7" {
             autocompleteBeforeDestroy : (autocomplete : Autocomplete) => void
         }
     }
-    export interface Framework7Params { }
     export interface Framework7 {
         autocomplete: Autocomplete.AppMethods
     }
     export interface Framework7AppEvents extends Autocomplete.AppEvents {}
-
-    export namespace Badge { } // None
-    export namespace Block { } // None
-    export namespace Button { } // None
 
     export namespace Calendar {
         export interface Calendar extends EventManagement<Events> {
@@ -673,11 +665,10 @@ declare module "framework7" {
             calendarBeforeDestroy: (calendar : Calendar) => void
         }
     }
-    export interface Framework7Params { }
     export interface Framework7 {
         calendar: Calendar.AppMethods
     }
-    //export interface Framework7AppEvents extends Calendar.AppEvents {}
+    export interface Framework7AppEvents extends Calendar.AppEvents {}
 
     export namespace Datepicker {
         export interface Datepicker {
@@ -712,16 +703,6 @@ declare module "framework7" {
         // Datepicker: Datepicker.AppMethods
     }
     //export interface Framework7AppEvents extends Datepicker.AppEvents {}
-
-    export namespace Cards { }
-
-    export namespace Checkbox { }
-
-    export namespace Chips { }
-
-    export namespace Tags { }
-
-    export namespace ContactsList { }
 
     export namespace DataTable {
         export interface DataTable { }
@@ -945,14 +926,8 @@ declare module "framework7" {
     }
     export interface Framework7AppEvents extends Dialog.AppEvents {}
 
-    export namespace Elevation { }
-
     export namespace FloatingActionButton {
         export interface FloatingActionButton { }
-
-        export interface Parameters { }
-
-        export interface Events { }
     
         export interface DomEvents {
             /** Event will be triggered on FAB open or when it morphs to target element */
@@ -981,10 +956,6 @@ declare module "framework7" {
     export namespace Form {
         export interface Form { }
 
-        export interface Parameters { }
-
-        export interface Events { }
-    
         export interface DomEvents {
             /** Event will be triggered on form when calling app.form.convertToData */
             'form:todata': () => void
@@ -1038,7 +1009,6 @@ declare module "framework7" {
             formAjaxError: (form : HTMLElement, data : object, xhr : Dom7.Dom7XHR) => void
         }
     }
-    export interface Framework7Params {}
     export interface Framework7 {
         form: Form.AppMethods
     }
@@ -1136,18 +1106,8 @@ declare module "framework7" {
     }
     export interface Framework7AppEvents extends Gauge.AppEvents {}
 
-    export namespace Grid {}
-
-    export namespace LayoutGrid {}
-
-    export namespace Icons {}
-
     export namespace InfiniteScroll {
         export interface InfiniteScroll { }
-
-        export interface Parameters { }
-
-        export interface Events { }
     
         export interface DomEvents {
             /** Event will be triggered when page scroll reaches specified (in data-distance attribute) distance to the bottom. */
@@ -1220,140 +1180,143 @@ declare module "framework7" {
     }
 
     export namespace LazyLoad {
-        export interface LazyLoad {
-            // TODO: fill in?
-        }
-
-        export interface Parameters {
-            // TODO: fill in?
-        }
-
-        export interface Events {
-            // TODO: fill in?
+        export interface AppParameters {
+            /** Lazy load image placeholder source to show while image is not yet loaded. By default it is 1x1 px image. */
+            placeholder: string
+            /** By default images are loaded when they appear on the screen. Use this parameter if you want to load images earlier. Setting it to 50 will load image when it 50 pixels before it appears on viewport. (default 0) */
+            threshold?: number
+            /** If enabled, then lazy images will be loaded one by one when they appear in viewport. (default true) */
+            sequential?: boolean
         }
     
         export interface DomEvents {
-            // TODO: fill in?
+            /** Event will be triggered in the beginning of image file loading */
+            'lazy:load': () => void
+            /** Event will be triggered after image file successfully loaded */
+            'lazy:loaded': () => void
+            /** Event will be triggered in case of error loading image file */
+            'lazy:error': () => void
         }
 
         export interface AppMethods {
-            // TODO: fill in?
+            /** initialize lazy loading on page */
+            create(pageEl : HTMLElement | CssSelector) : void;
+            /** destroy/disable lazy loading on page */
+            destroy(pageEl : HTMLElement | CssSelector) : void;
+            /** force to load lazy image */
+            loadImage(
+                /** lazy image or element (element with lazy class). Required. */
+                pageEl : HTMLElement | CssSelector, 
+                callback : () => void) : void;
         }
     
         export interface AppEvents {
-            // TODO: fill in?
+            /** Event will be triggered in the beginning of image file loading. As an argument it receives lazy loading HTML element. */
+            lazyLoad?: (lazyEl : HTMLElement) => void
+            /** Event will be triggered after image file successfully loaded. As an argument it receives lazy loading HTML element. */
+            lazyLoaded?: (lazyEl : HTMLElement) => void
+            /** Event will be triggered in case of error loading image file. As an argument it receives lazy loading HTML element.*/
+            lazyError?: (lazyEl : HTMLElement) => void
         }
     }
     export interface Framework7Params {
-        // TODO: fill in?
+        lazy: LazyLoad.AppParameters
     }
     export interface Framework7 {
-        // TODO: fill in?
-        // LazyLoad: LazyLoad.AppMethods
+        lazy: LazyLoad.AppMethods
     }
-    //export interface Framework7AppEvents extends LazyLoad.AppEvents {}
-
-    export namespace Link {
-        export interface Link {
-            // TODO: fill in?
-        }
-
-        export interface Parameters {
-            // TODO: fill in?
-        }
-
-        export interface Events {
-            // TODO: fill in?
-        }
-    
-        export interface DomEvents {
-            // TODO: fill in?
-        }
-
-        export interface AppMethods {
-            // TODO: fill in?
-        }
-    
-        export interface AppEvents {
-            // TODO: fill in?
-        }
-    }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
-    export interface Framework7 {
-        // TODO: fill in?
-        // Link: Link.AppMethods
-    }
-    //export interface Framework7AppEvents extends Link.AppEvents {}
-
-    export namespace ListView {
-        export interface ListView {
-            // TODO: fill in?
-        }
-
-        export interface Parameters {
-            // TODO: fill in?
-        }
-
-        export interface Events {
-            // TODO: fill in?
-        }
-    
-        export interface DomEvents {
-            // TODO: fill in?
-        }
-
-        export interface AppMethods {
-            // TODO: fill in?
-        }
-    
-        export interface AppEvents {
-            // TODO: fill in?
-        }
-    }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
-    export interface Framework7 {
-        // TODO: fill in?
-        // ListView: ListView.AppMethods
-    }
-    //export interface Framework7AppEvents extends ListView.AppEvents {}
+    export interface Framework7AppEvents extends LazyLoad.AppEvents {}
 
     export namespace ListIndex {
-        export interface ListIndex {
-            // TODO: fill in?
+        export interface ListIndex extends EventManagement<Events> {
+            /** Link to global app instance */
+            app : Framework7
+            /** List index HTML element */
+            el : HTMLElement
+            /** Dom7 instance with list index HTML element */
+            $el : Dom7.Dom7
+            /** Dynamically created inner <ul> HTML element */
+            ul : HTMLElement
+            /** Dom7 instance with dynamically created inner <ul> HTML element */
+            $ul : Dom7.Dom7
+            /** Related List HTML element, passed in listEl parameter */
+            listEl : HTMLElement
+            /** Dom7 instance with related List HTML element, passed in listEl parameter */
+            $listEl : Dom7.Dom7
+            /** Array with calculated indexes */
+            indexes : number[]
+            /** List index parameters */
+            params : Parameters
+
+            /** Recalculates indexes, sizes and rerenders list index */
+            update() : void
+            /** Scrolls related list to specified index content */
+            scrollToList(itemContent : unknown) : void
+            /** Destroys list index instance */
+            destroy() : void
         }
 
         export interface Parameters {
-            // TODO: fill in?
+            /** List Index element. HTMLElement or string with CSS selector of list index element. */
+            el: HTMLElement | CssSelector
+            /** Related List View element. HTMLElement or string with CSS selector of List View element. */
+            listEl: HTMLElement | CssSelector
+            /** Array with indexes. If not passed then it will automatically generate it based on item-divider and list-group-title elements inside of passed List View element in listEl parameter. (default auto) */
+            indexes?: number[] | string // ??
+            /** Will automatically scroll related List View to the selected index. (default true) */
+            scrollList?: boolean
+            /** Enables label bubble with selected index when you swipe over list index. (default false) */
+            label?: boolean
+            /** Single index item height. It is required to calculate dynamic index and how many indexes fit on the screen. For iOS theme. (default 14) */
+            iosItemHeight?: number
+            /** Single index item height. It is required to calculate dynamic index and how many indexes fit on the screen. For MD theme. (default 14) */
+            mdItemHeight?: number
+            /** Object with events handlers.. */
+            on: {
+                [event in keyof Events] : Function
+            }
         }
 
         export interface Events {
-            // TODO: fill in?
+            /** Event will be triggered on index select rather by click or swiping. As an argument event handler receives list index instance and selected index item content */
+            select(listIndex: number, itemContent: unknown) : void
+            /** Event will be triggered on index click. As an argument event handler receives list index instance and clicked index item content */
+            click(listIndex: number) : void
+            /** Event will be triggered right before List Index instance will be destroyed. As an argument event handler receives list index instance */
+            beforeDestroy(listIndex: number) : void
         }
     
         export interface DomEvents {
-            // TODO: fill in?
+            /** Event will be triggered on index select rather by click or swiping */
+            'listindex:select': () => void
+            /** Event will be triggered on index click */
+            'listindex:click': () => void
+            /** Event will be triggered right before List Index instance will be destroyed */
+            'listindex:beforedestroy': () => void
         }
 
         export interface AppMethods {
-            // TODO: fill in?
+            /** create ListIndex instance */
+            create(parameters : Parameters) : ListIndex;
+            /** destroy ListIndex instance */
+            destroy(el : HTMLElement | CssSelector | ListIndex) : void;
+            /** get ListIndex instance by HTML element */
+            get(el : HTMLElement | CssSelector) : ListIndex;
         }
     
         export interface AppEvents {
-            // TODO: fill in?
+            /** Event will be triggered on index select rather by click or swiping. As an argument event handler receives list index instance and selected index item content */
+            listIndexSelect(listIndex: number, itemContent: unknown) : void
+            /** Event will be triggered on index click. As an argument event handler receives list index instance and clicked index item content */
+            listIndexClick(listIndex: number) : void
+            /** Event will be triggered right before List Index instance will be destroyed. As an argument event handler receives list index instance */
+            listIndexBeforeDestroy(listIndex: number) : void
         }
     }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
     export interface Framework7 {
-        // TODO: fill in?
-        // ListIndex: ListIndex.AppMethods
+        listIndex: ListIndex.AppMethods
     }
-    //export interface Framework7AppEvents extends ListIndex.AppEvents {}
+    export interface Framework7AppEvents extends ListIndex.AppEvents {}
 
     export namespace LoginScreen {
         export interface LoginScreen {
