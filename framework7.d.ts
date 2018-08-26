@@ -2436,38 +2436,16 @@ declare module "framework7" {
     //export interface Framework7AppEvents extends Preloader.AppEvents {}
 
     export namespace Progressbar {
-        export interface Progressbar {
-            // TODO: fill in?
-        }
-
-        export interface Parameters {
-            // TODO: fill in?
-        }
-
-        export interface Events {
-            // TODO: fill in?
-        }
-    
-        export interface DomEvents {
-            // TODO: fill in?
-        }
-
         export interface AppMethods {
-            // TODO: fill in?
+            set(el: HTMLElement | CssSelector, progress : number, durationMS : number) : void
+            set(progress : number, durationMS : number) : void
+            show(el?: HTMLElement | CssSelector, progress? : number, color? : string) : void
+            hide(el?: HTMLElement | CssSelector) : void
         }
-    
-        export interface AppEvents {
-            // TODO: fill in?
-        }
-    }
-    export interface Framework7Params {
-        // TODO: fill in?
     }
     export interface Framework7 {
-        // TODO: fill in?
-        // Progressbar: Progressbar.AppMethods
+        progressbar: Progressbar.AppMethods
     }
-    //export interface Framework7AppEvents extends Progressbar.AppEvents {}
 
     export namespace PullToRefresh {
         export interface PullToRefresh {
