@@ -78,7 +78,7 @@ declare module "framework7" {
             closed : (actions : ActionSheet) => void
             /** Event will be triggered right before Action Sheet instance will be destroyed. As an argument event handler receives action sheet instance */
             beforeDestroy : (actions : ActionSheet) => void
-         }
+        }
 
         export interface ActionSheet extends EventManagement<Events> {
             /** Link to global app instance */
@@ -173,7 +173,7 @@ declare module "framework7" {
             'actions:close' : (actions : ActionSheet) => void
             /** Event will be triggered after Action Sheet completes its closing animation */
             'actions:closed' : (actions : ActionSheet) => void
-         }
+        }
 
         export interface AppMethods {
             /** create Action Sheet instance */
@@ -190,7 +190,7 @@ declare module "framework7" {
             open(el : HTMLElement | CssSelector, animate : boolean) : ActionSheet;
             /** closes Action Sheet */
             close(el : HTMLElement | CssSelector, animate : boolean) : ActionSheet;
-         }
+        }
     
         export interface AppEvents {
             /** Event will be triggered when Action Sheet starts its opening animation. As an argument event handler receives action sheet instance */
@@ -203,7 +203,7 @@ declare module "framework7" {
             actionsClosed : (actions : ActionSheet) => void
             /** Event will be triggered right before Action Sheet instance will be destroyed. As an argument event handler receives action sheet instance */
             actionsBeforeDestroy : (actions : ActionSheet) => void
-         }
+        }
     }
     export interface Framework7 {
         actions: ActionSheet.AppMethods
@@ -287,7 +287,7 @@ declare module "framework7" {
 
             on: {
                 [event in keyof Events] : Function
-            }
+           }
         }
         export interface StandaloneParameters {
             /** If enabled, then it will request passed to source function on autocomplete open. (default false) */
@@ -376,7 +376,7 @@ declare module "framework7" {
 
             /** closes Autocomplete */
             close(el : HTMLElement | CssSelector) : Autocomplete
-         }
+        }
     
         export interface AppEvents {
             /** Event will be triggered when Autocomplete value changed. Returned value is an array with selected items */
@@ -391,7 +391,7 @@ declare module "framework7" {
             autocompleteClosed : (autocomplete : Autocomplete) => void
             /** Event will be triggered right before Autocomplete instance will be destroyed. As an argument event handler receives autocomplete instance */
             autocompleteBeforeDestroy : (autocomplete : Autocomplete) => void
-         }
+        }
     }
     export interface Framework7Params { }
     export interface Framework7 {
@@ -414,15 +414,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -447,15 +448,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -480,15 +482,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -513,15 +516,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -546,15 +550,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -579,15 +584,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -612,15 +618,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -645,15 +652,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -678,15 +686,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -711,15 +720,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -744,15 +754,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -777,15 +788,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -810,15 +822,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -843,15 +856,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -876,15 +890,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -909,15 +924,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -942,15 +958,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -975,15 +992,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1008,15 +1026,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1041,15 +1060,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1074,15 +1094,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1107,15 +1128,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1140,15 +1162,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1173,15 +1196,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1206,15 +1230,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1239,15 +1264,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1272,15 +1298,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1305,15 +1332,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1338,15 +1366,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1371,15 +1400,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1404,15 +1434,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1464,15 +1495,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1497,15 +1529,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1530,15 +1563,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1563,15 +1597,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1596,15 +1631,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1629,15 +1665,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1662,15 +1699,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1695,15 +1733,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1728,15 +1767,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1761,15 +1801,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1794,15 +1835,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1827,15 +1869,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1860,15 +1903,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1937,7 +1981,7 @@ declare module "framework7" {
              * running under cordova/phonegap environment with installed
              * cordova-plugin-statusbar */
             isVisible() : boolean
-         }
+        }
     }
     export interface Framework7 {
         statusbar: Statusbar.AppParameters & Statusbar.AppMethods
@@ -1958,15 +2002,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -1991,15 +2036,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -2024,15 +2070,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -2057,15 +2104,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -2090,15 +2138,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -2123,15 +2172,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -2156,15 +2206,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -2189,15 +2240,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -2222,15 +2274,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -2255,15 +2308,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -2288,15 +2342,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -2321,15 +2376,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -2388,15 +2444,16 @@ declare module "framework7" {
     
         export interface DomEvents {
             // TODO: fill in?
-         }
+        }
 
         export interface AppMethods {
             // TODO: fill in?
-         }
+        }
     
         export interface AppEvents {
             // TODO: fill in?
-         }}
+        }
+    }
     export interface Framework7Params {
         // TODO: fill in?
     }
@@ -2657,7 +2714,7 @@ declare module "framework7" {
         params?: {
             [plugin_name: string]: {
                 [param: string]: any
-            }
+           }
         },
         /** proto object extends Class prototype */
         proto?: {
