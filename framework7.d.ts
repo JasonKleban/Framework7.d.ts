@@ -1977,22 +1977,24 @@ declare module "framework7" {
         }
     
         export interface DomEvents {
-            /** Event will be triggered when new page just inserted to DOM */
-            'page:mounted': () => void
-            /** Event will be triggered after Framework7 initialize required page's components and navbar */
-            'page:init': () => void
-            /** This event will be triggered in case of navigating to the page that was already initialized. */
-            'page:reinit': () => void
-            /** Event will be triggered when everything initialized and page is ready to be transitioned into view (into active/current position) */
-            'page:beforein': () => void
-            /** Event will be triggered after page transitioned into view */
-            'page:afterin': () => void
-            /** Event will be triggered right before page is going to be transitioned out of view */
-            'page:beforeout': () => void
-            /** Event will be triggered after page transitioned out of view */
-            'page:afterout': () => void
-            /** Event will be triggered right before Page will be removed from DOM. This event could be very useful if you need to detach some events / destroy some plugins to free memory */
-            'page:beforeremove': () => void
+            /** Event will be triggered when Panel starts its opening animation */
+            'panel:open': () => void
+            /** Event will be triggered after Panel completes its opening animation */
+            'panel:opened': () => void
+            /** Event will be triggered when Panel starts its closing animation */
+            'panel:close': () => void
+            /** Event will be triggered after Panel completes its closing animation */
+            'panel:closed': () => void
+            /** Event will be triggered when the panel overlay is clicked */
+            'panel:backdrop-click	': () => void
+            /** Event will be triggered in the very beginning of opening it with swipe */
+            'panel:swipeopen': () => void
+            /** Event will be triggered for swipe panel during touch swipe action */
+            'panel:swipe': () => void
+            /** Event will be triggered when it becomes visible/hidden when app width matches its breakpoint */
+            'panel:breakpoint': () => void
+            /** Event will be triggered right before Panel instance will be destroyed */
+            'panel:beforedestroy': () => void
         }
 
         export interface AppEvents {
