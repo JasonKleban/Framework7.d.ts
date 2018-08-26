@@ -2295,38 +2295,109 @@ declare module "framework7" {
     //export interface Framework7AppEvents extends Popover.AppEvents {}
 
     export namespace Popup {
-        export interface Popup {
-            // TODO: fill in?
+        export interface Popup extends EventManagement<Events> {
+            /** Link to global app instance */
+            app : Framework7
+            /** Popup HTML element */
+            el : HTMLElement
+            /** Dom7 instance with popup HTML element */
+            $el : Dom7.Dom7
+            /** Backdrop HTML element */
+            backdropEl : HTMLElement
+            /** Dom7 instance with backdrop HTML element */
+            $backdropEl: Dom7.Dom7
+            /** Popup parameters */
+            params : Parameters
+            /** Boolean prop indicating whether popup is opened or not */
+            opened : boolean
+
+            /** Open popup. */
+            open(animate: boolean) : void
+            /** Close popup. */
+            close(animate: boolean) : void
+            /** Destroy popup */
+            destroy() : void
         }
 
         export interface Parameters {
-            // TODO: fill in?
+            /** Popup element. Can be useful if you already have Popup element in your HTML and want to create new instance using this element. */
+            el: HTMLElement
+            /** Full Popup HTML layout string. Can be useful if you want to create Popup element dynamically. */
+            content: string
+            /** Enables Popup backdrop (dark semi transparent layer behind). (default true) */
+            backdrop?: boolean
+            /** When enabled, popup will be closed on backdrop click. (default true) */
+            closeByBackdropClick?: boolean
+            /** Whether the Popup should be opened/closed with animation or not. Can be overwritten in .open() and .close() methods. (default true) */
+            animate?: boolean
+            
+            /** Object with events handlers.. */
+            on: {
+                [event in keyof Events] : Function
+            }
         }
 
         export interface Events {
-            // TODO: fill in?
+            /** Event will be triggered when Popup starts its opening animation. As an argument event handler receives popup instance */
+            open: (popup : Popup) => void
+            /** Event will be triggered when Popup completes its opening animation. As an argument event handler receives popup instance */
+            opened: (popup : Popup) => void
+            /** Event will be triggered when Popup starts its closing animation. As an argument event handler receives popup instance */
+            close: (popup : Popup) => void
+            /** Event will be triggered after Popup completes its closing animation. As an argument event handler receives popup instance */
+            closed: (popup : Popup) => void
+            /** Event will be triggered right before Popup instance will be destroyed */
+            beforeDestroy: (popup : Popup) => void
         }
     
         export interface DomEvents {
-            // TODO: fill in?
+            /** Event will be triggered when Popup starts its opening animation */
+            'popup:open' : () => void
+            /** Event will be triggered after Popup completes its opening animation */
+            'popup:opened' : () => void
+            /** Event will be triggered when Popup starts its closing animation */
+            'popup:close' : () => void
+            /** Event will be triggered after Popup completes its closing animation */
+            'popup:closed' : () => void
         }
 
         export interface AppMethods {
-            // TODO: fill in?
+            /** create Popup instance */
+            create(parameters : Parameters) : Popup
+
+            /** destroy Popup instance */
+            destroy(el : HTMLElement | CssSelector | Popup) : void
+
+            /** get Popup instance by HTML element */
+            get(el : HTMLElement | CssSelector) : Popup
+
+            /** open Popup */
+            open(el : HTMLElement | CssSelector) : Popup
+
+            /** closes Popup */
+            close(el : HTMLElement | CssSelector) : Popup
         }
     
         export interface AppEvents {
-            // TODO: fill in?
+            /** Event will be triggered when Popup starts its opening animation. As an argument event handler receives popup instance */
+            popupOpen: (popup : Popup) => void
+            /** Event will be triggered when Popup completes its opening animation. As an argument event handler receives popup instance */
+            popupOpened: (popup : Popup) => void
+            /** Event will be triggered when Popup starts its closing animation. As an argument event handler receives popup instance */
+            popupClose: (popup : Popup) => void
+            /** Event will be triggered after Popup completes its closing animation. As an argument event handler receives popup instance */
+            popupClosed: (popup : Popup) => void
+            /** Event will be triggered right before Popup instance will be destroyed */
+            popupBeforeDestroy: (popup : Popup) => void
         }
     }
     export interface Framework7Params {
         // TODO: fill in?
     }
     export interface Framework7 {
-        // TODO: fill in?
-        // popup: Popup.AppMethods
+        popup: Popup.AppMethods
     }
-    //export interface Framework7AppEvents extends Popup.AppEvents {}
+    export interface Framework7AppEvents extends Popup.AppEvents {}
 
     export namespace Preloader {
         export interface Preloader {
