@@ -16,7 +16,7 @@ declare module "framework7-react" {
             ios: boolean,
             material: boolean
         }
-        $f7router : Router
+        $f7router : Router.Router
         $f7route : Route
     }
 

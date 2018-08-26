@@ -1,10 +1,4 @@
-type UnionToIntersection<U> = (U extends any ? (k : U) => void : never) extends ((k : infer I) => void) ? I : never
-type PickAndFlatten<T, K extends keyof T> = UnionToIntersection<T[K]>
-
 declare module "framework7" {
-    ///
-    /// BEGIN v3 organization
-    ///
     import * as Dom7 from 'Dom7'
     import * as Template7 from 'Template7'
     
@@ -216,53 +210,1519 @@ declare module "framework7" {
     }
     export interface Framework7AppEvents extends ActionSheet.AppEvents {}
 
-    export namespace Autocomplete {}
-    export namespace Badge {}
-    export namespace Block {}
-    export namespace Button {}
-    export namespace Calendar {}
-    export namespace Datepicker {}
-    export namespace Cards {}
-    export namespace Checkbox {}
-    export namespace Chips {}
-    export namespace Tags {}
-    export namespace ContactsList {}
-    export namespace DataTable {}
-    export namespace Dialog {}
-    export namespace Elevation {}
-    export namespace FloatingActionButton {}
-    export namespace FormDataStorage {}
-    export namespace Gauge {}
-    export namespace Grid {}
-    export namespace LayoutGrid {}
-    export namespace Icons {}
-    export namespace InfiniteScroll {}
-    export namespace FormInputs {}
-    export namespace LazyLoad {}
-    export namespace Link {}
-    export namespace ListView {}
-    export namespace ListIndex {}
-    export namespace LoginScreen {}
-    export namespace Messagebar {}
-    export namespace Messages {}
-    export namespace Navbar {}
-    export namespace Notification {}
-    export namespace Page {}
-    export namespace Panels {}
-    export namespace PhotoBrowser {}
-    export namespace Picker {}
-    export namespace Popover {}
-    export namespace Popup {}
-    export namespace Preloader {}
-    export namespace Progressbar {}
-    export namespace PullToRefresh {}
-    export namespace Radio {}
-    export namespace RangeSlider {}
-    export namespace Rearchbar {}
-    export namespace Router {}
-    export namespace SheetModal {}
-    export namespace SmartSelect {}
-    export namespace SortableList {}
+    export namespace Autocomplete {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }
+    }
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Badge {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Block {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Button {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Calendar {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Datepicker {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Cards {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Checkbox {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Chips {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Tags {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace ContactsList {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace DataTable {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Dialog {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Elevation {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace FloatingActionButton {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace FormDataStorage {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Gauge {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Grid {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace LayoutGrid {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Icons {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace InfiniteScroll {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace FormInputs {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace LazyLoad {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Link {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace ListView {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace ListIndex {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace LoginScreen {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Messagebar {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Messages {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Navbar {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Notification {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Page {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+
+    export namespace Panels {
+        export interface AppParameters {
+            /** Minimal app width (in px) when left panel becomes always visible. */
+            leftBreakpoint : number
+            /** Minimal app width (in px) when right panel becomes always visible. */
+            rightBreakpoint : number
+            /** Disabled by default. If you want to enable ability to open/close side panels with swipe you can pass here left (for left panel) or right (for right panel) or both (for both panels).. */
+            swipe : string
+            /** Width (in px) of invisible edge from the screen that triggers swipe panel. (default 0) */
+            swipeActiveArea : number
+            /** This parameter gives ability to close opposite panel by swipe. For example, if your swipePanel is "left", then you could close "right" panel also with swipe.. (default true) */
+            swipeCloseOpposite : boolean
+            /** This parameter allows to close (but not open) panels with swipes. (default false) */
+            swipeOnlyClose : boolean
+            /** Fallback option for potentially better performance on old/slow devices. If you enable it, then side panel will not follow your finger during touch, it will be automatically opened/closed on swipe left/right.. (default false) */
+            swipeNoFollow : boolean
+            /** Panel will not move with swipe if "touch distance" will be less than this value (in px).. (default 0) */
+            swipeThreshold : number
+            /** Enable/disable ability to close panel by clicking outside of panel (on panel's backdrop). (default true) */
+            closeByBackdropClick : boolean
+        }
+    }
+    export interface Framework7Params {
+        panel: Panels.AppParameters
+    }
+
+    export namespace PhotoBrowser {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Picker {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Popover {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Popup {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Preloader {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Progressbar {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace PullToRefresh {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Radio {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace RangeSlider {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Rearchbar {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace SheetModal {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace SmartSelect {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace SortableList {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
 
     export namespace Statusbar {
         export interface AppParameters{
@@ -328,18 +1788,402 @@ declare module "framework7" {
         statusbar: Statusbar.AppParameters & Statusbar.AppMethods
     }
 
-    export namespace Stepper {}
-    export namespace Subnavbar {}
-    export namespace Swiper {}
-    export namespace Swipeout {}
-    export namespace Tabs {}
-    export namespace Timeline {}
-    export namespace Toast {}
-    export namespace Toggle {}
-    export namespace Toolbar {}
-    export namespace Tabbar {}
-    export namespace Tooltip {}
-    export namespace VideoIntelligence {}
+    export namespace Stepper {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Subnavbar {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Swiper {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Swipeout {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Tabs {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Timeline {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Toast {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Toggle {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Toolbar {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Tabbar {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Tooltip {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace VideoIntelligence {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
+
+        export interface Parameters {
+            // TODO: fill in?
+        }
+
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
     export namespace View {
         export interface Parameters {
             name:string
@@ -361,272 +2205,220 @@ declare module "framework7" {
             passRouteParamsToRequest:boolean
         }
     }
-    export namespace VirtualList {}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
 
-    ///
-    /// END v3 organization
-    ///
+    export namespace VirtualList {
+        export interface Instance { // TODO Rename to component name
+            // TODO: fill in?
+        }
 
-    ///
-    /// BEGIN v1 stuff that hasn't been reviewed/incorporated into the new structure
-    ///
+        export interface Parameters {
+            // TODO: fill in?
+        }
 
-    export interface PageCallbackObject {
-        trigger(): void;
-        remove(): void;
+        export interface Events {
+            // TODO: fill in?
+        }
+    
+        export interface DomEvents {
+            // TODO: fill in?
+         }
+
+        export interface AppMethods {
+            // TODO: fill in?
+         }
+    
+        export interface AppEvents {
+            // TODO: fill in?
+         }}
+    export interface Framework7Params {
+        // TODO: fill in?
+    }
+    export interface Framework7 {
+        // TODO: fill in?
+        // ____: ____.AppMethods
+    }
+    //export interface Framework7AppEvents extends ____.AppEvents {}
+
+    export namespace Router {
+        export interface Router { // TODO Rename to component name
+            /** Template7 template string. Will be compiled as Template7 template */
+            template : string
+            /** Render function to render component. Must return full html string or HTMLElement */
+            render : () => string | HTMLElement
+            /** Component data, function must return component context data */
+            data : () => any
+            /** Component CSS styles. Styles will be added to the document after component will be mounted (added to DOM), and removed after component will be destroyed (removed from the DOM) */
+            style : string
+            /** Object with additional component methods which extend component context */
+            methods : { [name : string] : () => any }
+            /** Object with page events handlers */
+            on : { [event : string] : () => void }
+
+            /** Called synchronously immediately after the component has been initialized, before data and event/watcher setup. */
+            beforeCreate : () => void
+            /** Called synchronously after the component is created, context data and methods are available and component element $el is also created and available */
+            created : () => void
+            /** Called right before component will be added to DOM */
+            beforeMount : () => void
+            /** Called right after component was be added to DOM */
+            mounted : () => void
+            /** Called right after component VDOM has been patched */
+            updated : () => void
+            /** Called right before component will be destoyed */
+            beforeDestroy : () => void
+            /** Called when component destroyed */
+            destroyed : () => void
+        }
     }
 
-    export interface Framework7Options {
-        // Material Theme (Material theme only)
-        material?: boolean;
-        materialPageLoadDelay?: number;
-        materialRipple?: boolean;
-        materialRippleElements?: string;
-        materialPreloaderHtml?: string;
-
-        // Caching
-        cache?: boolean;
-        cacheDuration?: number;
-        cacheIgnore?: string[];
-        cacheIgnoreGetParameters?: boolean;
-
-        // Fast clicks library
-        fastClicks?: boolean;
-        fastClicksDelayBetweenClicks?: number;
-        fastClicksDistanceThreshold?: number;
-        activeState?: boolean;
-        activeStateElemets?: string;
-        tapHold?: boolean;
-        tapHoldDelay?: number;
-        tapHoldPreventClicks?: boolean;
-
-        // Navigation / Router
-        router?: boolean;
-        ajaxLinks?: string;
-        dynamicPageUrl?: string;
-        uniqueHistory?: boolean;
-        uniqueHistoryIgnoreGetParameters?: boolean;
-        externalLinks?: string;
-        allowDuplicateUrls?: boolean;
-        animateNavBackIcon?: boolean;
-        animatePages?: boolean;
-        preloadPreviousPage?: boolean;
-        preroute?: (view: View, options: ViewParameters) => void;
-        preprocess?: (content?: any, url?: string, next?: (resultContent: any) => void) => void;
-
-        // Push State
-        pushState?: boolean;
-        pushStateSeparator?: string;
-        pushStateRoot?: string;
-        pushStateNoAnimation?: boolean;
-        pushStatePreventOnLoad?: boolean;
-
-        // Swipe back (iOS theme only)
-        swipeBackPage?: boolean;
-        swipeBackPageThreshold?: number;
-        swipeBackPageActiveArea?: number;
-        swipeBackPageAnimateShadow?: boolean;
-        swipeBackPageAnimateOpacity?: boolean;
-
-        // Sortable Lists
-        sortable?: boolean;
-
-        // Swipeout
-        swipeout?: boolean;
-        swipeoutNoFollow?: boolean;
-
-        // Side Panels
-        swipePanel?: string;
-        swipePanelCloseOpposite?: boolean;
-        swipePanelOnlyClose?: boolean;
-        swipePanelActiveArea?: number;
-        swipePanelNoFollow?: boolean;
-        swipePanelThreshold?: number;
-        panelsCloseByOutside?: boolean;
-
-        // Modals
-        modalTitle?: string;
-        modalButtonOk?: string;
-        modalButtonCancel?: string;
-        modalPreloaderTitle?: string;
-        modalCloseByOutside?: boolean;
-        actionsCloseByOutside?: boolean;
-        popupCloseByOutside?: boolean;
-        modalTemplate?: string;
-        modalActionsTemplate?: string;
-        modalActionsToPopoverTemplate?: string;
-        modalUsernamePlaceholder?: string;
-        modalPasswordPlaceholder?: string;
-        modalStack?: boolean;
-
-        // Smart Select
-        smartSelectOpenIn?: string;
-        smartSelectBackTemplate?: string;
-        smartSelectPopupCloseTemplate?: string;
-        smartSelectBackText?: string;
-        smartSelectPopupCloseText?: string;
-        smartSelectPickerCloseText?: string;
-        smartSelectSearchbar?: boolean;
-        smartSelectBackOnSelect?: boolean;
-        smartSelectFormTheme?: string;
-        smartSelectNavbarTheme?: string;
-
-        // Navbars / Toolbars
-        hideNavbarOnPageScroll?: boolean;
-        hideToolbarOnPageScroll?: boolean;
-        hideTabbarOnPageScroll?: boolean;
-        showBarsOnPageScrollEnd?: boolean;
-        showBarsOnPageScrollTop?: boolean;
-        scrollTopOnNavbarClick?: boolean;
-
-        // Images Lazy Load
-        imagesLazyLoadThreshold?: number;
-        imagesLazyLoadSequential?: boolean;
-        imagesLazyLoadPlaceholder?: string;
-
-        // Notifications
-        notificationTitle?: string;
-        notificationSubtitle?: string;
-        notificationMedia?: string;
-        notificationHold?: number;
-        notificationCloseOnClick?: boolean;
-        notificationCloseIcon?: boolean;
-        notificationCloseButtonText?: string;
-
-        // Status Bar (iOS theme only)
-        statusbarOverlay?: boolean;
-        scrollTopOnStatusbarClick?: boolean;
-
-        // Template7
-        template7Pages?: boolean;
-        template7Data?: any;
-        precompileTemplates?: boolean;
-        templates?: any;
-
-        // Page Callbacks
-        onPageBeforeInit?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-        onPageInit?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-        onPageBeforeAnimation?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-        onPageAfterAnimation?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-        onPageBeforeRemove?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-        onPageBack?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-        onPageAfterBack?: (pageName: string, callback: (page: PageData) => void) => PageCallbackObject;
-
-        // Ajax Callbacks
-        onAjaxStart?: (xhr: Dom7.Dom7XHR) => void;
-        onAjaxComplete?: (xhr: Dom7.Dom7XHR) => void;
-
-        // Namespace
-        /**
-        * Class name for your View element -
-        * Attention! If you change following class names you will also need to change them in CSS! */
-        viewClass?: string;
-        /**
-        * Class name for your Main View element -
-        * Attention! If you change following class names you will also need to change them in CSS! */
-        viewMainClass?: string;
-        /**
-        * Class name for your Views element -
-        * Attention! If you change following class names you will also need to change them in CSS! */
-        viewsClass?: string;
-
-        // Init
-        init?: boolean;
+    export interface Framework7Params {
+        /** App root element. If you main app layout is not a direct child of the <body> then it is required to specify root element here. (default body) */
+        root : string
+        /** App bundle id.. (default io.framework7.testapp) */
+        id : string
+        /** App name. Can be used by other components, e.g. as the default title for Dialog component.. (default Framework7) */
+        name : string
+        /** App version. Can be used by other components.. (default 1.0.0) */
+        version : string
+        /** App theme. Can be ios, md or auto. In case of auto it will use iOS theme for iOS devices and MD theme for all other devices.. (default auto) */
+        theme : string
+        /** App language. Can be used by other components. By default equal to the current browser/webview language (i.e. navigator.language).. */
+        language : string
+        /** Array with default routes to all views.. (default []) */
+        routes : Route[]
+        /** App root data. Must be a function that returns an object with root data.  Note, that this inside of this data function points to app Framework7 instance.. */
+        data : () => any
+        /** App root methods. Object with methods.  Note, that this inside of each method points to app Framework7 instance.. (default {}) */
+        methods : { [name : string] : () => any }
+        /** Object with events handlers.. (default {}) */
+        on : { [event : string] : () => void }
+        /** By default Framework7 will be initialized automatically when you call new Framework7(). If you want to prevent this behavior you can disable it with this option and then initialize it manually with init() when you need it.. (default true) */
+        init : boolean
+        /** If automatic initialization is enabled with init: true parameter and app is running under cordova environment then it will be initialized on deviceready event.. (default true) */
+        initOnDeviceReady : boolean
+        /** Object with clicks-module related parameters */
+        clicks: {
+            /** CSS selector for links that should be treated as external and shouldn't be handled by Framework7. For example such '.external' value will match to links like <a href="somepage.html" class="external"> (with class "external") (default '.external') */
+            externalLinks : string
+        }
+        /** Object with touch-module related parameters */
+        touch: {
+            /** Fast clicks is a built-in library that removes 300ms delay from links and form elements in mobile browser while you click them. You can disable this built-in library if you want to use other third party fast clicks script.. (default true) */
+            fastClicks : boolean
+            /** Distance threshold (in px) to prevent short taps. So if tap/move distance is larger than this value then "click" will not be triggered. (default 10) */
+            fastClicksDistanceThreshold : number
+            /** Minimal allowed delay (in ms) between multiple clicks. (default 50) */
+            fastClicksDelayBetweenClicks : number
+            /** This parameter allows to specify elements not handled by fast clicks by passing CSS selector of such elements. */
+            fastClicksExclude : string
+            /** . (default true) */
+            disableContextMenu : boolean
+            /** Enables tap hold. (default false) */
+            tapHold : boolean
+            /** Determines how long (in ms) the user must hold their tap before the taphold event is fired on the target element. (default 750) */
+            tapHoldDelay : number
+            /** When enabled (by default), then click event will not be fired after tap hold event. (default true) */
+            tapHoldPreventClicks : boolean
+            /** When enabled, app will add "active-state" class to currently touched (:active) element.. (default true) */
+            activeState : boolean
+            /** CSS selector of elements where enabled activeState will add appropriate active class. (default a, button, label, span, .actions-button) */
+            activeStateElements : string
+            /** Enables Material theme specific touch ripple effect. (default true) */
+            materialRipple : boolean
+            /** CSS selector of elements to apply touch ripple effect on click. (default .ripple, .link, .item-link, .links-list a, .button, button, .input-clear-button, .dialog-button, .tab-link, .item-radio, .item-checkbox, .actions-button, .searchbar-disable-button, .fab a, .checkbox, .radio, .data-table .sortable-cell, .notification-close-button) */
+            materialRippleElements : string
+        }
     }
 
-    export interface ModalButton {
-        text?: string;
-        bold?: boolean;
-        close?: boolean;
-        onClick?: () => void;
+    export interface Framework7 {
+        /** App ID passed in parameters */
+        id : string
+        /** App name passed in parameters */
+        name : string
+        /** App version */
+        version : string
+        /** App routes */
+        routes : Route[]
+        /** App language */
+        language : string
+        /** Dom7 instance with app root element */
+        root : Dom7.Dom7
+        /** Boolean property indicating app is in RTL layout or not */
+        rtl : boolean
+        /** Current app theme. Can be md or ios */
+        theme : string
+        /** Object with app root data passed on intialization */
+        data : any
+        /** Object with app root methods */
+        methods : { [name : string] : () => any }
+        /** App width in px */
+        width : number
+        /** App height in px */
+        height : number
+        /** App left offset in px */
+        left : number
+        /** App top offset in px */
+        top : number
+        /** Boolean property indicating app is initialized or not */
+        initialized : boolean
+        /** Dom7 alias */
+        $ : Dom7.Dom7Static
+        /** Template7 alias */
+        t7 : Template7.Template7
+        /** App parameters */
+        params : Framework7Params
+        /** Object with properties about supported features. Check the Support utilities section */
+        support : Support
+        /** Object with properties about device. Check the Device utilities section */
+        device : Device
+        /** Object with some useful utilities. Check the Utils section */
+        utils : Utils
+        /** Contains methods to work with XHR requests. Check the Request utilities section */
+        request : Request
+
+        /** Add event handler */
+        on(event : keyof Framework7AppEvents, handler : () => void) : void
+        /** Add event handler that will be removed after it was fired */
+        once(event : keyof Framework7AppEvents, handler : () => void) : void
+        /** Remove event handler */
+        off(event : keyof Framework7AppEvents, handler : () => void) : void
+        /** Remove all handlers for specified event */
+        off(event : keyof Framework7AppEvents) : void
+        /** Fire event on instance */
+        emit(event : keyof Framework7AppEvents, ... args : any[]) : void
+        /** Initialize app. In case you disabled auto initialization with init: false parameter */
+        init() : void
     }
 
-    export interface ActionSheetButton {
-        text: string;
-        bold?: boolean;
-        color?: string;
-        bg?: string;
-        label?: boolean;
-        disabled?: boolean;
-        onClick?: () => void;
-    }
-
-    export interface ModalOptions {
-        title?: string;
-        text?: string;
-        afterText?: string;
-        buttons?: ModalButton[];
-        verticalButtons?: boolean;
-        onClick?: (modal: HTMLElement, index: number) => void;
-    }
-
-    export interface Modal {
-
-    }
-
-    export interface SearchBarOptions {
-        searchList?: string | HTMLElement;
-        searchIn?: string;
-        found?: string | HTMLElement;
-        notFoud?: string | HTMLElement;
-        overlay?: string | HTMLElement;
-        ignore?: string;
-        customSearch?: boolean;
-        removeDiacritics?: boolean;
-        hideDividers?: boolean;
-        hideGroups?: boolean;
-        // Callbacks
-        onSearch?: (s: SearchBar) => void;
-        onEnable?: (s: SearchBar) => void;
-        onDisable?: (s: SearchBar) => void;
-        onClear?: (s: SearchBar) => void;
-    }
-
-    export interface SearchBar {
-        params: SearchBarOptions;
-        query: string;
-        searchList: Dom7.Dom7;
-        container: Dom7.Dom7;
-        input: Dom7.Dom7;
-        active: boolean;
-
-        search(query: string): void;
-        enable(): void;
-        disable(): void;
-        clear(): void;
-        destroy(): void;
-    }
-
-    export interface ViewParameters {
-
-        dynamicNavbar?: boolean;
-        url?: string;
-        domCache?: boolean;
-        linksView?: string | View;
-
-        // Navigation
-        uniqueHistory?: boolean;
-        uniqueHistoryIgnoreGetParameters?: boolean;
-        allowDuplicateUrls?: boolean;
-        animatePages?: boolean;
-        preloadPreviousPage?: boolean;
-        reloadPages?: boolean;
-        preroute?: (view: View, options: ViewParameters) => void;
-        preprocess?: (content: string, url: string, next: (result: any) => void) => void;
-
-        // Swipe back (iOS theme only)
-        swipeBackPage?: boolean;
-        swipeBackPageThreshold?: number;
-        swipeBackPageActiveArea?: number;
-        swipeBackPageAnimateShadow?: boolean;
-        swipeBackPageAnimateOpacity?: boolean;
-
-        // Callbacks (iOS theme only)
-        onSwipeBackMove?: (callbackData: any) => void;
-        onSwipeBackBeforeChange?: (callbackData: any) => void;
-        onSwipeBackAfterChange?: (callbackData: any) => void;
-        onSwipeBackBeforeReset?: (callbackData: any) => void;
-        onSwipeBackAfterReset?: (callbackData: any) => void;
+    interface Framework7AppEvents {
+        /** Event will be fired on app initialization. Automatically after new Framework7() or after app.init() if you disabled auto init. */
+        'init': () => void
+        /** Event will be fired on app resize (window resize). */
+        'resize': () => void
+        /** Event will be fired on app orientation change (window orientantion change). */
+        'orientationchange': () => void
+        /** Event will be fired on app click */
+        'click': (event : Event) => void
+        /** Event will be fired on touch start (mousedown) event added as active listener (possible to prevent default) */
+        'touchstart:active': (event : Event) => void
+        /** Event will be fired on touch move (mousemove) event added as active listener (possible to prevent default) */
+        'touchmove:active': (event : Event) => void
+        /** Event will be fired on touch end (mouseup) event added as active listener (possible to prevent default) */
+        'touchend:active': (event : Event) => void
+        /** Event will be fired on touch start (mousedown) event added as passive listener (impossible to prevent default) */
+        'touchstart:passive': (event : Event) => void
+        /** Event will be fired on touch move (mousemove) event added as passive listener (impossible to prevent default) */
+        'touchmove:passive': (event : Event) => void
+        /** Event will be fired on touch end (mouseup) event added as passive listener (impossible to prevent default) */
+        'touchend:passive': (event : Event) => void
     }
 
     export interface Route {
@@ -662,683 +2454,6 @@ declare module "framework7" {
         reload?: boolean;
         reloadPrevious?: boolean;
         pushState?: boolean;
-    }
-
-    export interface VirtualListOptions {
-        items?: any[];
-        rowsBefore?: number;
-        rowsAfter?: number;
-        cols?: number;
-        height?: number | { (item: any): number };
-        template?: string | Function;
-        renderItem?: (index: number, item: any) => HTMLElement;
-        dynamicHeightBufferSize?: number;
-        cache?: boolean;
-        updatableScroll?: boolean;
-        showFilteredItemsOnly?: boolean;
-
-        // Search
-        searchByItem?: (query: string, index: number, item: any) => boolean;
-        searchAll?: (query: string, items: any[]) => number[];
-
-        // Callbacks
-        onItemBeforeInsert?: (list: VirtualList, item: any) => void;
-        onBeforeClear?: (list: VirtualList, fragment: DocumentFragment) => void;
-        onItemsBeforeInsert?: (list: VirtualList, fragment: DocumentFragment) => void;
-        onItemsAfterInsert?: (list: VirtualList, fragment: DocumentFragment) => void;
-    }
-
-    export interface VirtualList {
-        items: any[];
-        filteredItems: any[];
-        domCache: any;
-        params: VirtualListOptions;
-        listBlock: Dom7.Dom7;
-        pageContent: Dom7.Dom7;
-        currentFromIndex: number;
-        currentToIndex: number;
-        reachEnd: boolean;
-
-        filterItems(indexes: number[]): VirtualList;
-        resetFilter(): VirtualList;
-        appendItem(item: any): VirtualList;
-        appendItems(items: any[]): VirtualList;
-        prependItem(item: any): VirtualList;
-        prependItems(items: any[]): VirtualList;
-        replaceItem(index: number, item: any): VirtualList;
-        replaceAllItems(items: any[]): VirtualList;
-        moveItem(oldIndex: number, newIndex: number): VirtualList;
-        insertItemBefore(index: number, item: any): VirtualList;
-        deleteItem(index: number): VirtualList;
-        deleteItems(indexes: number[]): VirtualList;
-        deleteAllItems(): VirtualList;
-        clearCache(): VirtualList;
-        destroy(): void;
-        update(): VirtualList;
-        scrollToItem(index: number): VirtualList;
-    }
-
-    export interface Router {
-        load(options: RouterOptions): void;
-        back(): void;
-        back(options: RouterOptions): void;
-        loadPage(url: string): void;
-        loadContent(content: string | HTMLElement | Dom7.Dom7 | HTMLElement[]): void;
-        reloadPage(url: string): void;
-        reloadContent(content: string | HTMLElement | Dom7.Dom7 | HTMLElement[]): void;
-        reloadPreviousPage(url: string): void;
-        reloadPreviousContent(content: string | HTMLElement | Dom7.Dom7 | HTMLElement[]): void;
-        refreshPage(): void;
-        refreshPreviousPage(): void;
-    }
-
-    export interface PageData {
-        name?: string;
-        url?: string;
-        query?: any;
-        view?: View;
-        container?: HTMLElement;
-        from?: string;
-        navbarInnerContainer?: HTMLElement;
-        swipeBack?: boolean;
-        context?: any;
-        fromPage?: PageData;
-    }
-
-    export interface View {
-        params: ViewParameters;
-        history: string[];
-        contentCache: any;
-        url: string;
-        pagesContainer: HTMLElement;
-        activePage: PageData;
-        main: boolean;
-        router: Router;
-
-        hideNavbar(): void;
-        showNavbar(): void;
-        hideToolbar(): void;
-        showToolbar(): void;
-        destroy(): void;
-    }
-
-    export interface PhotoBrowserOptions {
-        photos?: { html?: string; url?: string; caption?: string }[]
-        initialSlide?: number;
-        spaceBetween?: number;
-        speed?: number;
-        zoom?: boolean;
-        maxZoom?: number;
-        minZoom?: number;
-        exposition?: boolean;
-        expositionHideCaptions?: boolean;
-        swipeToClose?: boolean;
-        view?: View;
-        type?: string;
-        loop?: boolean;
-        theme?: string;
-        captionsTheme?: string;
-        navbar?: boolean;
-        toolbar?: boolean;
-        backLinkText?: string;
-        ofText?: string;
-
-        // Lazy Loading
-        lazyLoading?: boolean;
-        lazyLoadingInPrevNext?: boolean;
-        lazyLoadingOnTransitionStart?: boolean;
-
-        // Templates
-        template?: string;
-        navbarTemplate?: string;
-        toolbarTemplate?: string;
-        photoTemplate?: string;
-        photoLazyTemplate?: string;
-        objectTemplate?: string;
-        captionTemplate?: string;
-
-        // Callbacks
-        onOpen?: (photobrowser: PhotoBrowser) => void;
-        onClose?: (photobrowser: PhotoBrowser) => void;
-        onSwipeToClose?: (photobrowser: PhotoBrowser) => void;
-
-        // Swiper Callbacks
-        onSlideChangeStart?: (swiper: Swiper) => void;
-        onSlideChangeEnd?: (swiper: Swiper) => void;
-        onTransitionStart?: (swiper: Swiper) => void;
-        onTransitionEnd?: (swiper: Swiper) => void;
-        onClick?: (swiper: Swiper, event: string) => void;
-        onTap?: (swiper: Swiper, event: string) => void;
-        onDoubleTap?: (swiper: Swiper, event: string) => void;
-        onLazyImageLoad?: (swiper: Swiper, slide: number, image: HTMLElement) => void;
-        onLazyImageReady?: (swiper: Swiper, slide: number, image: HTMLElement) => void;
-    }
-
-    export interface PhotoBrowser {
-        swiper: Swiper;
-        container: string | HTMLElement | Dom7.Dom7
-        exposed: boolean;
-        activeSlideIndex: number;
-        params: PhotoBrowserOptions;
-
-        open(index: number): void;
-        close(): void;
-        toggleZoom(): void;
-        toggleExposition(): void;
-        enableExposition(): void;
-        disableExposition(): void;
-    }
-
-    export interface AutocompleteOptions {
-        openIn?: string;
-        source?: (autocomplete: Autocomplete, query: string, render: (results: any[]) => void) => void;
-        limit?: number;
-        preloader?: boolean;
-        preloaderColor?: string;
-        valueProperty?: string;
-        textProperty?: string;
-
-        // Standalone Autocomplete Parameters
-        opener?: string | HTMLElement;
-        popupCloseText?: string;
-        backText?: string;
-        pageTitle?: string;
-        searchbarPlaceholderText?: string;
-        searchbarCancelText?: string;
-        notFoundText?: string;
-        multiple?: boolean;
-        backOnSelect?: boolean;
-        navbarTheme?: string;
-        formTheme?: string;
-
-        // Dropdown Autocomplete Parameters
-        input?: string | HTMLElement;
-        dropdownPlaceholderText?: string;
-        updateInputValueOnSelect?: boolean;
-        expandInput?: boolean;
-
-        // Callbacks
-        onChange?: (autocomplete: Autocomplete, value: any[]) => void;
-        onOpen?: (autocomplete: Autocomplete) => void;
-        onClose?: (autocomplete: Autocomplete) => void;
-
-        // Templates
-        navbarTemplate?: string;
-        itemTemplate?: string;
-        dropdownTemplate?: string;
-        dropdownItemTemplate?: string;
-        dropdownPlaceholderTemplate?: string;
-    }
-
-    export interface Autocomplete {
-        params: AutocompleteOptions;
-        value: any[];
-        opened: boolean;
-        dropdown: Dom7.Dom7;
-        popup: Dom7.Dom7;
-
-        open(): Autocomplete;
-        close(): Autocomplete;
-        showPreloader(): Autocomplete;
-        hidePreloader(): Autocomplete;
-        destroy(): void;
-    }
-
-    export interface PickerColumnOptions {
-        values?: string[];
-        displayValues?: string[];
-        cssClass?: string;
-        textAlign?: string;
-        width?: number;
-        divider?: boolean;
-        content?: string;
-
-        // Callbacks
-        onChange?: (p: Picker, value: string, displayValue: string) => void;
-    }
-
-    export interface PickerColumn {
-        container?: Dom7.Dom7;
-        items?: Dom7.Dom7;
-        values: Array<any>;
-        displayValues?: Array<any>;
-        activeIndex?: number;
-        textAlign?: string;
-
-        setValue?(value: any, duration: number): void;
-        replaceValues?(values: any[], displayValues: any[]): void;
-    }
-
-    export interface PickerOptions {
-        // Common Picker Modal Component Parameters
-        container?: string | HTMLElement;
-        input?: string | HTMLElement;
-        scrollToInput?: boolean;
-        inputReadOnly?: boolean;
-        convertToPopover?: boolean;
-        onlyOnPopover?: boolean;
-        cssClass?: string;
-        closeByOutsideClick?: boolean;
-        toolbar?: boolean;
-        toolbarCloseText?: string;
-        toolbarTemplate?: string;
-
-        // Specific Picker Parameters
-        rotateEffect?: boolean;
-        momentumRatio?: number;
-        updateValuesOnMomentum?: boolean;
-        updateValuesOnTouchmove?: boolean;
-        value?: any[];
-        formatValue?: (p: Picker, values: any[], displayValues: string[]) => string;
-        cols?: PickerColumn[];
-
-        // Callbacks
-        onChange?: (p: Picker, values: string[], displayValues: string[]) => void;
-        onOpen?: (p: Picker) => void;
-        onClose?: (p: Picker) => void;
-
-    }
-
-    export interface Picker {
-        params: PickerOptions;
-        value: any[];
-        displayValue: any[];
-        opened: boolean;
-        inline: boolean;
-        cols: PickerColumn[];
-        container: Dom7.Dom7;
-
-        setValue(values: any[], duration: number): Picker;
-        open(): Picker;
-        close(): Picker;
-        destroy(): void;
-    }
-
-    type DateRange = Date | Date[] | { (d: Date): boolean } | { from: Date; to: Date; };
-    export interface RangeClass {
-        cssClass: string;
-        range: DateRange;
-    }
-
-    export interface CalendarOptions {
-        // Common Picker Modal Component Parameters
-        container?: string | HTMLElement;
-        input?: string | HTMLElement;
-        scrollToInput?: boolean;
-        inputReadOnly?: boolean;
-        convertToPopover?: boolean;
-        onlyOnPopover?: boolean;
-        cssClass?: string;
-        closeByOutsideClick?: boolean;
-        toolbar?: boolean;
-        toolbarCloseText?: string;
-        toolbarTemplate?: string;
-
-        // Specific Calendar Parameters
-        value?: Date[];
-        disabled?: DateRange;
-        events?: DateRange;
-        rangesClasses?: RangeClass[];
-        formatValue?: (p: Calendar, values: Date[]) => string;
-        monthNames?: string[];
-        monthNamesShort?: string[];
-        dayNames?: string[];
-        dayNamesShort?: string[];
-        updateValuesOnTouchmove?: boolean;
-        firstDay?: number;
-        weekendDays?: string[];
-        dateFormat?: string;
-        multiple?: boolean;
-        rangePicker?: boolean;
-        direction?: string;
-        minDate?: Date;
-        maxDate?: Date;
-        touchmove?: boolean;
-        animate?: boolean;
-        closeOnSelect?: boolean;
-        weekHeader?: boolean;
-        monthPicker?: boolean;
-        monthPickerTemplate?: string;
-        yearPicker?: boolean;
-        yearPickerTemplate?: string;
-
-        // Callbacks
-        onChange?: (p: Calendar, values: Date[], displayValues: string[]) => void;
-        onMonthAdd?: (p: Calendar, monthContainer: HTMLElement) => void;
-        onDayClick?: (p: Calendar, dayContainer: HTMLElement, year: number, month: number, day: number) => void;
-        onMonthYearChangeStart?: (p: Calendar, year: number, month: number) => void;
-        onMonthYearChangeEnd?: (p: Calendar, year: number, month: number) => void;
-        onOpen?: (p: Calendar) => void;
-        onClose?: (p: Calendar) => void;
-    }
-
-    export interface Calendar {
-        params: CalendarOptions;
-        value: Date[];
-        opened: boolean;
-        inline: boolean;
-        cols: PickerColumn[];
-        container: Dom7.Dom7;
-
-        setValue(values: Date[]): Calendar;
-        nextMonth(duration: number): Calendar;
-        prevMonth(duration: number): Calendar;
-        nextYear(): Calendar;
-        prevYear(): Calendar;
-        setYearMonth(year: number, month: number, duration: number): Calendar;
-        open(): Calendar;
-        close(): Calendar;
-        destroy(): Calendar;
-    }
-
-    export interface MessageOptions {
-        text?: string;
-        name?: string;
-        avatar?: string;
-        type?: string;
-        label?: string;
-        day?: string;
-        time?: string;
-    }
-
-    export interface Message {
-    }
-
-    export interface MessagesOptions {
-        autoLayout?: boolean;
-        newMessagesFirst?: boolean;
-        scrollMessages?: boolean;
-        scrollMessagesOnlyOnEdge?: boolean;
-        messages?: Message[];
-        messageTemplate?: string;
-    }
-
-    export interface Messages {
-        params: MessagesOptions;
-        container: Dom7.Dom7;
-
-        addMessage(messageParameters: MessageOptions, method?: string, animate?: boolean): HTMLElement;
-        appendMessage(messageParameters: MessageOptions, animate?: boolean): HTMLElement;
-        prependMessage(messageParameters: MessageOptions, animate?: boolean): HTMLElement;
-        addMessages(messages: Message[], method?: string, animate?: boolean): HTMLElement[];
-        removeMessage(message: Message): boolean;
-        removeMessages(messages: Message[]): boolean;
-        scrollMessages(): void;
-        layout(): void;
-        clean(): void;
-        destroy(): void;
-    }
-
-    export interface MessageBarOptions {
-        maxHeight?: number;
-    }
-
-    export interface MessageBar {
-        params: MessageBarOptions;
-        container: Dom7.Dom7;
-        textarea: HTMLTextAreaElement;
-
-        value(): string;
-        value(newValue?: string): MessageBar;
-    }
-
-    export interface NotificationOptions {
-        title?: string;
-        message?: string;
-        subtitle?: string;
-        media?: string;
-        hold?: number;
-        closeIcon?: boolean;
-        button?: { text: string, color: string, close: boolean };
-        closeOnClick?: boolean;
-        additionalClass?: string;
-        custom?: string;
-        onClick?: () => void;
-        onClose?: () => void;
-    }
-    
-    export interface SwiperOptions {
-        initialSlide?: number;
-        direction?: string;
-        speed?: number;
-        setWrapperSize?: boolean;
-        virtualTranslate?: boolean;
-        width?: number;
-        height?: number;
-        autoHeight?: boolean;
-        roundLengths?: boolean;
-        nested?: boolean;
-
-        // Autoplay
-        autoplay?: number;
-        autoplayDisableOnInteraction?: boolean;
-
-        // Progress
-        watchSlidesProgress?: boolean;
-        watchSlidesVisibility?: boolean;
-
-        // Freemode
-        freeMode?: boolean;
-        freeModeMomentum?: boolean;
-        freeModeMomentumRatio?: number;
-        freeModeMomentumBounce?: boolean;
-        freeModeMomentumBounceRatio?: number;
-        freeModeMinimumVelocity?: number;
-        freeModeSticky?: boolean;
-
-        // Effects
-        effect?: string;
-        fade?: any;
-        cube?: any;
-        coverflow?: any;
-
-        // Parallax
-        parallax?: boolean;
-
-        // Slides grid
-        spaceBetween?: number;
-        slidesPerView?: number | string;
-        slidesPerColumn?: number;
-        slidesPerColumnFill?: string;
-        slidesPerGroup?: number;
-        centeredSlides?: boolean;
-        slidesOffsetBefore?: number;
-        slidesOffsetAfter?: number;
-
-        // Grab Cursor
-        grabCursor?: boolean;
-
-        // Touches
-        touchEventsTarget?: string;
-        touchRatio?: number;
-        touchAngle?: number;
-        simulateTouch?: boolean;
-        shortSwipes?: boolean;
-        longSwipes?: boolean;
-        longSwipesRatio?: number;
-        longSwipesMs?: number;
-        followFinger?: boolean;
-        onlyExternal?: boolean;
-        threshold?: number;
-        touchMoveStopPropagation?: boolean;
-        iOSEdgeSwipeDetection?: boolean;
-        iOSEdgeSwipeThreshold?: number;
-
-        // Touch Resistance
-        resistance?: boolean;
-        resistanceRatio?: number;
-
-        // Clicks
-        preventClicks?: boolean;
-        preventClicksPropagation?: boolean;
-        slideToClickedSlide?: boolean;
-
-        // Swiping / No swiping
-        allowSwipeToPrev?: boolean;
-        allowSwipeToNext?: boolean;
-        noSwiping?: boolean;
-        noSwipingClass?: string;
-        swipeHandler?: string | HTMLElement;
-
-        // Pagination
-        pagination?: string | HTMLElement;
-        paginationHide?: boolean;
-        paginationClickable?: boolean;
-        paginationElement?: string;
-        paginationBulletRender?: (index: number, className: string) => string;
-
-        // Navigation Buttons
-        nextButton?: string | HTMLElement;
-        prevButton?: string | HTMLElement;
-
-        // Accessibility
-        a11y?: boolean
-        prevSlideMessage?: string;
-        nextSlideMessage?: string;
-        firstSlideMessage?: string;
-        lastSlideMessage?: string;
-        paginationBulletMessage?: string;
-
-        // Scollbar
-        scrollbar?: string | HTMLElement;
-        scrollbarHide?: boolean;
-        scrollbarDraggable?: boolean;
-        scrollbarSnapOnRelease?: boolean;
-
-        // Keyboard / Mousewheel
-        keyboardControl?: boolean;
-        mousewheelControl?: boolean;
-        mousewheelForceToAxis?: boolean;
-        mousewheelReleaseOnEdges?: boolean;
-        mousewheelInvert?: boolean;
-        mousewheelSensitivity?: number;
-
-        // Hash Navigation
-        hashnav?: boolean;
-
-        // Images
-        preloadImages?: boolean;
-        updateOnImagesReady?: boolean;
-        lazyLoading?: boolean;
-        lazyLoadingInPrevNext?: boolean;
-        lazyLoadingOnTransitionStart?: boolean;
-
-        // Loop
-        loop?: boolean;
-        loopAdditionalSlides?: number;
-        loopedSlides?: number;
-
-        // Controller
-        control?: Swiper | Swiper[];
-        controlInverse?: boolean;
-        controlBy?: string;
-
-        // Observer
-        observer?: boolean;
-        observeParents?: boolean;
-
-        // Breakpoints
-        breakpoints?: any;
-
-        // Callbacks
-        runCallbacksOnInit?: boolean;
-        onInit?: (swiper: Swiper) => void;
-        onSlideChangeStart?: (swiper: Swiper) => void;
-        onSlideChangeEnd?: (swiper: Swiper) => void;
-        onSlideNextStart?: (swiper: Swiper) => void;
-        onSlideNextEnd?: (swiper: Swiper) => void;
-        onSlidePrevStart?: (swiper: Swiper) => void;
-        onSlidePrevEnd?: (swiper: Swiper) => void;
-        onTransitionStart?: (swiper: Swiper) => void;
-        onTransitionEnd?: (swiper: Swiper) => void;
-        onTouchStart?: (swiper: Swiper, event: string) => void;
-        onTouchMove?: (swiper: Swiper, event: string) => void;
-        onTouchMoveOpposite?: (swiper: Swiper, event: string) => void;
-        onSliderMove?: (swiper: Swiper, event: string) => void;
-        onTouchEnd?: (swiper: Swiper, event: string) => void;
-        onClick?: (swiper: Swiper, event: string) => void;
-        onTap?: (swiper: Swiper, event: string) => void;
-        onDoubleTap?: (swiper: Swiper, event: string) => void;
-        onImagesReady?: (swiper: Swiper) => void;
-        onProgress?: (swiper: Swiper, progress: number) => void;
-        onReachBeginning?: (swiper: Swiper) => void;
-        onReachEnd?: (swiper: Swiper) => void;
-        onDestroy?: (swiper: Swiper) => void;
-        onSetTranslate?: (swiper: Swiper, translate: boolean) => void;
-        onSetTransition?: (swiper: Swiper, transition: number) => void;
-        onAutoplayStart?: (swiper: Swiper) => void;
-        onAutoplayStop?: (swiper: Swiper) => void;
-        onLazyImageLoad?: (swiper: Swiper, slide: number, image: HTMLElement) => void;
-        onLazyImageReady?: (swiper: Swiper, slide: number, image: HTMLElement) => void;
-
-        // Namespace
-        slideClass?: string
-        slideActiveClass?: string
-        slideVisibleClass?: string
-        slideDuplicateClass?: string
-        slideNextClass?: string
-        slidePrevClass?: string
-        wrapperClass?: string
-        bulletClass?: string
-        bulletActiveClass?: string
-        paginationHiddenClass?: string
-        buttonDisabledClass?: string
-    }
-
-    export class Swiper {
-        constructor(swiperContainer: string | HTMLElement | Dom7.Dom7, parameters: SwiperOptions);
-
-        params: SwiperOptions;
-        container: Dom7.Dom7;
-        wrapper: Dom7.Dom7;
-        slides: Dom7.Dom7;
-        bullets: Dom7.Dom7;
-        width: number;
-        height: number;
-        translate: string;
-        progress: number;
-        /** Index number of currently active slide. In loop mode active index value will be always shifted on a number of looped/duplicated slides. **/
-        activeIndex: number;
-        previousIndex: number;
-        /** Index number of currently active slide considering duplicated slides in loop mode **/
-        realIndex: number;
-        isBeginning: boolean;
-        isEnd: boolean;
-        autoplaying: boolean;
-        animating: boolean;
-        touches: { startX: number; startY: number; currentX: number; currentY: number; diff: any };
-        clickedIndex: number;
-        clickedSlide: HTMLElement;
-
-        slideNext(runCallbacks?: boolean, speed?: number): Swiper;
-        slidePrev(runCallbacks?: boolean, speed?: number): Swiper;
-        slideTo(index: number, speed?: number, runCallbacks?: boolean): Swiper;
-        update(updateTranslate?: boolean): Swiper;
-        onResize(): Swiper;
-        detachEvents(): Swiper;
-        attachEvents(): Swiper;
-        startAutoplay(): Swiper;
-        stopAutoplay(): Swiper;
-        destroy(deleteInstance?: boolean, cleanupStyles?: boolean): Swiper;
-        appendSlide(...slides: Array<HTMLElement | string>): Swiper;
-        prependSlide(...slides: Array<HTMLElement | string>): Swiper;
-        removeSlide(slideIndex?: number): Swiper;
-        removeAllSlides(): Swiper;
-        setWrapperTranslate(translate?: string): Swiper;
-        getWrapperTranslate(): Swiper;
-        on(callback: string, handler: () => void): Swiper;
-        once(callback: string, handler: () => void): Swiper;
-        off(callback: string): Swiper;
-        lockSwipeToNext(): Swiper;
-        unlockSwipeToNext(): Swiper;
-        lockSwipeToPrev(): Swiper;
-        unlockSwipeToPrev(): Swiper;
-        lockSwipes(): Swiper;
-        unlockSwipes(): Swiper;
-        disableMousewheelControl(): Swiper;
-        enableMousewheelControl(): Swiper;
-        disableKeyboardControl(): Swiper;
-        enableKeyboardControl(): Swiper;
     }
 
     export interface Device {
@@ -1406,160 +2521,6 @@ declare module "framework7" {
             [selector: string]: ($clickedEl: HTMLElement, data: any) => void
         }
     }
-
-    class Framework7 {
-        constructor(options?: Framework7Options);
-        init(): void;
-
-        device: Device; // https://framework7.io/docs/device-api.html
-
-        // Views
-        views: View[];
-        addView(selector: string | HTMLElement | Dom7.Dom7, parameters: ViewParameters): View;
-        getCurrentView(index?: number): View | View[];
-
-        // Search Bar
-        searchbar(searchbarContainer: string | HTMLElement | Dom7.Dom7, parameters: SearchBarOptions): SearchBar;
-
-        // Side panels
-        openPanel(position: string): void;
-        closePanel(): void;
-
-        // Navbar https://framework7.io/docs/navbar.html
-
-        /** Hide specified toolbar. **/
-        hideNavbar(navbar: HTMLElement, isAnimated?: boolean): void;
-
-        /** Show specified toolbar. **/
-        showNavbar(navbar: HTMLElement, isAnimated?: boolean): void;
-
-        /** Recalculate positional styles for Navbar in selected View. Useful after you change some of Navbar elements dynamically.
-         * @param viewContainer - CSS Selector string or HTMLElement. **/
-        sizeNavbars(viewContainer: any): void;
-
-
-        // Overlays
-        alert(text: string, callbackOk?: () => void): HTMLElement;
-        alert(text: string, title?: string, callbackOk?: () => void): HTMLElement;
-        confirm(text: string, callbackOk?: () => void, callbackCancel?: () => void): HTMLElement;
-        confirm(text: string, title?: string, callbackOk?: () => void, callbackCancel?: () => void): HTMLElement;
-        prompt(text: string, callbackOk?: (input: string) => void, callbackCancel?: (input: string) => void): HTMLElement;
-        prompt(text: string, title?: string, callbackOk?: (input: string) => void, callbackCancel?: (input: string) => void): HTMLElement;
-        modalLogin(text: string, callbackOk?: (username: string, password: string) => void, callbackCancel?: (username: string, password: string) => void): HTMLElement;
-        modalLogin(text: string, title?: string, callbackOk?: (username: string, password: string) => void, callbackCancel?: (username: string, password: string) => void): HTMLElement;
-        modalPassword(text: string, callbackOk?: (password: string) => void, callbackCancel?: (password: string) => void): HTMLElement;
-        modalPassword(text: string, title?: string, callbackOk?: (password: string) => void, callbackCancel?: (password: string) => void): HTMLElement;
-        showPreloader(title: string): void;
-        hidePreloader(): void;
-        showIndicator(): void;
-        hideIndicator(): void;
-        modal(options: ModalOptions): HTMLElement;
-        popup(content: HTMLElement | string | Dom7.Dom7, removeOnClose?: boolean): HTMLElement;
-        popover(content: HTMLElement | string | Dom7.Dom7, target: HTMLElement | string | Dom7.Dom7, removeOnClose?: boolean): HTMLElement;
-        closeModal(modal?: Modal | HTMLElement | string): void;
-        actions(groups: ActionSheetButton[][]): void;
-        actions(buttons: ActionSheetButton[]): HTMLElement;
-        actions(target: HTMLElement | string | Dom7.Dom7, groups: ActionSheetButton[][]): void;
-        actions(target: HTMLElement | string | Dom7.Dom7, buttons: ActionSheetButton[]): HTMLElement;
-        loginScreen(loginScreen: HTMLElement | string | Dom7.Dom7, animated?: boolean): HTMLElement;
-        pickerModal(picker: HTMLElement | string | Dom7.Dom7, removeOnClose?: boolean): HTMLElement;
-
-        // Progress Bars
-        setProgressbar(container: HTMLElement | string | Dom7.Dom7, progress: number, speed: number): void;
-        hideProgressbar(container: HTMLElement | string | Dom7.Dom7): void;
-        showProgressbar(container: HTMLElement | string | Dom7.Dom7, color: string): void;
-        showProgressbar(progress: number, color: string): void;
-        showProgressbar(container: HTMLElement | string | Dom7.Dom7, progress: number, color: string): void;
-        showProgressbar(): void;
-
-        // Swipeout
-        swipeoutOpen(el: HTMLElement | string | Dom7.Dom7, direction: string, callback: Function): void;
-        swipeoutClose(el: HTMLElement | string | Dom7.Dom7, callback: Function): void;
-        swipeoutDelete(el: HTMLElement | string | Dom7.Dom7, callback: Function): void;
-        swipeoutOpenedEl: HTMLElement;
-
-        // Sortable List
-        sortableOpen(sortableContainer: HTMLElement | string | Dom7.Dom7): void;
-        sortableClose(sortableContainer: HTMLElement | string | Dom7.Dom7): void;
-        sortableToggle(sortableContainer: HTMLElement | string | Dom7.Dom7): void;
-
-        // Virtual List
-        virtualList(listBlockContainer: HTMLElement | string | Dom7.Dom7, parameters: VirtualListOptions): VirtualList;
-
-        // Accordian
-        accordionOpen(item: HTMLElement | string | Dom7.Dom7): void;
-        accordionClose(item: HTMLElement | string | Dom7.Dom7): void;
-        accordionToggle(item: HTMLElement | string | Dom7.Dom7): void;
-
-        // SmartSelect
-        smartSelectOpen(smartSelect: HTMLElement | string | Dom7.Dom7): void;
-        smartSelectAddOption(select: HTMLElement | string | Dom7.Dom7, optionHTML: string, index: number): void;
-
-        // Forms
-        formToJSON(form: HTMLElement | string | Dom7.Dom7): any;
-        formFromJSON(form: HTMLElement | string | Dom7.Dom7, formData: Object): void;
-        formGetData(formId: string): void;
-        formDeleteData(formId: string): void;
-        formStoreData(formId: string, formJSON: Object): void;
-
-        // Tabs
-        showTab(tab: HTMLElement | string | Dom7.Dom7): boolean;
-
-        // Swiper
-        swiper(swiperContainer: string | HTMLElement | Dom7.Dom7, parameters?: SwiperOptions): Swiper;
-
-        // Photo Browser
-        photoBrowser(parameters: PhotoBrowserOptions): PhotoBrowser;
-
-        // Autocomplete
-        autocomplete(parameters: AutocompleteOptions): Autocomplete;
-
-        // Picker
-        picker(parameters: PickerOptions): Picker;
-
-        // Calendar/Datepicker
-        calendar(parameters: CalendarOptions): Calendar;
-
-        // Pull to Refresh
-        initPullToRefresh(pageContainer: string | HTMLElement | Dom7.Dom7): void;
-        pullToRefreshDone(ptrContent?: string | HTMLElement | Dom7.Dom7): void;
-        pullToRefreshTrigger(ptrContent?: string | HTMLElement | Dom7.Dom7): void;
-        destroyPullToRefresh(ptrContent?: string | HTMLElement | Dom7.Dom7): void;
-
-        // Infinite Scroll
-        attachInfiniteScroll(container: string | HTMLElement | Dom7.Dom7): void;
-        detachInfiniteScroll(container: string | HTMLElement | Dom7.Dom7): void;
-
-        // Messages
-        messages(messagesContainer: string | HTMLElement | Dom7.Dom7, parameters: MessagesOptions): Messages;
-        messagebar(messagebarContainer: string | HTMLElement | Dom7.Dom7, parameters: MessageBarOptions): MessageBar;
-
-        // Notifications
-        addNotification(parameters: NotificationOptions): void;
-        closeNotification(notificationElement: string | HTMLElement | Dom7.Dom7): void;
-
-        // not documented
-        onPageBeforeInit(pageName: string, callback: (page: PageData) => void): PageCallbackObject;
-        onPageInit(pageName: string, callback: (page: PageData) => void): PageCallbackObject;
-        onPageReinit(pageName: string, callback: (page: PageData) => void): PageCallbackObject;
-        onPageBeforeAnimation(pageName: string, callback: (page: PageData) => void): PageCallbackObject;
-        onPageAfterAnimation(pageName: string, callback: (page: PageData) => void): PageCallbackObject;
-        onPageBeforeRemove(pageName: string, callback: (page: PageData) => void): PageCallbackObject;
-        onPageBack(pageName: string, callback: (page: PageData) => void): PageCallbackObject;
-        onPageAfterBack(pageName: string, callback: (page: PageData) => void): PageCallbackObject;
-
-        // Resizable textarea
-        resizeTextarea(textarea: string | HTMLElement | Dom7.Dom7): void;
-        resizableTextarea(textarea: string | HTMLElement | Dom7.Dom7): void;
-        destroyResizableTextarea(pageContainer: string | HTMLElement | Dom7.Dom7): void;
-        initPageResizableTextarea(pageContainer: string | HTMLElement | Dom7.Dom7): void;
-
-        static use(module: Framework7Plugin, ...params: any[]): Framework7;
-    }
-
-    ///
-    /// END v1 stuff that hasn't been reviewed/incorporated into the new structure
-    ///
 
     // TODO
     
