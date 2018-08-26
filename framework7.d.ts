@@ -2838,6 +2838,9 @@ declare module "framework7" {
             [selector: string]: ($clickedEl: HTMLElement, data: any) => void
         }
     }
+    export interface Framework7 {
+        use(plugin : Framework7Plugin) : void
+    }
 
     class Framework7 implements Framework7 {}
 
