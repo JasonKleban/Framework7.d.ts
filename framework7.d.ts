@@ -1143,72 +1143,81 @@ declare module "framework7" {
     export namespace Icons {}
 
     export namespace InfiniteScroll {
-        export interface InfiniteScroll {
-            // TODO: fill in?
-        }
+        export interface InfiniteScroll { }
 
-        export interface Parameters {
-            // TODO: fill in?
-        }
+        export interface Parameters { }
 
-        export interface Events {
-            // TODO: fill in?
-        }
+        export interface Events { }
     
         export interface DomEvents {
-            // TODO: fill in?
+            /** Event will be triggered when page scroll reaches specified (in data-distance attribute) distance to the bottom. */
+            'infinite': () => void
         }
 
         export interface AppMethods {
-            // TODO: fill in?
+            /** create InfiniteScroll instance */
+            create(el : HTMLElement | CssSelector) : InfiniteScroll;
+            /** destroy InfiniteScroll instance */
+            destroy(el : HTMLElement | CssSelector) : void;
         }
     
         export interface AppEvents {
-            // TODO: fill in?
+            /** Event will be triggered when page scroll reaches specified (in data-distance attribute) distance to the bottom. */
+            'infinite': (el : HTMLElement, event : Event) => void
         }
     }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
+    export interface Framework7Params { }
     export interface Framework7 {
-        // TODO: fill in?
-        // InfiniteScroll: InfiniteScroll.AppMethods
+        infiniteScroll: InfiniteScroll.AppMethods
     }
-    //export interface Framework7AppEvents extends InfiniteScroll.AppEvents {}
+    export interface Framework7AppEvents extends InfiniteScroll.AppEvents {}
 
-    export namespace FormInputs {
-        export interface FormInputs {
-            // TODO: fill in?
-        }
-
-        export interface Parameters {
-            // TODO: fill in?
-        }
-
-        export interface Events {
-            // TODO: fill in?
+    export namespace Input {
+        export interface AppParameters {
+            /** When enabled will scroll input into view on input focus. By default it is enabled for android devices only, as it helps to solve issue when on-screen keyboard may overlap the input. */
+            scrollIntoViewOnFocus: boolean
+            /** Tweaks behavior of previous parameter to scroll input into the center of view on input focus. (default false) */
+            scrollIntoViewCentered?: boolean
+            /** Default duration for scrolling input into view. (default 0) */
+            scrollIntoViewDuration?: number
+            /** When enabled will scroll input into view no matter is it outside of view or not. (default false) */
+            scrollIntoViewAlways?: boolean
         }
     
         export interface DomEvents {
-            // TODO: fill in?
+            /** Event will be triggered after resizable textarea resized. event.detail will contain object with the initialHeight, currentHeight and scrollHeight properties */
+            'textarea:resize': () => void
+            /** Event will be triggered when input value becomes not empty */
+            'input:notempty': () => void
+            /** Event will be triggered when input value becomes empty */
+            'input:empty': () => void
+            /** Event will be triggered after input value will be cleared by clicking on input clear button */
+            'input:clear': () => void
         }
 
         export interface AppMethods {
-            // TODO: fill in?
-        }
-    
-        export interface AppEvents {
-            // TODO: fill in?
+            /** Scroll input into view */
+            scrollIntoView(inputEl : HTMLElement | CssSelector, durationMS: number, centered : boolean, force : boolean) : void
+            /** Will add additional required styles and classes on input like when it is focused*/
+            focus(inputEl : HTMLElement | CssSelector) : void
+            /** Will remove additional required styles and classes on input like when it loses focus */
+            blur(inputEl : HTMLElement | CssSelector) : void
+            /** Force resizable textarea to resize depending on its content */
+            resizeTextarea(textareaEl : HTMLElement | CssSelector) : void
+            /** Recalculate required additional styles and classes on input element based on whether it has value or not */
+            checkEmptyState(inputEl : HTMLElement | CssSelector) : void
+            /** Validate input */
+            validate(inputEl : HTMLElement | CssSelector) : void
+            /** Validate all inputs in passed container */
+            validateInputs(containerEl : HTMLElement | CssSelector) : void
         }
     }
     export interface Framework7Params {
-        // TODO: fill in?
+        input: Input.AppParameters
     }
     export interface Framework7 {
-        // TODO: fill in?
-        // FormInputs: FormInputs.AppMethods
+        input: Input.AppMethods
     }
-    //export interface Framework7AppEvents extends FormInputs.AppEvents {}
 
     export namespace LazyLoad {
         export interface LazyLoad {
