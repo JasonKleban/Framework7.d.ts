@@ -2838,11 +2838,12 @@ declare module "framework7" {
             [selector: string]: ($clickedEl: HTMLElement, data: any) => void
         }
     }
-    export interface Framework7 {
-        use(plugin : Framework7Plugin) : void
-    }
 
-    class Framework7 implements Framework7 {}
+    class Framework7 implements Framework7 {
+        constructor(parameters?: Framework7Params);
+
+        static use(plugin : Framework7Plugin) : void;
+    }
 
     // TODO
     
