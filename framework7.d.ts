@@ -976,39 +976,71 @@ declare module "framework7" {
     }
     //export interface Framework7AppEvents extends FloatingActionButton.AppEvents {}
 
-    export namespace FormDataStorage {
-        export interface FormDataStorage {
-            // TODO: fill in?
-        }
+    export namespace Form {
+        export interface Form { }
 
-        export interface Parameters {
-            // TODO: fill in?
-        }
+        export interface Parameters { }
 
-        export interface Events {
-            // TODO: fill in?
-        }
+        export interface Events { }
     
         export interface DomEvents {
-            // TODO: fill in?
+            /** Event will be triggered on form when calling app.form.convertToData */
+            'form:todata': () => void
+            /** Event will be triggered on form when calling app.form.fillFromData */
+            'form:fromdata': () => void
+
+            /** Event will be triggered right after for data saved */
+            'form:storedata': () => void
+
+            /** Event will be triggered after successful Ajax request */
+            'formajax:success': () => void
+            /** Event will be triggered after Ajax request completed */
+            'formajax:complete': () => void
+            /** Event will be triggered right before Ajax request */
+            'formajax:beforesend': () => void
+            /** Event will be triggered on Ajax request error */
+            'formajax:error': () => void
         }
 
         export interface AppMethods {
-            // TODO: fill in?
+            /** convert form fields values to data object */
+            convertToData(form : HTMLElement | CssSelector) : void
+            
+            /** fill up form according to data object */
+            fillFromData(form : HTMLElement | CssSelector, data : object) : void
+
+            /** get form data for the form with specified id attribute */
+            getFormData(formId : string) : Form
+            /** store form data for the form with specified id attribute */
+            storeFormData(formId : string, data : object) : void
+            /** remove form data for the form with specified id attribute */
+            removeFormData(formId : string) : void
         }
     
         export interface AppEvents {
-            // TODO: fill in?
+            /** Event will be triggered on form when calling app.form.convertToData */
+            formToData: (form : Form, data : object) => void
+            /** Event will be triggered on form when calling app.form.fillFromData  */
+            formFromData: (form : Form, data : object) => void
+
+            /** Event will be triggered right after for data saved */
+            formStoreData: (form : Form, data : object) => void
+
+            /** Event will be triggered right after for data saved */
+            formAjaxSuccess: (form : HTMLElement, data : object, xhr : Dom7.Dom7XHR) => void
+            /** Event will be triggered right after for data saved */
+            formAjaxComplete: (form : HTMLElement, data : object, xhr : Dom7.Dom7XHR) => void
+            /** Event will be triggered right after for data saved */
+            formAjaxBeforeSend: (form : HTMLElement, data : object, xhr : Dom7.Dom7XHR) => void
+            /** Event will be triggered right after for data saved */
+            formAjaxError: (form : HTMLElement, data : object, xhr : Dom7.Dom7XHR) => void
         }
     }
-    export interface Framework7Params {
-        // TODO: fill in?
-    }
+    export interface Framework7Params {}
     export interface Framework7 {
-        // TODO: fill in?
-        // FormDataStorage: FormDataStorage.AppMethods
+        form: Form.AppMethods
     }
-    //export interface Framework7AppEvents extends FormDataStorage.AppEvents {}
+    export interface Framework7AppEvents extends Form.AppEvents {}
 
     export namespace Gauge {
         export interface Gauge {
