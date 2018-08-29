@@ -1687,14 +1687,36 @@ declare module "framework7-react" {
 
     namespace Progressbar {
         export interface Props extends F7Props {
+            /** Determinate progress (from 0 to 100) */
+            progress : number
+            /** Whether progressbar is infinite or not (determinate) */
+            infinite : boolean
         }
     }
 
-    export class Progressbar extends React.Component<Progressbar.Props, {}> {}
+    export class Progressbar extends React.Component<Progressbar.Props, {}> {
+        /** Set progressbar progress */
+        set(progress : number, durationMS : number) : void
+    }
     export const F7Progressbar : typeof Progressbar;
 
     namespace Radio {
         export interface Props extends F7Props {
+            /** Defines whether the radio input is checked or not. */
+            checked: boolean
+            /** Defines whether the checkbox input is checked or not, for the case if it is uncontrolled component. */
+            defaultChecked: boolean
+            /** Radio input name. */
+            name: string | number
+            /** Radio input value. */
+            value: string | number | boolean
+            /** Defines whether the radio input is disabled. */
+            disabled: boolean
+            /** Defines whether the radio input is readonly. */
+            readonly: boolean
+
+            /** Event will be triggered when radio input state changed */
+            onChange : () => void
         }
     }
 
