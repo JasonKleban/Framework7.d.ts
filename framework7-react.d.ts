@@ -1587,10 +1587,46 @@ declare module "framework7-react" {
 
     namespace Panel {
         export interface Props extends F7Props {
+            /** Panel side. Could be left or right. */
+            side: string
+            /** Shortcut prop for side="left". */
+            left: boolean
+            /** Shortcut prop for side="right". */
+            right: boolean
+            /** Panel effect. Could be cover or reveal. */
+            effect: string
+            /** Shortcut prop for effect="cover". */
+            cover: boolean
+            /** Shortcut prop for effect="reveal". */
+            reveal: boolean
+            /** Allows to open/close panel and set its initial state. */
+            opened: boolean
+
+            /** Event will be triggered when Panel starts its opening animation */
+            onPanelOpen : () => void
+            /** Event will be triggered after Panel completes its opening animation */
+            onPanelOpened : () => void
+            /** Event will be triggered when Panel starts its closing animation */
+            onPanelClose : () => void
+            /** Event will be triggered after Panel completes its closing animation */
+            onPanelClosed : () => void
+            /** Event will be triggered when the panel backdrop is clicked */
+            onPanelBackdropClick : () => void
+            /** Event will be triggered for swipe panels during touch swipe action */
+            onPanelSwipe : () => void
+            /** Event will be triggered in the very beginning of opening it with swipe */
+            onPanelSwipeOpen : () => void
+            /** Event will be triggered when it becomes visible/hidden when app width matches its breakpoint */
+            onPanelBreakpoint : () => void
         }
     }
 
-    export class Panel extends React.Component<Panel.Props, {}> {}
+    export class Panel extends React.Component<Panel.Props, {}> {
+        /** Open panel */
+        open(animate : boolean) : void
+        /** Close panel */
+        close(animate : boolean) : void
+    }
     export const F7Panel : typeof Panel;
 
     namespace PhotoBrowser {
