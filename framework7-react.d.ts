@@ -892,10 +892,31 @@ declare module "framework7-react" {
 
     namespace ListIndex {
         export interface Props extends F7Props {
+            /** Initializes List Index. (default true) */
+            init?: boolean
+            /** Related List View element. HTMLElement or string with CSS selector of List View element. */
+            listEl: HTMLElement | CssSelector
+            /** Array with indexes. If not passed then it will automatically generate it based on item-divider and list-group-title elements inside of passed List View element in listEl parameter. (default auto) */
+            indexes?: number[] | string
+            /** Will automatically scroll related List View to the selected index. (default true) */
+            scrollList?: boolean
+            /** Enables label bubble with selected index when you swipe over list index. (default false) */
+            label?: boolean
+            /** Single index item height. It is required to calculate dynamic index and how many indexes fit on the screen. For iOS theme. (default 14) */
+            iosItemHeight?: number
+            /** Single index item height. It is required to calculate dynamic index and how many indexes fit on the screen. For MD theme. (default 14) */
+            mdItemHeight?: number
+
+            onListIndexSelect: (itemContent : any) => void
         }
     }
 
-    export class ListIndex extends React.Component<ListIndex.Props, {}> {}
+    export class ListIndex extends React.Component<ListIndex.Props, {}> {
+        /** Recalculates indexes, sizes and rerenders list index */
+        update() : void
+        /** Scrolls related list to specified index content */
+        scrollToList(itemContent : any) : void
+    }
     export const F7ListIndex : typeof ListIndex;
 
     namespace ListItemCell {
@@ -1189,10 +1210,26 @@ declare module "framework7-react" {
 
     namespace LoginScreen {
         export interface Props extends F7Props {
+            /** Allows to open/close Login Screen and set its initial state. (default false) */
+            opened?: boolean
+
+            /** Event will be triggered when Login Screen starts its opening animation */
+            onLoginScreenOpen : () => void
+            /** Event will be triggered after Login Screen completes its opening animation */
+            onLoginScreenOpened : () => void
+            /** Event will be triggered when Login Screen starts its closing animation */
+            onLoginScreenClose : () => void
+            /** Event will be triggered after Login Screen completes its closing animation */
+            onLoginScreenClosed : () => void
         }
     }
 
-    export class LoginScreen extends React.Component<LoginScreen.Props, {}> {}
+    export class LoginScreen extends React.Component<LoginScreen.Props, {}> {
+        /** Open login screen */
+        open(animate : boolean) : void
+        /** Close login screen */
+        close(animate : boolean) : void
+    }
     export const F7LoginScreen : typeof LoginScreen;
 
     namespace Message {
