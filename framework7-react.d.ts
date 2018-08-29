@@ -791,6 +791,85 @@ declare module "framework7-react" {
 
     namespace ListButton {
         export interface Props extends F7Props {
+            /** Button inner text. */
+            title: string
+            /** Button inner text, same as title. */
+            text: string
+            /** Enables tab link and specify CSS selector of the target tab (if specified as a string). */
+            tabLink: string | boolean
+            /** Disables fast click. */
+            noFastClick: boolean
+
+            // <ListButton> navigation/router related properties
+            /** URL of the page to load. In case of boolean href="false" it won't add href tag. (default #) */
+            href?: string | boolean
+            /** Value of link target attribute, e.g. _blank, _self, etc.. */
+            target: string
+            /** CSS selector of the View to load the page. */
+            view: string
+            /** Enable to bypass Framework7's link click handler. */
+            external: boolean
+            /** Enables back navigation link. */
+            back: boolean
+            /** Force page to load and ignore previous page in history (use together with back prop). */
+            force: boolean
+            /** Reloads new page instead of the currently active one. */
+            reloadCurrent: boolean
+            /** Replace the previous page in history with the new one from route. */
+            reloadPrevious: boolean
+            /** Load new page and remove all previous pages from history and DOM. */
+            reloadAll: boolean
+            /** Disables pages animation. */
+            animate: boolean
+            /** Ignores caching. */
+            ignoreCache: boolean
+            /** Name of the page to load. */
+            pageName: string
+            /** Routable Tab id. */
+            routeTabId: string
+
+            // <ListButton> action related properties
+            /** Defines panel to open. Can be left or right. */
+            panelOpen: CssSelector | boolean
+            /** Closes panel on click. */
+            panelClose: boolean
+            /** CSS selector of the action sheet to open on click. */
+            actionsOpen: CssSelector | boolean
+            /** CSS selector of the action sheet to close on click. Or boolean property to close currently opened action sheet. */
+            actionsClose: CssSelector | boolean
+            /** CSS selector of the popup to open on click. */
+            popupOpen: CssSelector | boolean
+            /** CSS selector of the popup to close on click. Or boolean property to close currently opened popup. */
+            popupClose: CssSelector | boolean
+            /** CSS selector of the popover to open on click. */
+            popoverOpen: CssSelector | boolean
+            /** CSS selector of the popover to close on click. Or boolean property to close currently opened popover. */
+            popoverClose: CssSelector | boolean
+            /** CSS selector of the sheet modal to open on click. */
+            sheetOpen: CssSelector | boolean
+            /** CSS selector of the sheet modal to close on click. Or boolean property to close currently opened sheet modal. */
+            sheetClose: CssSelector | boolean
+            /** CSS selector of the login screen to open on click. */
+            loginScreenOpen: CssSelector | boolean
+            /** CSS selector of the login screen to close on click. Or boolean property to close currently opened login screen. */
+            loginScreenClose: CssSelector | boolean
+            /** CSS selector of the Sortable list to open on click. */
+            sortableEnable: CssSelector | boolean
+            /** CSS selector of the Sortable list to close on click. Or boolean property to close currently opened Sortable list. */
+            sortableDisable: CssSelector | boolean
+            /** CSS selector of the Sortable list to toggle on click. Or boolean property to toggle currently opened/closed Sortable list. */
+            sortableToggle: CssSelector | boolean
+            /** CSS selector of the Expandable Searchbar to be enabled on click. Or boolean property to enable the first found Searchbar. */
+            searchbarEnable: CssSelector | boolean
+            /** CSS selector of the Expandable Searchbar to be disabled on click. Or boolean property to disable the first found Searchbar. */
+            searchbarDisable: CssSelector | boolean
+            /** CSS selector of the Expandable Searchbar to toggle on click. Or boolean property to toggle the first found Searchbar. */
+            searchbarToggle: CssSelector | boolean
+            /** CSS selector of the Expandable Searchbar to clear on click. Or boolean property to clear the first found Searchbar. */
+            searchbarClear: CssSelector | boolean
+            
+            /** Event will be triggered after click on a button */
+            onClick: () => void
         }
     }
 
@@ -799,6 +878,12 @@ declare module "framework7-react" {
 
     namespace ListGroup {
         export interface Props extends F7Props {
+            /** Enables Media List for this group. (default false) */
+            mediaList?: boolean
+            /** Enables Sortable List for this group. (default false) */
+            sortable?: boolean
+            /** Enables simplified Simple List for this group. (default false) */
+            simpleList?: boolean
         }
     }
 
@@ -839,6 +924,177 @@ declare module "framework7-react" {
 
     namespace ListItem {
         export interface Props extends F7Props {
+            // <ListItem> properties
+            /** List item title. */
+            title: string
+            /** List item subtitle (only for Media List). */
+            subtitle: string
+            /** List item text (only for Media List). */
+            text: string
+            /** List item header text. */
+            header: string
+            /** List item footer text. */
+            footer: string
+            /** List item media image URL. */
+            media: string
+            /** List item label. */
+            after: string
+            /** List item Badge. */
+            badge: string | number
+            /** List item Badge color. One of the default colors. */
+            badgeColor: string
+            /** Enables Media list item for the current list item. */
+            mediaItem: boolean
+            /** Converts list item to list item divider. */
+            divider: boolean
+            /** Converts list item to list group title. */
+            groupTitle: boolean
+            /** Disables fast click. */
+            noFastClick: boolean
+            /** List item link target attribute. */
+            target: boolean
+            
+            // <ListItem> Form inputs specific properties: 
+            /** Enables inline-styled labels for Form Inputs. By default inherirt inlineLabels prop on parent <List>. (default false) */
+            inlineLabel?: boolean
+            /** Enables additional styling for Form Inputs inside. By default will try to detect based on content. (default false) */
+            itemInput?: boolean
+            /** Enables additional styling for Form Inputs with additional info. By default will try to detect based on content. (default false) */
+            itemInputWithInfo?: boolean
+            
+            // <ListItem> Swipeout specific properties: 
+            /** Converts list item to swipeout list item. */
+            swipeout: boolean
+            /** Defines whether swipe actions should be opened or not. Note, only one swipeout item can be opened at same time. */
+            swipeoutOpened: boolean
+            
+            // <ListItem> Accordion specific properties: 
+            /** Converts list item to accordion list item. (default false) */
+            accordionItem?: boolean
+            /** Makes accordion item opened. (default false) */
+            accordionItemOpened?: boolean
+            
+            // <ListItem> Smart Select specific properties: 
+            /** Enables Smart Select behavior. (default false) */
+            smartSelect?: boolean
+            /** Object with Smart Select Parameters. */
+            smartSelectParams: object
+            
+            // <ListItem> Checkboxes & Radios specific properties: 
+            /** Enables checkbox-item. (default false) */
+            checkbox?: boolean
+            /** Enables radio-item. (default false) */
+            radio?: boolean
+            /** Whether the checkbox/radio input is checked. (default false) */
+            checked?: boolean
+            /** Defines whether the checkbox input is checked or not, for the case if it is uncontrolled component. */
+            defaultChecked: boolean
+            /** Checkbox/radio input name. */
+            name: string
+            /** Checkbox/radio input value. */
+            value: string | number
+            /** Whether the checkbox/radio input is readonly. (default false) */
+            readonly?: boolean
+            /** Whether the checkbox/radio input is disabled. (default false) */
+            disabled?: boolean
+            /** Whether the checkbox/radio input is required. (default false) */
+            required?: boolean
+            
+            // <ListItem> navigation/router related properties: 
+            /** Enables link and link URL if specified as string. Same as href prop. */
+            link: boolean | string
+            /** URL of the page to load. In case of boolean href="false" it won't add href tag. (default #) */
+            href?: string | boolean
+            /** CSS selector of the View to load the page. */
+            view: string
+            /** Enable to bypass Framework7's link click handler. */
+            external: boolean
+            /** Enables back navigation link. */
+            back: boolean
+            /** Force page to load and ignore previous page in history (use together with back prop). */
+            force: boolean
+            /** Reloads new page instead of the currently active one. */
+            reloadCurrent: boolean
+            /** Replace the previous page in history with the new one from route. */
+            reloadPrevious: boolean
+            /** Load new page and remove all previous pages from history and DOM. */
+            reloadAll: boolean
+            /** Disables pages animation. */
+            animate: boolean
+            /** Ignores caching. */
+            ignoreCache: boolean
+            /** Name of the page to load. */
+            pageName: string
+            /** Routable Tab id. */
+            routeTabId: string
+
+            // <ListItem> action related properties: 
+            /** Defines panel to open. Can be left or right. */
+            panelOpen: string | boolean
+            /** Closes panel on click. */
+            panelClose: boolean
+            /** CSS selector of the action sheet to open on click. */
+            actionsOpen: string | boolean
+            /** CSS selector of the action sheet to close on click. Or boolean property to close currently opened action sheet. */
+            actionsClose: string | boolean
+            /** CSS selector of the popup to open on click. */
+            popupOpen: string | boolean
+            /** CSS selector of the popup to close on click. Or boolean property to close currently opened popup. */
+            popupClose: string | boolean
+            /** CSS selector of the popover to open on click. */
+            popoverOpen: string | boolean
+            /** CSS selector of the popover to close on click. Or boolean property to close currently opened popover. */
+            popoverClose: string | boolean
+            /** CSS selector of the sheet modal to open on click. */
+            sheetOpen: string | boolean
+            /** CSS selector of the sheet modal to close on click. Or boolean property to close currently opened sheet modal. */
+            sheetClose: string | boolean
+            /** CSS selector of the login screen to open on click. */
+            loginScreenOpen: string | boolean
+            /** CSS selector of the login screen to close on click. Or boolean property to close currently opened login screen. */
+            loginScreenClose: string | boolean
+            /** CSS selector of the Sortable list to open on click. */
+            sortableEnable: string | boolean
+            /** CSS selector of the Sortable list to close on click. Or boolean property to close currently opened Sortable list. */
+            sortableDisable: string | boolean
+            /** CSS selector of the Sortable list to toggle on click. Or boolean property to toggle currently opened/closed Sortable list. */
+            sortableToggle: string | boolean
+            /** CSS selector of the Expandable Searchbar to be enabled on click. Or boolean property to enable the first found Searchbar. */
+            searchbarEnable: string | boolean
+            /** CSS selector of the Expandable Searchbar to be disabled on click. Or boolean property to disable the first found Searchbar. */
+            searchbarDisable: string | boolean
+            /** CSS selector of the Expandable Searchbar to toggle on click. Or boolean property to toggle the first found Searchbar. */
+            searchbarToggle: string | boolean
+            /** CSS selector of the Expandable Searchbar to clear on click. Or boolean property to clear the first found Searchbar. */
+            searchbarClear: string | boolean
+
+            // event
+            /** Event will be triggeres when user clicks on list item */
+            onClick: () => void
+            /** Event will be triggeres when "change" event occurs on list item input (radio or checkbox) */
+            onChange: () => void
+            /** Event will be triggered while you move swipeout element. event.detail.progress contains current opened progress percentage */
+            onSwipeout: () => void
+            /** Event will be triggered when swipeout element starts its opening animation */
+            onSwipeoutOpen: () => void
+            /** Event will be triggered after swipeout element completes its opening animation */
+            onSwipeoutOpened: () => void
+            /** Event will be triggered when swipeout element starts its closing animation */
+            onSwipeoutClose: () => void
+            /** Event will be triggered after swipeout element completes its closing animation */
+            onSwipeoutClosed: () => void
+            /** Event will be triggered after swipeout element starts its delete animation */
+            onSwipeoutDelete: () => void
+            /** Event will be triggered after swipeout element completes its delete animation right before it will be removed from DOM */
+            onSwipeoutDeleted: () => void
+            /** Event will be triggered when accordion content starts its opening animation. */
+            onAccordionOpen: () => void
+            /** Event will be triggered after accordion content completes its opening animation. */
+            onAccordionOpened: () => void
+            /** Event will be triggered when accordion content starts its closing animation. */
+            onAccordionClose: () => void
+            /** Event will be triggered after accordion content completes its closing animation. */
+            onAccordionClosed: () => void
         }
     }
 
@@ -847,8 +1103,76 @@ declare module "framework7-react" {
 
     namespace List {
         export interface Props extends F7Props {
-            /** Adds required additional styles for Contacts List. (default false) */
+            /** Makes list block inset. (default false) */
+            inset?: boolean
+            /** Makes block inset on tablets, but not on phones. (default false) */
+            tabletInset?: boolean
+            /** Enables Media List. (default false) */
+            mediaList?: boolean
+            /** Enables simplified Links List. (default false) */
+            linksList?: boolean
+            /** Enables simplified Simple List. (default false) */
+            simpleList?: boolean
+            /** Enables Sortable List. (default false) */
+            sortable?: boolean
+            /** Enables sorting on sortable list. (default false) */
+            sortableEnabled?: boolean
+            /** Enables Accordion List. (default false) */
+            accordion?: boolean
+            /** Enables Contacts List by adding required addional classes for styling. (default false) */
             contactsList?: boolean
+            /** Enables <form> tag on list block instead of <div>. (default false) */
+            form?: boolean
+            /** Enables form storage for the current form. (default false) */
+            formStoreData?: boolean
+            /** Enables inline-styled labels for Form Inputs. (default false) */
+            inlineLabels?: boolean
+            /** Removes outer hairlines. (default false) */
+            noHairlines?: boolean
+            /** Removes outer hairlines for MD theme. (default false) */
+            noHairlinesMd?: boolean
+            /** Removes outer hairlines for iOS theme. (default false) */
+            noHairlinesIos?: boolean
+            /** Removes inner hairlines between items. (default false) */
+            noHairlinesBetween?: boolean
+            /** Removes inner hairlines between items for MD theme. (default false) */
+            noHairlinesBetweenMd?: boolean
+            /** Removes inner hairlines between items for iOS theme. (default false) */
+            noHairlinesBetweenIos?: boolean
+            /** Adds additional "tab" class when block should be used as a Tab. (default false) */
+            tab?: boolean
+            /** Adds additional "tab-active" class when block used as a Tab and makes it active tab. (default false) */
+            tabActive?: boolean
+            /** Enables Virtual List. (default false) */
+            virtualList?: boolean
+            /** Object with Virtual List Parameters. */
+            virtualListParams: object
+
+            // <List> events
+            /** Event will be triggered when List Block-Tab becomes visible/active */
+            onTabShow() : void
+            /** Event will be triggered when List Block-Tab becomes invisible/inactive */
+            onTabHide() : void
+            /** Event will be triggered on list-form submit when list used as form (with enabled form prop) */
+            onSubmit() : void
+
+            // <List> Sortable specific events
+            /** Event will be triggered when sortable mode is enabled */
+            sortableEnable() : void
+            /** Event will be triggered when sortable mode is disabled */
+            sortableDisable() : void
+            /** Event will be triggered after user release currently sorting element in new position. event.detail will contain object with from and to properties with start/new index numbers of sorted list item */
+            sortableSort() : void
+
+            // <List> Virtual List specific events
+            /** Event will be triggered before item will be added to virtual document fragment */
+            virtualItemBeforeInsert() : void
+            /** Event will be triggered after current DOM list will be removed and before new document will be inserted */
+            virtualItemsBeforeInsert() : void
+            /** Event will be triggered after new document fragment with items inserted */
+            virtualItemsAfterInsert() : void
+            /** Event will be triggered before current DOM list will be removed and replaced with new document fragment */
+            virtualBeforeClear() : void
         }
     }
 
