@@ -1234,6 +1234,53 @@ declare module "framework7-react" {
 
     namespace Message {
         export interface Props extends F7Props {
+            /** Message type: sent (default) or received. (default sent) */
+            type?: string
+            /** Message text. */
+            text: string
+            /** Message user's avatar URL. */
+            avatar: string
+            /** Message user's name. */
+            name: string
+            /** Message image URL. */
+            image: string
+            /** Message header. */
+            header: string
+            /** Message footer. */
+            footer: string
+            /** Message text header. */
+            textHeader: string
+            /** Message text footer. */
+            textFooter: string
+            /** Defines that the message is first in the conversation. (default false) */
+            first?: boolean
+            /** Defines that the message is last in the conversation. (default false) */
+            last?: boolean
+            /** Defines that the message has visual "tail". Usually last message in conversation. (default false) */
+            tail?: boolean
+            /** Defines that this message sender name is the same as on previous message. (default false) */
+            sameName?: boolean
+            /** Defines that this message header text is the same as on previous message. (default false) */
+            sameHeader?: boolean
+            /** Defines that this message footer text is the same as on previous message. (default false) */
+            sameFooter?: boolean
+            /** Defines that this message user's avatar URL is the same as on previous message. (default false) */
+            sameAvatar?: boolean
+
+            /** Event will be triggered when user clicks on message bubble */
+            onClick : () => void
+            /** Event will be triggered when user clicks on message user's name */
+            onClickName : () => void
+            /** Event will be triggered when user clicks on message text */
+            onClickText : () => void
+            /** Event will be triggered when user clicks on message user's avatar */
+            onClickAvatar : () => void
+            /** Event will be triggered when user clicks on message header */
+            onClickHeader : () => void
+            /** Event will be triggered when user clicks on message footer */
+            onClickFooter : () => void
+            /** Event will be triggered when user clicks on message bubble */
+            onClickBubble : () => void
         }
     }
 
@@ -1242,6 +1289,15 @@ declare module "framework7-react" {
 
     namespace MessagebarAttachment {
         export interface Props extends F7Props {
+            /** Attachment image URL. */
+            image: string
+            /** Defines whether the attachment is deletable or not. In case of deletable the additional delete button will be rendered. (default true) */
+            deletable?: boolean
+
+            /** Event will be triggered on attachment click */
+            onAttachmentClick : (event : Event) => void
+            /** Event will be triggered on attachment delete button click */
+            onAttachmentDelete : (event : Event) => void
         }
     }
 
@@ -1258,6 +1314,13 @@ declare module "framework7-react" {
 
     namespace MessagebarSheetImage {
         export interface Props extends F7Props {
+            /** Sheet image URL. */
+            image: string
+            /** Indicates whether this sheet image-item is checked or not. (default false) */
+            checked?: boolean
+
+            /** Event will be triggered on sheet item checkbox change */
+            change?: (event : Event) => void
         }
     }
 
@@ -1282,10 +1345,60 @@ declare module "framework7-react" {
 
     namespace Messagebar {
         export interface Props extends F7Props {
+            /** Initializes Messagebar. (default true) */
+            init?: boolean
+            /** Textarea "name" attribute. */
+            name: string
+            /** Textarea placeholder text. (default Message) */
+            placeholder?: string
+            /** Textarea value. */
+            value: string | number
+            /** Sets "readonly" textarea attribute. (default false) */
+            readonly?: boolean
+            /** Sets "disbled" textarea attribute. (default false) */
+            disabled?: boolean
+            /** Enables Send link and specifies its text. This property will be ignored in case you use send-link slot. */
+            sendLink: string
+            /** Defines resizeable textarea max height. */
+            maxHeight: number
+            /** Enables resizeable textarea. (default true) */
+            resizable?: boolean
+            /** Makes messagebar sheet visible/active. (default false) */
+            sheetVisible?: boolean
+            /** Makes messagebar attachments visible/active. (default false) */
+            attachmentsVisible?: boolean
+            /** When enabled, it will resize messages page when messagebar textarea size changed. (default true) */
+            resizePage?: boolean
         }
     }
 
-    export class Messagebar extends React.Component<Messagebar.Props, {}> {}
+    export class Messagebar extends React.Component<Messagebar.Props, {}> {
+        /** Clear textarea and update/reset its size */
+        clear() : void
+        /** Set messagebar textarea value/text */
+        setValue(newValue : string | number) : void
+        /** Return messagebar textarea value */
+        getValue() : void
+        /** Force Messagebar to resize messages page depending on messagebar height/size */
+        resize() : void
+        /** Focus messagebar textarea */
+        focus() : void
+        /** Remove focus from messagebar textarea */
+        blur() : void
+
+        /** Event will be triggered when "change" event occurs on messagebar textarea element */
+        onChange : (event : Event) => void
+        /** Event will be triggered when "input" event occurs on messagebar textarea element */
+        onInput : (event : Event) => void
+        /** Event will be triggered when "focus" event occurs on messagebar textarea element */
+        onFocus : (event : Event) => void
+        /** Event will be triggered when "blur" event occurs on messagebar textarea element */
+        onBlur : (event : Event) => void
+        /** Event will be triggered when user clicks on messagebar "send link" */
+        onSubmit : (value : string | number, clear : boolean) => void
+        /** Event will be triggered when user clicks on messagebar "send link" */
+        onSend : (value : string | number, clear : boolean) => void
+    }
     export const F7Messagebar : typeof Messagebar;
 
     namespace MessagesTitle {
@@ -1298,10 +1411,25 @@ declare module "framework7-react" {
 
     namespace Messages {
         export interface Props extends F7Props {
+            /** Initializes Messages component. (default true) */
+            init?: boolean
+            /** Enable if you want to use new messages on top, instead of having them on bottom. (default false) */
+            newMessagesFirst?: boolean
+            /** Enable/disable messages autoscrolling when adding new message. (default true) */
+            scrollMessages?: boolean
+            /** If enabled then messages autoscrolling will happen only when user is on top/bottom of the messages view. (default true) */
+            scrollMessagesOnEdge?: boolean
         }
     }
 
-    export class Messages extends React.Component<Messages.Props, {}> {}
+    export class Messages extends React.Component<Messages.Props, {}> {
+        /** Scroll messages to top/bottom depending on newMessagesFirst parameter */
+        scroll(durationMS : number, positionPX : number) : void
+        /** Show typing message indicator */
+        showTyping(message : Message) : void
+        /** Hide typing message indicator */
+        hideTyping() : void
+    }
     export const F7Messages : typeof Messages;
 
     namespace NavLeft {
