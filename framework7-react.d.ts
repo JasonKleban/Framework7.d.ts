@@ -1775,10 +1775,32 @@ declare module "framework7-react" {
 
     namespace Sheet {
         export interface Props extends F7Props {
+            /** Enable to render additional sheet modal backdrop when required. (default false) */
+            backdrop?: boolean
+            /** Allows to open/close Sheet Modal and set its initial state. (default false) */
+            opened?: boolean
+            /** When enabled, sheet will be closed on backdrop click. By default inherits same app parameter value. (default true) */
+            closeByBackdropClick?: boolean
+            /** When enabled, sheet will be closed on when click outside of it. By default inherits same app parameter value. (default false) */
+            closeByOutsideClick?: boolean
+            
+            /** Event will be triggered when Sheet starts its opening animation */
+            onSheetOpen : () => void
+            /** Event will be triggered after Sheet completes its opening animation */
+            onSheetOpened : () => void
+            /** Event will be triggered when Sheet starts its closing animation */
+            onSheetClose : () => void
+            /** Event will be triggered after Sheet completes its closing animation */
+            onSheetClosed : () => void
         }
     }
 
-    export class Sheet extends React.Component<Sheet.Props, {}> {}
+    export class Sheet extends React.Component<Sheet.Props, {}> {
+        /** Open Sheet modal */
+        open(animate : boolean) : void
+        /** Close Sheet modal */
+        close(animate : boolean) : void
+    }
     export const F7Sheet : typeof Sheet;
 
     namespace Statusbar {
@@ -1839,6 +1861,10 @@ declare module "framework7-react" {
 
     namespace Tab {
         export interface Props extends F7Props {
+            /** Defines currently active/visible tab */
+            tabActive : boolean
+            /** Tab ID */
+            id : string
         }
     }
 
@@ -1847,10 +1873,24 @@ declare module "framework7-react" {
 
     namespace Tabs {
         export interface Props extends F7Props {
+            /** Enables animated tabs */
+            animated : boolean
+            /** Enables swipeable tabs */
+            swipeable : boolean
+            /** Enables routable tabs */
+            routable : boolean
+
+            /** Event will be triggered when Tab becomes visible/active */
+            onTabShow : () => void
+            /** Event will be triggered when Tab becomes invisible/inactive */
+            onTabHide : () => void
         }
     }
 
-    export class Tabs extends React.Component<Tabs.Props, {}> {}
+    export class Tabs extends React.Component<Tabs.Props, {}> {
+        /** Show this tab */
+        show(animate : boolean) : void
+    }
     export const F7Tabs : typeof Tabs;
 
     namespace Toggle {
