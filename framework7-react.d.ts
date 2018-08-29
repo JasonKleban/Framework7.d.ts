@@ -1647,10 +1647,34 @@ declare module "framework7-react" {
 
     namespace Popup {
         export interface Props extends F7Props {
+            /** Defines whether the popup should be displayed fullscreen on tablets or not */
+            tabletFullscreen : boolean
+            /** Allows to open/close Popup and set its initial state */
+            opened : boolean
+            /** Enables Popup backdrop (dark semi transparent layer behind). By default inherits same app parameter value (true) */
+            backdrop : boolean
+            /** When enabled, popup will be closed on backdrop click. By default inherits same app parameter value (true) */
+            closeByBackdropClick : boolean
+            /** Whether the Popup should be opened/closed with animation or not. Can be overwritten in .open() and .close() methods. By default inherits same app parameter value (true) */
+            animate : boolean
+            
+            /** Event will be triggered when Popup starts its opening animation */
+            onPopupOpen : () => void
+            /** Event will be triggered after Popup completes its opening animation */
+            onPopupOpened : () => void
+            /** Event will be triggered when Popup starts its closing animation */
+            onPopupClose : () => void
+            /** Event will be triggered after Popup completes its closing animation */
+            onPopupClosed : () => void
         }
     }
 
-    export class Popup extends React.Component<Popup.Props, {}> {}
+    export class Popup extends React.Component<Popup.Props, {}> {
+        /** Open popup */
+        open(animate : boolean) : void
+        /** Close popup */
+        close(animate : boolean) : void
+    }
     export const F7Popup : typeof Popup;
 
     namespace Preloader {
