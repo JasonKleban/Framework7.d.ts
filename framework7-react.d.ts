@@ -1434,6 +1434,17 @@ declare module "framework7-react" {
 
     namespace NavLeft {
         export interface Props extends F7Props {
+            /** Adds back-link with text (if string value is specified). */
+            backLink: boolean | string
+            /** Custom back link URL. */
+            backLinkUrl: string
+            /** Enables "sliding" effect. By default inhertis sliding prop of parent Navbar. */
+            sliding: boolean
+
+            /** Event will be triggered after click on navbar back link */
+            onBackClick : () => void
+            /** Event will be triggered after click on navbar back link */
+            onClickBack : () => void
         }
     }
 
@@ -1442,6 +1453,8 @@ declare module "framework7-react" {
 
     namespace NavRight {
         export interface Props extends F7Props {
+            /** Enables "sliding" effect. By default inhertis sliding prop of parent Navbar. */
+            sliding: boolean
         }
     }
 
@@ -1450,6 +1463,12 @@ declare module "framework7-react" {
 
     namespace NavTitle {
         export interface Props extends F7Props {
+            /** Specifies element inner title text (affects if there is no child elements). */
+            title: string
+            /** Sub title text. */
+            subtitle: string
+            /** Enables "sliding" effect. By default inhertis sliding prop of parent Navbar. */
+            sliding: boolean
         }
     }
 
@@ -1458,10 +1477,40 @@ declare module "framework7-react" {
 
     namespace Navbar {
         export interface Props extends F7Props {
+            /** When enabled (by default), it will put all the content within internal `navbar-inner` element. Disable it only in case you want to put totally custom layout inside. (default true) */
+            inner?: boolean
+            /** Navbar title. */
+            title: string
+            /** Navbar sub title. */
+            subtitle: string
+            /** Adds back-link with text (if string value is specified). */
+            backLink: boolean | string
+            /** Custom back link URL. */
+            backLinkUrl: string
+            /** Enables "sliding" effect for nav elements. (default true) */
+            sliding?: boolean
+            /** Disable shadow rendering for Material theme. (default false) */
+            noShadow?: boolean
+            /** Disable navbar bottom thin border (hairline) for iOS theme. (default false) */
+            noHairline?: boolean
+            /** Makes navbar hidden. (default false) */
+            hidden?: boolean
+
+            /** Event will be triggered after click on navbar back link */
+            onBackClick : () => void
+            /** Event will be triggered after click on navbar back link */
+            onClickBack : () => void
         }
     }
 
-    export class Navbar extends React.Component<Navbar.Props, {}> {}
+    export class Navbar extends React.Component<Navbar.Props, {}> {
+        /** Hide navbar */
+        hide(animate : boolean) : void
+        /** Show navbar */
+        show(animate : boolean) : void
+        /** Size navbar */
+        size() : void
+    }
     export const F7Navbar : typeof Navbar;
 
     namespace PageContent {
