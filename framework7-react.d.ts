@@ -20,7 +20,8 @@ declare module "framework7-react" {
         $f7route : Route
     }
 
-    export interface F7Props {
+    // Not sure 
+    export interface F7Props<Slots = string> {
         slot?: string
     }
 
@@ -136,6 +137,7 @@ declare module "framework7-react" {
 
     namespace Badge {
         export interface Props extends F7Props {
+            color?: string
         }
     }
 
@@ -168,6 +170,26 @@ declare module "framework7-react" {
 
     namespace Block {
         export interface Props extends F7Props {
+            /** Makes block inset. */
+            inset?: boolean
+            /** Makes block inset on tablets, but not on phones. */
+            tabletInset?: boolean
+            /** Adds extra highlighting and padding block content. */
+            strong?: boolean
+            /** Makes block wrapper for accordion items. */
+            accordionList?: boolean
+            /** Adds additional "tabs" class to make the block tabs wrapper. */
+            tabs?: boolean
+            /** Adds additional "tab" class when block should be used as a Tab. */
+            tab?: boolean
+            /** Adds additional "tab-active" class when block used as a Tab and makes it active tab. */
+            tabActive?: boolean
+            /** Removes outer hairlines. */
+            noHairlines?: boolean
+            /** Removes outer hairlines for MD theme. */
+            noHairlinesMd?: boolean
+            /** Removes outer hairlines for iOS theme. */
+            noHairlinesIos?: boolean
         }
     }
 
@@ -176,6 +198,137 @@ declare module "framework7-react" {
 
     namespace Button {
         export interface Props extends F7Props {
+            /** Enables tab link and specify CSS selector of the target tab (if specified as a string). */
+            tabLink?: boolean | CssSelector
+            /** Makes this tab link active. (default false) */
+            tabLinkActive?: boolean
+            /** Makes this button active state when used in Segmented. Must be used instead of tab-link-active. (default false) */
+            active?: boolean
+            /** Button text label. */
+            text: string
+            /** Disables fast click. */
+            noFastClick: boolean
+            /** Button tooltip text to show on button hover/press. */
+            tooltip?: string
+            /** Makes button round. (default false) */
+            round?: boolean
+            /** Makes button round for iOS theme only. (default false) */
+            roundIos?: boolean
+            /** Makes button round for MD theme only. (default false) */
+            roundMd?: boolean
+            /** Makes big button. (default false) */
+            big?: boolean
+            /** Makes big button for iOS theme only. (default false) */
+            bigIos?: boolean
+            /** Makes big button for MD theme only. (default false) */
+            bigMd?: boolean
+            /** Makes small button. (default false) */
+            small?: boolean
+            /** Makes small button for iOS theme only. (default false) */
+            smallIos?: boolean
+            /** Makes small button for MD theme only. (default false) */
+            smallMd?: boolean
+            /** Makes button filled color. (default false) */
+            fill?: boolean
+            /** Makes button filled color for iOS theme only. (default false) */
+            fillIos?: boolean
+            /** Makes button filled color for MD theme only. (default false) */
+            fillMd?: boolean
+            /** Makes button raised. Affects MD theme only. (default false) */
+            raised?: boolean
+            /** Makes button outline. Affects MD theme only. (default false) */
+            outline?: boolean
+
+            // <Button> icon related properties
+            /** Icon size in px. */
+            iconSize: string | number
+            /** Icon color. One of the default colors. */
+            iconColor: string
+            /** Custom icon class. */
+            icon: string
+            /** Name of F7 Icons font icon. */
+            iconF7: string
+            /** Name of Material Icons font icon. */
+            iconMaterial: string
+            /** Name of Font Awesome font icon. */
+            iconFa: string
+            /** Name of Ionicons font icon. */
+            iconIon: string
+            /** Icon to be used in case of iOS theme is used. Consists of icon family and icon name divided by colon, e.g. f7:home or ion:home. */
+            iconIos: string
+            /** Icon to be used in case of MD theme is used. Consists of icon family and icon name divided by colon, e.g. material:home or fa:home. */
+            iconMd: string
+
+            // <Button> navigation/router related properties
+            /** URL of the page to load. In case of boolean href="false" it won't add href tag. (default #) */
+            href?: string | false
+            /** Value of link target attribute, e.g. _blank, _self, etc.. */
+            target: string
+            /** CSS selector of the View to load the page. */
+            view: string
+            /** Enable to bypass Framework7's link click handler. */
+            external: boolean
+            /** Enables back navigation link. */
+            back: boolean
+            /** Force page to load and ignore previous page in history (use together with back prop). */
+            force: boolean
+            /** Reloads new page instead of the currently active one. */
+            reloadCurrent: boolean
+            /** Replace the previous page in history with the new one from route. */
+            reloadPrevious: boolean
+            /** Load new page and remove all previous pages from history and DOM. */
+            reloadAll: boolean
+            /** Disables pages animation. */
+            animate: boolean
+            /** Ignores caching. */
+            ignoreCache: boolean
+            /** Name of the page to load. */
+            pageName: string
+            /** Routable Tab id. */
+            routeTabId: string
+
+            // <Button> action related properties
+            /** Defines panel to open. Can be left or right. */
+            panelOpen: 'left' | 'right' | boolean
+            /** Closes panel on click. */
+            panelClose: boolean
+            /** CSS selector of the action sheet to open on click. */
+            actionsOpen: CssSelector | boolean
+            /** CSS selector of the action sheet to close on click. Or boolean property to close currently opened action sheet. */
+            actionsClose: CssSelector | boolean
+            /** CSS selector of the popup to open on click. */
+            popupOpen: CssSelector | boolean
+            /** CSS selector of the popup to close on click. Or boolean property to close currently opened popup. */
+            popupClose: CssSelector | boolean
+            /** CSS selector of the popover to open on click. */
+            popoverOpen: CssSelector | boolean
+            /** CSS selector of the popover to close on click. Or boolean property to close currently opened popover. */
+            popoverClose: CssSelector | boolean
+            /** CSS selector of the sheet modal to open on click. */
+            sheetOpen: CssSelector | boolean
+            /** CSS selector of the sheet modal to close on click. Or boolean property to close currently opened sheet modal. */
+            sheetClose: CssSelector | boolean
+            /** CSS selector of the login screen to open on click. */
+            loginScreenOpen: CssSelector | boolean
+            /** CSS selector of the login screen to close on click. Or boolean property to close currently opened login screen. */
+            loginScreenClose: CssSelector | boolean
+            /** CSS selector of the Sortable list to open on click. */
+            sortableEnable: CssSelector | boolean
+            /** CSS selector of the Sortable list to close on click. Or boolean property to close currently opened Sortable list. */
+            sortableDisable: CssSelector | boolean
+            /** CSS selector of the Sortable list to toggle on click. Or boolean property to toggle currently opened/closed Sortable list. */
+            sortableToggle: CssSelector | boolean
+            /** CSS selector of the Expandable Searchbar to be enabled on click. Or boolean property to enable the first found Searchbar. */
+            searchbarEnable: CssSelector | boolean
+            /** CSS selector of the Expandable Searchbar to be disabled on click. Or boolean property to disable the first found Searchbar. */
+            searchbarDisable: CssSelector | boolean
+            /** CSS selector of the Expandable Searchbar to toggle on click. Or boolean property to toggle the first found Searchbar. */
+            searchbarToggle: CssSelector | boolean
+            /** CSS selector of the Expandable Searchbar to clear on click. Or boolean property to clear the first found Searchbar. */
+            searchbarClear: CssSelector | boolean
+
+            /** Event will be triggered after click on a button */
+            onClick : () => void
         }
     }
 
@@ -184,6 +337,8 @@ declare module "framework7-react" {
 
     namespace CardContent {
         export interface Props extends F7Props {
+            /** Adds additional inner padding. (default true) */
+            padding?: boolean
         }
     }
 
@@ -208,6 +363,16 @@ declare module "framework7-react" {
 
     namespace Card {
         export interface Props extends F7Props {
+            /** Card header content. */
+            title?: string
+            /** Card content. */
+            content?: string
+            /** Card footer content. */
+            footer?: string
+            /** Adds additional inner padding on card content. (default true) */
+            padding?: boolean
+            /** Makes Card outline. (default false) */
+            outline?: boolean
         }
     }
 
@@ -216,6 +381,21 @@ declare module "framework7-react" {
 
     namespace Checkbox {
         export interface Props extends F7Props {
+            /** Defines whether the checkbox input is checked or not. */
+            checked: boolean
+            /** Defines whether the checkbox input is checked or not, for the case if it is uncontrolled component. */
+            defaultChecked: boolean
+            /** Checkbox input name. */
+            name: string | number
+            /** Checkbox input value. */
+            value: string | number | boolean
+            /** Defines whether the checkbox input is disabled. */
+            disabled: boolean
+            /** Defines whether the checkbox input is readonly. */
+            readonly: boolean
+
+            /** Event will be triggered when checkbox state changed */
+            onChange: () => void
         }
     }
 
@@ -224,6 +404,23 @@ declare module "framework7-react" {
 
     namespace Chip {
         export interface Props extends F7Props {
+            /** Chip label text. */
+            text: string
+            /** Text content of chip media. */
+            media: string
+            /** Chip media element background color. One of the default colors. */
+            mediaBgColor: string
+            /** Chip media element text color. One of the default colors. */
+            mediaTextColor: string
+            /** Defines whether the Chip has additional "delete" button or not. (default false) */
+            deleteable?: boolean
+            /** Makes Card outline. (default false) */
+            outline?: boolean
+
+            /** Event will be triggered on Chip click */
+            onClick: () => void
+            /** Event will be triggered on Chip delete button click */
+            onDelete: () => void
         }
     }
 
@@ -232,6 +429,12 @@ declare module "framework7-react" {
 
     namespace Col {
         export interface Props extends F7Props {
+            /** Column width. Check available Column Sizes. (default auto) */
+            width?: number| string
+            /** Column width for large screen tablets (when width >= 768px). */
+            tabletWidth: number | string
+            /** Column width for larger screen tablets (when width >= 1025px). */
+            desktopWidth: number | string
         }
     }
 
@@ -240,6 +443,17 @@ declare module "framework7-react" {
 
     namespace FabButton {
         export interface Props extends F7Props {
+            /** When enabled then clicking on this button will close the FAB. (default false) */
+            fabClose?: boolean
+            /** Value of link target attribute, e.g. _blank, _self, etc.. */
+            target: string
+            /** Button text label. */
+            label: string
+            /** Button tooltip text to show on button hover/press. */
+            tooltip: string
+
+            /** Event will be triggered after click on FAB Speed Dial button */
+            onClick: () => void
         }
     }
 
@@ -248,6 +462,8 @@ declare module "framework7-react" {
 
     namespace FabButtons {
         export interface Props extends F7Props {
+            /** Speed dial buttons position. (default top) */
+            position?: 'top' | 'right' | 'bottom' | 'left' | 'center'
         }
     }
 
@@ -256,6 +472,21 @@ declare module "framework7-react" {
 
     namespace Fab {
         export interface Props extends F7Props {
+            /** URL of the page to load (if set). Will set href attribute on main FAB link. In case of boolean href="false" it won't add href tag. */
+            href: string | boolean
+            /** Value of link target attribute, e.g. _blank, _self, etc.. */
+            target: string
+            /** FAB position. Can be one of the following:. (default 'right-bottom') */
+            position?: 'right-bottom' | 'center-bottom' | 'left-bottom' | 'right-center' | 'center-center' | 'left-center' | 'right-top' | 'center-top' | 'left-top'
+            /** String CSS selector of the FAB morph target. */
+            morphTo: string
+            /** FAB Button text. If specified, then it will be displayed as Extended Fab with text label. */
+            text: string
+            /** FAB tooltip text to show on button hover/press. */
+            tooltip: string
+
+            /** event will be triggered after click on FAB */
+            onClick: () => void
         }
     }
 
@@ -264,6 +495,38 @@ declare module "framework7-react" {
 
     namespace Gauge {
         export interface Props extends F7Props {
+            /** Gauge element ID attribute. */
+            id: string
+            /** Gauge type. Can be circle or semicircle. (default circle) */
+            type?: string
+            /** Gauge value/percentage. Must be a number between 0 and 1. (default 0) */
+            value?: number
+            /** Generated SVG image size (in px). (default 200) */
+            size?: number
+            /** Gauge background color. Can be any valid color string, e.g. #ff00ff, rgb(0,0,255), etc.. (default transparent) */
+            bgColor?: string
+            /** Main border/stroke background color. (default #eeeeee) */
+            borderBgColor?: string
+            /** Main border/stroke color. (default #000000) */
+            borderColor?: string
+            /** Main border/stroke width. (default 10) */
+            borderWidth?: string
+            /** Gauge value text (large text in the center of gauge). (default null) */
+            valueText?: string
+            /** Value text color. (default #000000) */
+            valueTextColor?: string
+            /** Value text font size. (default 31) */
+            valueFontSize?: string
+            /** Value text font weight. (default 500) */
+            valueFontWeight?: string
+            /** Gauge additional label text. (default null) */
+            labelText?: string
+            /** Label text color. (default #888888) */
+            labelTextColor?: string
+            /** Label text font size. (default 14) */
+            labelFontSize?: string
+            /** Label text font weight. (default 400) */
+            labelFontWeight?: string
         }
     }
 
@@ -272,6 +535,24 @@ declare module "framework7-react" {
 
     namespace Icon {
         export interface Props extends F7Props {
+            /** Icon size in px. */
+            size?: number | string
+            /** Custom icon class. */
+            icon?: string
+            /** Name of F7 Icons font icon. */
+            f7?: string
+            /** Name of Material Icons font icon. */
+            material?: string
+            /** Name of Font Awesome font icon. */
+            fa?: string
+            /** Name of Ionicons font icon. */
+            ion?: string
+            /** Icon to be used in case of iOS theme is used. Consists of icon family and icon name divided by colon, e.g. f7:home or ion:home. */
+            ios?: string
+            /** Icon to be used in case of Material theme is used. Consists of icon family and icon name divided by colon, e.g. material:home or fa:home. */
+            md?: string
+            /** Icon tooltip text to show on icon hover/press. */
+            tooltip?: string
         }
     }
 
@@ -280,6 +561,91 @@ declare module "framework7-react" {
 
     namespace Input {
         export interface Props extends F7Props {
+            /** Defines should the input be wraped with "item-input-wrap" element or not. Must be disabled when using outside of List View. (default true) */
+            wrap?: boolean
+            /** Input type. All default HTML5 input type, and few special ones:. */
+            type: string
+            /** Makes textarea resizable. (default false) */
+            resizable?: boolean
+            /** Value if input's "style" attribute, in case you need to pass extra styles. */
+            inputStyle: string
+            /** Adds input clear button that will clear input value on click. (default false) */
+            clearButton?: boolean
+            /** When enabled then input value will be validated on change based on passed "pattern" or based on input type. If you use custom validation and need more control on where to show/hide error message, then it is better to disable validation and use error-message together with error-message-force props.. (default false) */
+            validate?: boolean
+            /** Custom error message to show when input value is invalid. */
+            errorMessage: string
+            /** Force error message to force. Useful in case you use custom validation and want to show/hide error message when you need it. (default false) */
+            errorMessageForce?: boolean
+            /** Custom additional text with information about input. */
+            info: string
+            /** Input name. */
+            name: string
+            /** Input placeholder. */
+            placeholder: string
+            /** Wrapping element ID attribute. */
+            id: string
+            /** Input element ID attribute. */
+            inputId: string
+            /** Input value. */
+            value: string | number
+            /** Input value, in case of uncontrolled component. */
+            defaultValue: string | number
+            /** Value of input's native "size" attribute. */
+            size: string | number
+            /** Value of input's native "pattern" attribute. */
+            pattern: string
+            /** Value of input's native "accept" attribute. */
+            accept: string | number
+            /** Value of input's native "autocomplete" attribute. */
+            autocomplete: string
+            /** Value of input's native "autofocus" attribute. (default false) */
+            autofocus?: boolean
+            /** Value of input's native "autosave" attribute. */
+            autosave: string
+            /** Marks input as checked. (default false) */
+            checked?: boolean
+            /** Marks input as disabled. (default false) */
+            disabled?: boolean
+            /** Value of input's native "max" attribute. */
+            max: string | number
+            /** Value of input's native "min" attribute. */
+            min: string | number
+            /** Value of input's native "step" attribute. */
+            step: string | number
+            /** Value of input's native "maxlength" attribute. */
+            maxlength: string | number
+            /** Value of input's native "minlength" attribute. */
+            minlength: string | number
+            /** Value of input's native "multiple" attribute. (default false) */
+            multiple?: boolean
+            /** Marks input as readonly. (default false) */
+            readonly?: boolean
+            /** Marks input as required. (default false) */
+            required?: boolean
+            /** Value of input's native "tabindex" attribute. */
+            tabindex: string | number
+            /** Allows to ignore input value to be stored when using with Form Storage. (default false) */
+            noStoreData?: boolean
+            /** Same as previous. (default false) */
+            ignoreStoreData?: boolean
+
+            /** Fired when user focused to input. */
+            onFocus : (event : Event) => void
+            /** Fired when user lost focus from input. */
+            onBlur : (event : Event) => void
+            /** Fired immediately when input value changed. Note: Input event triggers after beforeinput, keypress, keyup, keydown events. */
+            onInput : (event : Event) => void
+            /** Fired when blur if value changed. */
+            onChange : (event : Event) => void
+            /** Fired when input clear button clicked */
+            onInputClear : (event : Event) => void
+            /** Fired if resizable textarea resized. event.detail will contain object with the initialHeight, currentHeight and scrollHeight properties */
+            onTextareaResize : (event : Event) => void
+            /** Fired when input value becomes empty */
+            onInputEmpty : (event : Event) => void
+            /** Fired when input value becomes not empty */
+            onInputNotempty : (event : Event) => void
         }
     }
 
@@ -288,6 +654,10 @@ declare module "framework7-react" {
 
     namespace Label {
         export interface Props extends F7Props {
+            /** Enables floating label (affects MD theme only). (default false) */
+            floating?: boolean
+            /** Makes label inline. (default false) */
+            inline?: boolean
         }
     }
 
@@ -296,6 +666,123 @@ declare module "framework7-react" {
 
     namespace Link {
         export interface Props extends F7Props {
+            /** Removes "link" class. */
+            noLinkClass: boolean
+            /** Enables tab link and specify CSS selector of the target tab (if specified as a string). */
+            tabLink: string | boolean
+            /** Makes this tab link active. */
+            tabLinkActive: boolean
+            /** Link text. */
+            text: string
+            /** Disables fast click. */
+            noFastClick: boolean
+            /** Badge count. */
+            badge: string | number
+            /** Badge color. One of the default colors. */
+            badgeColor: string
+            /** Enable when used in navbar/toolbar with icon only inside. */
+            iconOnly: boolean
+            /** Link tooltip text to show on link hover/press. */
+            tooltip: string
+
+            // <Link> Smart Select related properties
+            /** Enables Smart Select behavior. (default false) */
+            smartSelect?: boolean
+            /** Object with Smart Select Parameters. */
+            smartSelectParams: object
+
+            // <Link> icon related properties
+            /** Icon size in px. */
+            iconSize: string | number
+            /** Icon color. One of the default colors. */
+            iconColor: string
+            /** Custom icon class. */
+            icon: string
+            /** Name of F7 Icons font icon. */
+            iconF7: string
+            /** Name of Material Icons font icon. */
+            iconMaterial: string
+            /** Name of Font Awesome font icon. */
+            iconFa: string
+            /** Name of Ionicons font icon. */
+            iconIon: string
+            /** Icon to be used in case of iOS theme is used. Consists of icon family and icon name divided by colon, e.g. f7:home or ion:home. */
+            iconIos: string
+            /** Icon to be used in case of MD theme is used. Consists of icon family and icon name divided by colon, e.g. material:home or fa:home. */
+            iconMd: string
+            /** Adds badge to the icon (intended to be used in Tabbar's icons). */
+            iconBadge: string | number
+
+            //<Link> navigation/router related properties
+            /** URL of the page to load. In case of boolean href="false" it won't add href tag. (default #) */
+            href?: string | boolean
+            /** Value of link target attribute, e.g. _blank, _self, etc.. */
+            target: string
+            /** CSS selector of the View to load the page. */
+            view: string
+            /** Enable to bypass Framework7's link click handler. */
+            external: boolean
+            /** Enables back navigation link. */
+            back: boolean
+            /** Force page to load and ignore previous page in history (use together with back prop). */
+            force: boolean
+            /** Reloads new page instead of the currently active one. */
+            reloadCurrent: boolean
+            /** Replace the previous page in history with the new one from route. */
+            reloadPrevious: boolean
+            /** Load new page and remove all previous pages from history and DOM. */
+            reloadAll: boolean
+            /** Disables pages animation. */
+            animate: boolean
+            /** Ignores caching. */
+            ignoreCache: boolean
+            /** Name of the page to load. */
+            pageName: string
+            /** Routable Tab id. */
+            routeTabId: string
+
+            // <Link> action related properties
+            /** Defines panel to open. Can be left or right. */
+            panelOpen: string | boolean
+            /** Closes panel on click. */
+            panelClose: boolean
+            /** CSS selector of the action sheet to open on click. */
+            actionsOpen: string | boolean
+            /** CSS selector of the action sheet to close on click. Or boolean property to close currently opened action sheet. */
+            actionsClose: string | boolean
+            /** CSS selector of the popup to open on click. */
+            popupOpen: string | boolean
+            /** CSS selector of the popup to close on click. Or boolean property to close currently opened popup. */
+            popupClose: string | boolean
+            /** CSS selector of the popover to open on click. */
+            popoverOpen: string | boolean
+            /** CSS selector of the popover to close on click. Or boolean property to close currently opened popover. */
+            popoverClose: string | boolean
+            /** CSS selector of the sheet modal to open on click. */
+            sheetOpen: string | boolean
+            /** CSS selector of the sheet modal to close on click. Or boolean property to close currently opened sheet modal. */
+            sheetClose: string | boolean
+            /** CSS selector of the login screen to open on click. */
+            loginScreenOpen: string | boolean
+            /** CSS selector of the login screen to close on click. Or boolean property to close currently opened login screen. */
+            loginScreenClose: string | boolean
+            /** CSS selector of the Sortable list to open on click. */
+            sortableEnable: string | boolean
+            /** CSS selector of the Sortable list to close on click. Or boolean property to close currently opened Sortable list. */
+            sortableDisable: string | boolean
+            /** CSS selector of the Sortable list to toggle on click. Or boolean property to toggle currently opened/closed Sortable list. */
+            sortableToggle: string | boolean
+            /** CSS selector of the Expandable Searchbar to be enabled on click. Or boolean property to enable the first found Searchbar. */
+            searchbarEnable: string | boolean
+            /** CSS selector of the Expandable Searchbar to be disabled on click. Or boolean property to disable the first found Searchbar. */
+            searchbarDisable: string | boolean
+            /** CSS selector of the Expandable Searchbar to toggle on click. Or boolean property to toggle the first found Searchbar. */
+            searchbarToggle: string | boolean
+            /** CSS selector of the Expandable Searchbar to clear on click. Or boolean property to clear the first found Searchbar. */
+            searchbarClear: string | boolean
+
+            /** Event will be triggered after click on a link */
+            onClick: () => void
         }
     }
 
@@ -360,6 +847,8 @@ declare module "framework7-react" {
 
     namespace List {
         export interface Props extends F7Props {
+            /** Adds required additional styles for Contacts List. (default false) */
+            contactsList?: boolean
         }
     }
 
@@ -632,6 +1121,10 @@ declare module "framework7-react" {
 
     namespace Row {
         export interface Props extends F7Props {
+            /** Removes spacing between columns. (default false) */
+            noGap?: boolean
+            /** Defines which tag must be used to render row element. (default div) */
+            tag?: string
         }
     }
 
@@ -648,6 +1141,12 @@ declare module "framework7-react" {
 
     namespace Segmented {
         export interface Props extends F7Props {
+            /** Makes segmented raised. Affects MD theme only. (default false) */
+            raised?: boolean
+            /** Makes segmented round. (default false) */
+            round?: boolean
+            /** Tag used to render Segmented element. (default div) */
+            tag?: string
         }
     }
 
