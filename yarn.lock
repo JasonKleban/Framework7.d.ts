@@ -54,6 +54,12 @@ diff@^3.1.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
 
+dom7@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/dom7/-/dom7-2.1.0.tgz#40b1022c06f1bc59bee7be4a193da109682455ec"
+  dependencies:
+    ssr-window "^1.0.1"
+
 execa@^0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/execa/-/execa-0.8.0.tgz#d8d76bbc1b55217ed190fd6dd49d3c774ecfc8da"
@@ -65,6 +71,15 @@ execa@^0.8.0:
     p-finally "^1.0.0"
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
+
+framework7@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/framework7/-/framework7-3.2.1.tgz#6659ed4a5f8aec86302c5e8583be5fcf06b3f7be"
+  dependencies:
+    dom7 "^2.1.0"
+    path-to-regexp "^2.4.0"
+    ssr-window "^1.0.1"
+    template7 "^1.4.0"
 
 get-stream@^3.0.0:
   version "3.0.0"
@@ -117,6 +132,10 @@ path-key@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/path-key/-/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
 
+path-to-regexp@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-2.4.0.tgz#35ce7f333d5616f1c1e1bfe266c3aba2e5b2e704"
+
 pseudomap@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
@@ -146,9 +165,17 @@ source-map@^0.6.0:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
 
+ssr-window@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-1.0.1.tgz#30752a6a4666e7767f0b7e6aa6fc2fdbd0d9b369"
+
 strip-eof@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/strip-eof/-/strip-eof-1.0.0.tgz#bb43ff5598a6eb05d89b59fcd129c983313606bf"
+
+template7@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/template7/-/template7-1.4.0.tgz#d400af49ea56fc08cc835a20e6167a26b288fb1b"
 
 ts-node@^7.0.1:
   version "7.0.1"

@@ -1,5 +1,8 @@
 declare module "framework7-react" {
-    import Framework7, { Framework7Plugin, Device, Request, Utils, Router, Route, CssSelector, View as F7View } from 'framework7'
+    import Dom7, { Dom7Static } from 'Dom7'
+    import Template7 from 'Template7'
+    import Framework7, { Framework7Plugin, Device, Request, Utils, 
+        Router, Route, CssSelector, View as F7View } from 'framework7'
 
     export const Framework7React : Framework7Plugin;
     export default Framework7React;
@@ -7,8 +10,8 @@ declare module "framework7-react" {
     export interface F7ReactComponentExtensions {
         $f7ready: (f7 : Framework7) => void
         $f7 : Framework7
-        $$ : Dom7.Dom7Static
-        $Dom7 : Dom7.Dom7Static
+        $$ : Dom7Static
+        $Dom7 : Dom7Static
         $device : Device
         $request : Request
         $utils : Utils

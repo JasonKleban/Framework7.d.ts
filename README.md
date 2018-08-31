@@ -1,6 +1,10 @@
 # Framework7.d.ts
 Typescript definitions for [Framework7, Swiper, Dom7, Template7, Framework7-React v3 by iDangero.us](http://framework7.io)
 
+NOTE: Framework7, Dom7, and Template7 type definitions [are currently being adopted into the actual projects](https://github.com/framework7io/framework7/issues/2616#issuecomment-417525998).  The Framework7-React may still need to live on for full type expression ... to be updated...
+
+===
+
 This is a start to match Framework7's v3.  This is nearly guaranteed to break for you coming from the older definitions, and I'm sorry about that.  But hopefully this is on a better track.
 
 I've attempted to work with Vue in F7v2, but my current opinion is that Vue is not very typesafe friendly, so I'm abandoning that for React again for myself.  Therefore, I haven't included and Vue definitions here because I don't know how.  You're welcome to help me provide them.  I'm also assisting Vladimir Kharlampidi from iDangero.us incorporate automated type declaration generation into their Phenome.js library.  That work may not result in fully-expressed types for Framework7-React and wouldn't include type declarations for the Framework7 Core - although I will soon petition Vladimir to adopt the Core declarations into the Framework7 distribution.
